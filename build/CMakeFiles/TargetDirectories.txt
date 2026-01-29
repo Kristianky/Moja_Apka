@@ -1,0 +1,11 @@
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/Aplication/CMakeFiles/AplicationLib.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/Aplication/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/Aplication/CMakeFiles/rebuild_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/WinApi/CMakeFiles/SiemensTCP.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/WinApi/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/WinApi/CMakeFiles/rebuild_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/Ui/CMakeFiles/UiLib.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/Ui/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/Ui/CMakeFiles/rebuild_cache.dir

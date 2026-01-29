@@ -1,0 +1,2 @@
+C:\PROGRA~1\mingw64\bin\ar.exe qc libUiLib.a CMakeFiles/UiLib.dir/Ui.obj
+C:\PROGRA~1\mingw64\bin\ranlib.exe libUiLib.a

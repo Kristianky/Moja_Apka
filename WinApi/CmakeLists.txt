@@ -1,0 +1,26 @@
+# definícia targetu
+add_executable(SiemensTCP WIN32
+    main.cpp
+    # ďalšie .cpp súbory sem
+)
+
+
+
+set_target_properties(SiemensTCP PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
+# include priečinok s hlavičkami
+target_include_directories(SiemensTCP PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+# Definície pre Unicode
+target_compile_definitions(SiemensTCP PRIVATE UNICODE _UNICODE)
+
+# Linkovanie knižníc / podprojektov
+target_link_libraries(SiemensTCP PRIVATE AplicationLib)
+
+# Linker flag pre MinGW, aby hľadal wWinMain
+if(MINGW)
+    target_link_options(SiemensTCP PRIVATE "-municode")
+endif()
