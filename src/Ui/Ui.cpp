@@ -2,13 +2,14 @@
 
 UI::UI(HWND hwnd)
 {
-    GetClientRect(hwnd, &Main_Window);
-    X_Rect = {Main_Window.right - 50, Main_Window.top, Main_Window.right, Main_Window.top + 30};
-    Border = {0, 0, Main_Window.right - 150, 30};
 }
 
 void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
 {
+    //Inicializacia velkosti bordera a ziskanie velkosti okna 
+    GetClientRect(Main_Hwnd, &Main_Window);
+    X_Rect = {Main_Window.right - 50, Main_Window.top, Main_Window.right, Main_Window.top + 30};
+    Border = {0, 0, Main_Window.right - 150, 30};
     // Kreslenie listy
     HBRUSH Border_Color = CreateSolidBrush(RGB(30, 30, 30));
     FillRect(hdc, &Border, Border_Color);
