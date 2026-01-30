@@ -1,9 +1,9 @@
 #include "Dispatcher.h"
 
-AppDispatcher::AppDispatcher(HWND hwnd)
+AppDispatcher::AppDispatcher(HWND hwnd):Ui(hwnd)
+
 {
     Inside_X_Mem = false;
-    Ui(hwnd);
 }
 
 void AppDispatcher::DrawDispatch(HDC hdc,HWND hwnd)

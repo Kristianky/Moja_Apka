@@ -1,6 +1,6 @@
 #include "Aplication.h"
 
-Aplication::Aplication(HINSTANCE Hinstance)
+Aplication::Aplication(HINSTANCE Hinstance):DispApp(Main_Hwnd)
 {
     const wchar_t CLASSNAME[] = L"MojeOknoTrieda"; // Tu si mozme nastavit hlavicku okna
     WNDCLASSW wc{};                                // vytvorenie classy appky
@@ -20,7 +20,7 @@ Aplication::Aplication(HINSTANCE Hinstance)
         NULL, NULL, Hinstance, this);
     ShowWindow(Main_Hwnd, SW_SHOW);
     UpdateWindow(Main_Hwnd);
-    DispApp(Main_Hwnd);
+    
 }
 Aplication::~Aplication()
 {
