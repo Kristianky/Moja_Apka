@@ -16,6 +16,7 @@ public:
 
     void DrawDispatch(HDC hdc, HWND hwnd);
     void CallRedraw_MouseMove(LPARAM lparam, HWND hwnd);
+    void CallMouseClick(LPARAM lpram,HWND hwnd);
 };
 
 #endif
