@@ -129,6 +129,19 @@ AplicationLib/fast:
 .PHONY : AplicationLib/fast
 
 #=============================================================================
+# Target rules for targets named DispatcherLIB
+
+# Build rule for target.
+DispatcherLIB: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DispatcherLIB
+.PHONY : DispatcherLIB
+
+# fast build rule for target.
+DispatcherLIB/fast:
+	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/build
+.PHONY : DispatcherLIB/fast
+
+#=============================================================================
 # Target rules for targets named SiemensTCP
 
 # Build rule for target.
@@ -176,6 +189,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AplicationLib
+	@echo ... DispatcherLIB
 	@echo ... MouseLIB
 	@echo ... SiemensTCP
 	@echo ... UiLib

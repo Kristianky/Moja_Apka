@@ -129,6 +129,20 @@ AplicationLib/fast:
 	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\AplicationLib.dir\build.make src/Aplication/CMakeFiles/AplicationLib.dir/build
 .PHONY : AplicationLib/fast
 
+# Convenience name for target.
+src/Aplication/CMakeFiles/DispatcherLIB.dir/rule:
+	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Aplication/CMakeFiles/DispatcherLIB.dir/rule
+.PHONY : src/Aplication/CMakeFiles/DispatcherLIB.dir/rule
+
+# Convenience name for target.
+DispatcherLIB: src/Aplication/CMakeFiles/DispatcherLIB.dir/rule
+.PHONY : DispatcherLIB
+
+# fast build rule for target.
+DispatcherLIB/fast:
+	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/build
+.PHONY : DispatcherLIB/fast
+
 Aplication.obj: Aplication.cpp.obj
 .PHONY : Aplication.obj
 
@@ -153,6 +167,30 @@ Aplication.cpp.s:
 	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\AplicationLib.dir\build.make src/Aplication/CMakeFiles/AplicationLib.dir/Aplication.cpp.s
 .PHONY : Aplication.cpp.s
 
+Dispatcher.obj: Dispatcher.cpp.obj
+.PHONY : Dispatcher.obj
+
+# target to build an object file
+Dispatcher.cpp.obj:
+	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj
+.PHONY : Dispatcher.cpp.obj
+
+Dispatcher.i: Dispatcher.cpp.i
+.PHONY : Dispatcher.i
+
+# target to preprocess a source file
+Dispatcher.cpp.i:
+	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.i
+.PHONY : Dispatcher.cpp.i
+
+Dispatcher.s: Dispatcher.cpp.s
+.PHONY : Dispatcher.s
+
+# target to generate assembly for a file
+Dispatcher.cpp.s:
+	cd /d C:\Users\krist\Desktop\C++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.s
+.PHONY : Dispatcher.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -162,9 +200,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AplicationLib
+	@echo ... DispatcherLIB
 	@echo ... Aplication.obj
 	@echo ... Aplication.i
 	@echo ... Aplication.s
+	@echo ... Dispatcher.obj
+	@echo ... Dispatcher.i
+	@echo ... Dispatcher.s
 .PHONY : help
 
 

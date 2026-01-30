@@ -70,6 +70,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/Aplication/CMakeFiles/AplicationLib.dir/DependInfo.cmake"
+  "src/Aplication/CMakeFiles/DispatcherLIB.dir/DependInfo.cmake"
   "src/WinApi/CMakeFiles/SiemensTCP.dir/DependInfo.cmake"
   "src/Ui/CMakeFiles/UiLib.dir/DependInfo.cmake"
   "src/Input/CMakeFiles/MouseLIB.dir/DependInfo.cmake"

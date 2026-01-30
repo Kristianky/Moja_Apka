@@ -7,7 +7,13 @@
 class UI
 {
 public:
-    static void Draw_Border(HDC hdc,HWND Main_Hwnd);
+   UI(HWND hwnd);
+   void Draw_Border(HDC hdc,HWND Main_Hwnd);
+   //Rect pre jednotlive tlacidla na borderi
+   RECT Main_Window; //HL okno apky
+   RECT X_Rect;
+   RECT Border;
+   bool Inside_X;
 };
 
 #endif

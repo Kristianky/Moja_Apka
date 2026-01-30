@@ -2,9 +2,9 @@
 #define _APLICATION_H_
 
 #include <windows.h>
-#include "Ui.h"
 #include "Mouse.h"
 #include "Dispatcher.h"
+
 
 class Aplication
 {

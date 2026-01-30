@@ -96,6 +96,7 @@ SiemensTCP_EXTERNAL_OBJECTS =
 C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/WinApi/CMakeFiles/SiemensTCP.dir/main.cpp.obj
 C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/WinApi/CMakeFiles/SiemensTCP.dir/build.make
 C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/Aplication/libAplicationLib.a
+C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/Aplication/libDispatcherLIB.a
 C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/Ui/libUiLib.a
 C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/Input/libMouseLIB.a
 C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe: src/WinApi/CMakeFiles/SiemensTCP.dir/linkLibs.rsp

@@ -20,6 +20,7 @@ Aplication::Aplication(HINSTANCE Hinstance)
         NULL, NULL, Hinstance, this);
     ShowWindow(Main_Hwnd, SW_SHOW);
     UpdateWindow(Main_Hwnd);
+    DispApp(Main_Hwnd);
 }
 Aplication::~Aplication()
 {

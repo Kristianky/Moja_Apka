@@ -9,8 +9,9 @@ class AppDispatcher
 {
     private:
       bool Inside_X_Mem;
+      UI Ui;
 public:
-    AppDispatcher(){Inside_X_Mem = false;}
+    AppDispatcher(HWND hwnd);
     ~AppDispatcher() = default;
 
     void DrawDispatch(HDC hdc, HWND hwnd);

@@ -113,10 +113,12 @@ src/clean: src/Input/clean
 
 # Recursive "all" directory target.
 src/Aplication/all: src/Aplication/CMakeFiles/AplicationLib.dir/all
+src/Aplication/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 .PHONY : src/Aplication/all
 
 # Recursive "codegen" directory target.
 src/Aplication/codegen: src/Aplication/CMakeFiles/AplicationLib.dir/codegen
+src/Aplication/codegen: src/Aplication/CMakeFiles/DispatcherLIB.dir/codegen
 .PHONY : src/Aplication/codegen
 
 # Recursive "preinstall" directory target.
@@ -125,6 +127,7 @@ src/Aplication/preinstall:
 
 # Recursive "clean" directory target.
 src/Aplication/clean: src/Aplication/CMakeFiles/AplicationLib.dir/clean
+src/Aplication/clean: src/Aplication/CMakeFiles/DispatcherLIB.dir/clean
 .PHONY : src/Aplication/clean
 
 #=============================================================================
@@ -188,6 +191,7 @@ src/WinApi/clean: src/WinApi/CMakeFiles/SiemensTCP.dir/clean
 # Target rules for target src/Aplication/CMakeFiles/AplicationLib.dir
 
 # All Build rule for target.
+src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\AplicationLib.dir\build.make src/Aplication/CMakeFiles/AplicationLib.dir/depend
@@ -197,7 +201,7 @@ src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/MouseLIB.d
 
 # Build rule for subdir invocation for target.
 src/Aplication/CMakeFiles/AplicationLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Aplication/CMakeFiles/AplicationLib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 0
 .PHONY : src/Aplication/CMakeFiles/AplicationLib.dir/rule
@@ -218,20 +222,54 @@ src/Aplication/CMakeFiles/AplicationLib.dir/clean:
 .PHONY : src/Aplication/CMakeFiles/AplicationLib.dir/clean
 
 #=============================================================================
+# Target rules for target src/Aplication/CMakeFiles/DispatcherLIB.dir
+
+# All Build rule for target.
+src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
+src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
+	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=3,4 "Built target DispatcherLIB"
+.PHONY : src/Aplication/CMakeFiles/DispatcherLIB.dir/all
+
+# Build rule for subdir invocation for target.
+src/Aplication/CMakeFiles/DispatcherLIB.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Aplication/CMakeFiles/DispatcherLIB.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 0
+.PHONY : src/Aplication/CMakeFiles/DispatcherLIB.dir/rule
+
+# Convenience name for target.
+DispatcherLIB: src/Aplication/CMakeFiles/DispatcherLIB.dir/rule
+.PHONY : DispatcherLIB
+
+# codegen rule for target.
+src/Aplication/CMakeFiles/DispatcherLIB.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=3,4 "Finished codegen for target DispatcherLIB"
+.PHONY : src/Aplication/CMakeFiles/DispatcherLIB.dir/codegen
+
+# clean rule for target.
+src/Aplication/CMakeFiles/DispatcherLIB.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/clean
+.PHONY : src/Aplication/CMakeFiles/DispatcherLIB.dir/clean
+
+#=============================================================================
 # Target rules for target src/WinApi/CMakeFiles/SiemensTCP.dir
 
 # All Build rule for target.
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/AplicationLib.dir/all
+src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\WinApi\CMakeFiles\SiemensTCP.dir\build.make src/WinApi/CMakeFiles/SiemensTCP.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\WinApi\CMakeFiles\SiemensTCP.dir\build.make src/WinApi/CMakeFiles/SiemensTCP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=5,6 "Built target SiemensTCP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=7,8 "Built target SiemensTCP"
 .PHONY : src/WinApi/CMakeFiles/SiemensTCP.dir/all
 
 # Build rule for subdir invocation for target.
 src/WinApi/CMakeFiles/SiemensTCP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/WinApi/CMakeFiles/SiemensTCP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 0
 .PHONY : src/WinApi/CMakeFiles/SiemensTCP.dir/rule
@@ -243,7 +281,7 @@ SiemensTCP: src/WinApi/CMakeFiles/SiemensTCP.dir/rule
 # codegen rule for target.
 src/WinApi/CMakeFiles/SiemensTCP.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\WinApi\CMakeFiles\SiemensTCP.dir\build.make src/WinApi/CMakeFiles/SiemensTCP.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=5,6 "Finished codegen for target SiemensTCP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=7,8 "Finished codegen for target SiemensTCP"
 .PHONY : src/WinApi/CMakeFiles/SiemensTCP.dir/codegen
 
 # clean rule for target.
@@ -258,7 +296,7 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/clean:
 src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Ui\CMakeFiles\UiLib.dir\build.make src/Ui/CMakeFiles/UiLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Ui\CMakeFiles\UiLib.dir\build.make src/Ui/CMakeFiles/UiLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=7,8 "Built target UiLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=9,10 "Built target UiLib"
 .PHONY : src/Ui/CMakeFiles/UiLib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -275,7 +313,7 @@ UiLib: src/Ui/CMakeFiles/UiLib.dir/rule
 # codegen rule for target.
 src/Ui/CMakeFiles/UiLib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Ui\CMakeFiles\UiLib.dir\build.make src/Ui/CMakeFiles/UiLib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=7,8 "Finished codegen for target UiLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=9,10 "Finished codegen for target UiLib"
 .PHONY : src/Ui/CMakeFiles/UiLib.dir/codegen
 
 # clean rule for target.
@@ -290,7 +328,7 @@ src/Ui/CMakeFiles/UiLib.dir/clean:
 src/Input/CMakeFiles/MouseLIB.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\MouseLIB.dir\build.make src/Input/CMakeFiles/MouseLIB.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\MouseLIB.dir\build.make src/Input/CMakeFiles/MouseLIB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=3,4 "Built target MouseLIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=5,6 "Built target MouseLIB"
 .PHONY : src/Input/CMakeFiles/MouseLIB.dir/all
 
 # Build rule for subdir invocation for target.
@@ -307,7 +345,7 @@ MouseLIB: src/Input/CMakeFiles/MouseLIB.dir/rule
 # codegen rule for target.
 src/Input/CMakeFiles/MouseLIB.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\MouseLIB.dir\build.make src/Input/CMakeFiles/MouseLIB.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=3,4 "Finished codegen for target MouseLIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=5,6 "Finished codegen for target MouseLIB"
 .PHONY : src/Input/CMakeFiles/MouseLIB.dir/codegen
 
 # clean rule for target.
