@@ -1,6 +1,6 @@
 #include "Aplication.h"
 
-Aplication::Aplication(HINSTANCE Hinstance):DispApp(Main_Hwnd)
+Aplication::Aplication(HINSTANCE Hinstance) : DispApp(Main_Hwnd)
 {
     const wchar_t CLASSNAME[] = L"MojeOknoTrieda"; // Tu si mozme nastavit hlavicku okna
     WNDCLASSW wc{};                                // vytvorenie classy appky
@@ -9,7 +9,7 @@ Aplication::Aplication(HINSTANCE Hinstance):DispApp(Main_Hwnd)
     wc.lpszClassName = CLASSNAME;                  // priradi meno okna
     wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 5); // nastavi styl a farbu okna
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);      // nacita kurzor a nastavi styl
-    RegisterClassW(&wc);                           // regitruje classu do windows az po tomto kroku mozme vytvorit okno
+    RegisterClassW(&wc); // regitruje classu do windows az po tomto kroku mozme vytvorit okno
 
     Main_Hwnd = CreateWindowExW( // vytvorenie hl okna
         0,
@@ -20,55 +20,55 @@ Aplication::Aplication(HINSTANCE Hinstance):DispApp(Main_Hwnd)
         NULL, NULL, Hinstance, this);
     ShowWindow(Main_Hwnd, SW_SHOW);
     UpdateWindow(Main_Hwnd);
-    
 }
 Aplication::~Aplication()
 {
 }
 
 LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)
+
 {
     switch (umsg)
     {
     case WM_DESTROY:
     {
         PostQuitMessage(0);
-        break;
+         break;
     }
     case WM_NCHITTEST:
-        {
-        break;
-        }
+    {
+        return HTCLIENT;
+    }
     case WM_PAINT:
     {
         PAINTSTRUCT Ps;
-        HDC hdc = BeginPaint(hwnd,&Ps);
-        DispApp.DrawDispatch(hdc,hwnd);
-        EndPaint(hwnd,&Ps);
+        HDC hdc = BeginPaint(hwnd, &Ps);
+        DispApp.DrawDispatch(hdc, hwnd);
+        EndPaint(hwnd, &Ps);
         break;
     }
     case WM_MOUSEMOVE:
     {
         Mouse::UpdateX_Y(lparam);
+        DispApp.CallRedraw_MouseMove(lparam, hwnd);
         break;
     }
     case WM_LBUTTONDOWN:
     {
         Mouse::Button_L_Button_Down();
-        break;
+         break;
     }
     case WM_LBUTTONUP:
     {
         Mouse::Button_L_Button_Up();
+         break;
     }
     default:
     {
         return DefWindowProc(hwnd, umsg, wparam, lparam);
-        break;
     }
-    
-}
- return 0;
+    }
+    return 0;
 }
 LRESULT CALLBACK Aplication::WindowProcSetup(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {

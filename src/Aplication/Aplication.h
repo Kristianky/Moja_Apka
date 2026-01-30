@@ -20,7 +20,6 @@ class Aplication
     public:
     //Funkcia pre volanie kreslenia v Ui pre border tlacidla
     void RedrawBorderBTN();
-
 };
 
 #endif

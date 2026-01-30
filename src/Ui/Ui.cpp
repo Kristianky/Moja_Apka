@@ -24,7 +24,6 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     // Vykreslenie border tlacitok
     // X
     HBRUSH Color_X;
-    Inside_X = Mouse::X > Main_Window.right - 50 && Mouse::Y < 30;
     if (Inside_X)
     {
         Color_X = CreateSolidBrush(RGB(200, 0, 0));
@@ -35,4 +34,5 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     }
     FillRect(hdc, &X_Rect, Color_X);
     DeleteObject(Color_X);
+
 }

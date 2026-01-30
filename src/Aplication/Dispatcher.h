@@ -15,7 +15,7 @@ public:
     ~AppDispatcher() = default;
 
     void DrawDispatch(HDC hdc, HWND hwnd);
-    void CallRedraw_MouseMove(HDC hdc, HWND hwnd);
+    void CallRedraw_MouseMove(LPARAM lparam, HWND hwnd);
 };
 
 #endif
