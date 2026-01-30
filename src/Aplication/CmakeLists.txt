@@ -1,0 +1,12 @@
+add_library(AplicationLib
+           Aplication.h
+           Aplication.cpp)
+add_library(DispatcherLIB
+            Dispatcher.h
+            Dispatcher.cpp)
+
+target_include_directories(AplicationLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(DispatcherLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+target_link_libraries(AplicationLib PUBLIC UiLib MouseLIB DispatcherLIB)
+target_link_libraries(DispatcherLIB PUBLIC UiLib MouseLIB)

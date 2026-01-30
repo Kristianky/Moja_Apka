@@ -1,4 +1,0 @@
-add_library(UiLib
-            Ui.h
-            Ui.cpp)
-target_include_directories(UiLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libMouseLIB.a CMakeFiles/MouseLIB.dir/Mouse.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libMouseLIB.a

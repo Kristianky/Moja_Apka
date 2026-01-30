@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Aplication",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/AplicationLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\AplicationLib.dir\\Aplication.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Aplication\\Aplication.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Aplication/Aplication.cpp",
+  "output": "src/Aplication/CMakeFiles/AplicationLib.dir/Aplication.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/WinApi",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DUNICODE -D_UNICODE @CMakeFiles/SiemensTCP.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\SiemensTCP.dir\\main.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\WinApi\\main.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/WinApi/main.cpp",
+  "output": "src/WinApi/CMakeFiles/SiemensTCP.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Ui",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/UiLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\UiLib.dir\\Ui.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Ui\\Ui.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Ui/Ui.cpp",
+  "output": "src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MouseLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MouseLIB.dir\\Mouse.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Mouse.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Mouse.cpp",
+  "output": "src/Input/CMakeFiles/MouseLIB.dir/Mouse.cpp.obj"
+}
+]

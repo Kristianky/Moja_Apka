@@ -1,0 +1,4 @@
+add_library(MouseLIB
+            Mouse.h
+            Mouse.cpp)
+target_include_directories(MouseLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
