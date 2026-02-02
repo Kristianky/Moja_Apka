@@ -9,6 +9,7 @@ class AppDispatcher
 {
     private:
       bool Inside_X_Mem;
+      bool Inside_Min_Mem;
       UI Ui;
 public:
     AppDispatcher(HWND hwnd);

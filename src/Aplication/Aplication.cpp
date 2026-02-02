@@ -47,6 +47,27 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
         EndPaint(hwnd, &Ps);
         break;
     }
+    case WM_SIZE:
+    {
+        RECT Resize_Rect;
+        GetClientRect(hwnd,&Resize_Rect);
+        switch(wparam)
+        {
+            case SIZE_MINIMIZED:
+            {
+                InvalidateRect(hwnd,&Resize_Rect,TRUE);
+            }
+            case SIZE_MAXIMIZED:
+            {
+                InvalidateRect(hwnd,&Resize_Rect,TRUE);
+            }
+            case SIZE_RESTORED:
+            {
+                InvalidateRect(hwnd,&Resize_Rect,TRUE);
+            }
+        }
+        break;
+    }
     case WM_MOUSEMOVE:
     {
         Mouse::UpdateX_Y(lparam);

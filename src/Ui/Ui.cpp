@@ -25,9 +25,13 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     // Vykreslenie border tlacitok
     // X
     HBRUSH Color_X;
-    if (Inside_X)
+    if (Inside_X && !Mouse::Button_L_Button_Down)
     {
         Color_X = CreateSolidBrush(RGB(200, 0, 0));
+    }
+    else if (Inside_X && Mouse::Button_L_Button_Down)
+    {
+        Color_X = CreateSolidBrush(RGB(150, 0, 0));
     }
     else
     {
@@ -43,9 +47,13 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     SelectObject(hdc, HoldFont);
     // Vytvorenie tlacidla Minimalize
     HBRUSH Color_Min;
-    if (Inside_Minimalize)
+    if (Inside_Minimalize && !Mouse::Button_L_Button_Down)
     {
         Color_Min = Color_X = CreateSolidBrush(RGB(90, 90, 90));
+    }
+    else if (Inside_Minimalize && Mouse::Button_L_Button_Down)
+    {
+        Color_Min = Color_X = CreateSolidBrush(RGB(140, 140, 140));
     }
     else
     {
@@ -57,5 +65,8 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     HoldFont = (HFONT)SelectObject(hdc, BorderFont);
     SetTextColor(hdc,RGB(255,255,255));
     SetBkMode(hdc,TRANSPARENT);
-    TextOutW(hdc,Main_Window.right - 80,2,L"\u25A1",1);
+    if(IsZoomed(Main_Hwnd))
+    TextOutW(hdc,Main_Window.right - 80,2,L"\u2750",2);
+    else
+    TextOutW(hdc,Main_Window.right - 80,2,L"\u25A1",2);
 }
