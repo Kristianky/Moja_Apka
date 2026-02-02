@@ -9,7 +9,7 @@ Aplication::Aplication(HINSTANCE Hinstance) : DispApp(Main_Hwnd)
     wc.lpszClassName = CLASSNAME;                  // priradi meno okna
     wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 5); // nastavi styl a farbu okna
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);      // nacita kurzor a nastavi styl
-    RegisterClassW(&wc); // regitruje classu do windows az po tomto kroku mozme vytvorit okno
+    RegisterClassW(&wc);                           // regitruje classu do windows az po tomto kroku mozme vytvorit okno
 
     Main_Hwnd = CreateWindowExW( // vytvorenie hl okna
         0,
@@ -33,7 +33,7 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     case WM_DESTROY:
     {
         PostQuitMessage(0);
-         break;
+        break;
     }
     case WM_NCHITTEST:
     {
@@ -56,12 +56,13 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     case WM_LBUTTONDOWN:
     {
         Mouse::Button_L_Button_Down();
-         break;
+        break;
     }
     case WM_LBUTTONUP:
     {
         Mouse::Button_L_Button_Up();
-         break;
+        DispApp.CallMouseClick(lparam, hwnd);
+        break;
     }
     default:
     {

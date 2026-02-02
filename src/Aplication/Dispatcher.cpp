@@ -31,6 +31,6 @@ void AppDispatcher::CallMouseClick(LPARAM lparam,HWND hwnd)
 {
     if(Ui.Inside_X && Mouse::LBtn_Clicked)
     {
-        
+        PostQuitMessage(0);
     }
 }
