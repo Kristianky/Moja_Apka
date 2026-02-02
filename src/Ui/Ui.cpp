@@ -6,9 +6,10 @@ UI::UI(HWND hwnd)
 
 void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
 {
-    //Inicializacia velkosti bordera a ziskanie velkosti okna 
+    // Inicializacia velkosti bordera a ziskanie velkosti okna
     GetClientRect(Main_Hwnd, &Main_Window);
     X_Rect = {Main_Window.right - 50, Main_Window.top, Main_Window.right, Main_Window.top + 30};
+    Minimalize_Rect = {Main_Window.right - 100, Main_Window.top, Main_Window.right - 50, Main_Window.top + 30};
     Border = {0, 0, Main_Window.right - 150, 30};
     // Kreslenie listy
     HBRUSH Border_Color = CreateSolidBrush(RGB(30, 30, 30));
@@ -30,9 +31,31 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     }
     else
     {
-        Color_X = CreateSolidBrush(RGB(30, 200, 30));
+        Color_X = CreateSolidBrush(RGB(30, 30, 30));
     }
     FillRect(hdc, &X_Rect, Color_X);
     DeleteObject(Color_X);
-
+    // Vypisanie X do tlacidla
+    HoldFont = (HFONT)SelectObject(hdc, BorderFont);
+    SetTextColor(hdc, RGB(255, 255, 255));
+    SetBkMode(hdc, TRANSPARENT);
+    TextOutW(hdc, Main_Window.right - 30, Main_Window.top + 2, L"X", 1);
+    SelectObject(hdc, HoldFont);
+    // Vytvorenie tlacidla Minimalize
+    HBRUSH Color_Min;
+    if (Inside_Minimalize)
+    {
+        Color_Min = Color_X = CreateSolidBrush(RGB(90, 90, 90));
+    }
+    else
+    {
+        Color_Min = CreateSolidBrush(RGB(30, 30, 30));
+    }
+    FillRect(hdc, &Minimalize_Rect, Color_Min);
+    DeleteObject(Color_Min);
+    // Vypisanie Minimalize
+    HoldFont = (HFONT)SelectObject(hdc, BorderFont);
+    SetTextColor(hdc,RGB(255,255,255));
+    SetBkMode(hdc,TRANSPARENT);
+    TextOutW(hdc,Main_Window.right - 80,2,L"\u25A1",1);
 }

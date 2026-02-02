@@ -60,8 +60,9 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     }
     case WM_LBUTTONUP:
     {
-        Mouse::Button_L_Button_Up();
+        Mouse::Button_L_Clicked();
         DispApp.CallMouseClick(lparam, hwnd);
+        Mouse::Button_L_Button_Up();
         break;
     }
     default:

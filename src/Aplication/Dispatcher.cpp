@@ -29,7 +29,7 @@ void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam,HWND hwnd)
 //volanie pre clickunutie lavym tlacidlo mysi
 void AppDispatcher::CallMouseClick(LPARAM lparam,HWND hwnd)
 {
-    if(Ui.Inside_X && Mouse::LBtn_Clicked)
+    if(Inside_X_Mem && Mouse::LBtn_Clicked)
     {
         PostQuitMessage(0);
     }

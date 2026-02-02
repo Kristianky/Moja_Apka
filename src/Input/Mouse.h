@@ -16,6 +16,7 @@ public:
     static void UpdateX_Y(LPARAM lparam);
     static void Button_L_Button_Down();
     static void Button_L_Button_Up();
+    static void Button_L_Clicked();
 };
 
 #endif
