@@ -87,13 +87,13 @@ const wchar_t *LinkedList::Min()
     return Return_Value.c_str();
 }
 
-Node* LinkedList::Search(wchar_t *key)
+Node *LinkedList::Search(wchar_t *key)
 {
     Node *Temp = First;
     Return_Value = key;
     while (Temp)
     {
-        if(std::stoi(Return_Value)==Temp->data)
+        if (std::stoi(Return_Value) == Temp->data)
         {
             return Temp;
         }
@@ -108,7 +108,7 @@ Node* LinkedList::Search(wchar_t *key)
    Node *temp = first;
    Node *temp_2 = NULL;
    while (Temp)
-   { 
+   {
       if (std::stoi(Return_Value)==Temp->data)
       {
          temp_2->Next = temp->Next;
@@ -125,12 +125,12 @@ Node* LinkedList::Search(wchar_t *key)
     return NULL;
 }*/
 
-//vkladanie 
-void LinkedList::Insert(wchar_t *Place,wchar_t *data)
+// vkladanie
+void LinkedList::Insert(wchar_t *Place, wchar_t *data)
 {
     std::wstring Place_Temp = Place, Data_Tamp = data;
-    int temp_Place_int = std::stoi(Place_Temp),tamp_Data_int = std::stoi(Data_Tamp);
-    //Ak je to na zaciatku musi byt logika takato pretoze presuvame first node
+    int temp_Place_int = std::stoi(Place_Temp), tamp_Data_int = std::stoi(Data_Tamp);
+    // Ak je to na zaciatku musi byt logika takato pretoze presuvame first node
     if (temp_Place_int == 0)
     {
         Node *Temp = new Node;
@@ -143,14 +143,102 @@ void LinkedList::Insert(wchar_t *Place,wchar_t *data)
         Node *Temp = First;
         Node *NewNode = new Node;
         NewNode->data = tamp_Data_int;
-        for (int i{};i < temp_Place_int - 1;i++)
+        for (int i{}; i < temp_Place_int - 1; i++)
         {
-            if (!Temp->Next){break;}
+            if (!Temp->Next)
+            {
+                break;
+            }
             Temp = Temp->Next;
         }
         NewNode->Next = Temp->Next;
         Temp->Next = NewNode;
-        
-
+    }
+}
+//=================================================
+void LinkedList::InsertInSorted(wchar_t *data)
+{
+    std::wstring Data_temp = data;
+    int Data_Int = std::stoi(Data_temp);
+    Node *Temp = First;
+    Node *Second = nullptr;
+    while (Temp)
+    {
+        if (Data_Int < Temp->data)
+        {
+            Second = Temp;
+            Temp = Second->Next;
+        }
+        else
+        {
+            Node *Result = new Node;
+            Result->data = Data_Int;
+            Result->Next = Second->Next;
+            Second->Next = Result;
+            break;
+        }
+    }
+}
+//===========================================================
+void LinkedList::Delete(int Position)
+{
+    Node *temp = nullptr;
+    Node *Temp2 = nullptr;
+    int Count = 0;
+    if (Position == 0)
+    {
+        temp = First;
+        First = First->Next;
+        delete temp;
+    }
+    else
+    {
+        temp = First;
+        for (Count; Count < Position - 1; Count++)
+        {
+            Temp2 = temp;
+            temp = temp->Next;
+        }
+        Temp2->Next = temp->Next;
+        delete temp;
+    }
+}
+//===================================================================
+bool LinkedList::Issorted()
+{
+    Node *Temp1 = First;
+    int x = INT_MIN;
+    while (Temp1 != nullptr)
+    {
+        if (Temp1->data < x)
+        {
+            return false;
+        }
+        else
+        {
+            x = Temp1->data;
+            Temp1 = Temp1->Next;
+        }
+    }
+    return true;
+}
+//================================================================
+void LinkedList::RemoveDuplicates()
+{
+    Node *Temp = First;
+    Node *Temp2 = Temp->Next;
+    while(Temp2 != NULL)
+    {
+        if(Temp->data != Temp2->data)
+        {
+            Temp = Temp2;
+            Temp2 = Temp2->Next;
+        }
+        else
+        {
+            Temp->Next = Temp2->Next;
+            delete Temp2;
+            Temp2 = Temp->Next;
+        }
     }
 }

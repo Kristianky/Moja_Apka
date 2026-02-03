@@ -28,6 +28,10 @@ class LinkedList
        Node* Search(wchar_t *Key);
        int Count() {return count;}
        void Insert(wchar_t *Place,wchar_t *data);
+       void InsertInSorted(wchar_t *data);
+       void Delete(int Position);
+       bool Issorted();
+       void RemoveDuplicates();
 
       
 };
