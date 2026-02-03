@@ -13,9 +13,11 @@ public:
    RECT Main_Window; //HL okno apky
    RECT X_Rect;
    RECT Minimalize_Rect;
+   RECT Minimize_Rect;
    RECT Border;
    bool Inside_X;
    bool Inside_Minimalize;
+   bool Inside_Minimize;
 
 };
 

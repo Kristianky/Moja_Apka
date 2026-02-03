@@ -77,6 +77,7 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     case WM_LBUTTONDOWN:
     {
         Mouse::Button_L_Button_Down();
+        DispApp.CallMouseLBtnDown(hwnd);
         break;
     }
     case WM_LBUTTONUP:
