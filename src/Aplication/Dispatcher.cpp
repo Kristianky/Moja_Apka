@@ -67,38 +67,42 @@ void AppDispatcher::CallMouseClick(LPARAM lparam, HWND hwnd)
         else
         ShowWindow(hwnd,SW_MAXIMIZE);
     }
+    if(Inside_Minimize_Mem && Mouse::LBtn_Clicked)
+    {
+        ShowWindow(hwnd,SW_MINIMIZE);
+    }
 }
 //Volanie vo wm_Lbtndown
 void AppDispatcher::CallMouseLBtnDown(HWND hwnd)
 {
-    if (Ui.Inside_X != Inside_X_Mem)
+    if (Inside_X_Mem)
     {
         Inside_X_Mem = Ui.Inside_X;
         InvalidateRect(hwnd, &Ui.X_Rect, TRUE);
     }
-    else if (Inside_X_Mem && !Ui.Inside_X)
+    else if (!Ui.Inside_X)
     {
         Inside_X_Mem = false;
         InvalidateRect(hwnd, &Ui.X_Rect, TRUE);
     }
     // Tlacidlo Minimalize
-    if (Ui.Inside_Minimalize != Inside_Min_Mem)
+    if (Inside_Min_Mem)
     {
         Inside_Min_Mem = Ui.Inside_Minimalize;
         InvalidateRect(hwnd, &Ui.Minimalize_Rect, TRUE);
     }
-    else if (Inside_Min_Mem && !Ui.Inside_Minimalize)
+    else if (Ui.Inside_Minimalize)
     {
         Inside_Min_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimalize_Rect, TRUE);
     }
     //Tlacidlo Minimize
-     if (Ui.Inside_Minimize != Inside_Minimize_Mem)
+     if ( Inside_Minimize_Mem)
     {
         Inside_Minimize_Mem = Ui.Inside_Minimize;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
     }
-    else if (Inside_Minimize_Mem && !Ui.Inside_Minimize)
+    else if (Ui.Inside_Minimize)
     {
         Inside_Minimize_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
