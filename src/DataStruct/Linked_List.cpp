@@ -286,3 +286,18 @@ void LinkedList::ReverseLinks()
         Temp2->Next = Temp3;
     }
 }
+//==========================================
+//Reversing with recursion
+/*
+void ReverseRecurs(Node *Temp1,Node *Temp2)
+{
+  if(Temp2)
+  {
+  ReverseRcurs(Temp2,Temp2->Next);
+  Temp1->Next = Temp2;
+  }
+  else
+  {
+  First = Temp1;
+  }
+}*/
