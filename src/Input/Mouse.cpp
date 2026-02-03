@@ -15,11 +15,15 @@ void Mouse::Button_L_Button_Down()
 
 void Mouse::Button_L_Button_Up()
 {
-    if(LBtn_Down)
-    {
-        LBtn_Clicked = true;
-    }
     LBtn_Down = false;
     LBtn_Up = true;
     LBtn_Clicked = false;
+}
+
+void Mouse::Button_L_Clicked()
+{
+    if (LBtn_Down)
+    {
+        LBtn_Clicked = true;
+    }
 }

@@ -9,13 +9,15 @@ class AppDispatcher
 {
     private:
       bool Inside_X_Mem;
+      bool Inside_Min_Mem;
       UI Ui;
 public:
     AppDispatcher(HWND hwnd);
     ~AppDispatcher() = default;
 
     void DrawDispatch(HDC hdc, HWND hwnd);
-    void CallRedraw_MouseMove(HDC hdc, HWND hwnd);
+    void CallRedraw_MouseMove(LPARAM lparam, HWND hwnd);
+    void CallMouseClick(LPARAM lpram,HWND hwnd);
 };
 
 #endif

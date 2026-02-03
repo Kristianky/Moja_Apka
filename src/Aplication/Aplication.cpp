@@ -1,6 +1,6 @@
 #include "Aplication.h"
 
-Aplication::Aplication(HINSTANCE Hinstance)
+Aplication::Aplication(HINSTANCE Hinstance) : DispApp(Main_Hwnd)
 {
     const wchar_t CLASSNAME[] = L"MojeOknoTrieda"; // Tu si mozme nastavit hlavicku okna
     WNDCLASSW wc{};                                // vytvorenie classy appky
@@ -20,13 +20,13 @@ Aplication::Aplication(HINSTANCE Hinstance)
         NULL, NULL, Hinstance, this);
     ShowWindow(Main_Hwnd, SW_SHOW);
     UpdateWindow(Main_Hwnd);
-    DispApp(Main_Hwnd);
 }
 Aplication::~Aplication()
 {
 }
 
 LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)
+
 {
     switch (umsg)
     {
@@ -36,20 +36,42 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
         break;
     }
     case WM_NCHITTEST:
-        {
-        break;
-        }
+    {
+        return HTCLIENT;
+    }
     case WM_PAINT:
     {
         PAINTSTRUCT Ps;
-        HDC hdc = BeginPaint(hwnd,&Ps);
-        DispApp.DrawDispatch(hdc,hwnd);
-        EndPaint(hwnd,&Ps);
+        HDC hdc = BeginPaint(hwnd, &Ps);
+        DispApp.DrawDispatch(hdc, hwnd);
+        EndPaint(hwnd, &Ps);
+        break;
+    }
+    case WM_SIZE:
+    {
+        RECT Resize_Rect;
+        GetClientRect(hwnd,&Resize_Rect);
+        switch(wparam)
+        {
+            case SIZE_MINIMIZED:
+            {
+                InvalidateRect(hwnd,&Resize_Rect,TRUE);
+            }
+            case SIZE_MAXIMIZED:
+            {
+                InvalidateRect(hwnd,&Resize_Rect,TRUE);
+            }
+            case SIZE_RESTORED:
+            {
+                InvalidateRect(hwnd,&Resize_Rect,TRUE);
+            }
+        }
         break;
     }
     case WM_MOUSEMOVE:
     {
         Mouse::UpdateX_Y(lparam);
+        DispApp.CallRedraw_MouseMove(lparam, hwnd);
         break;
     }
     case WM_LBUTTONDOWN:
@@ -59,16 +81,17 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     }
     case WM_LBUTTONUP:
     {
+        Mouse::Button_L_Clicked();
+        DispApp.CallMouseClick(lparam, hwnd);
         Mouse::Button_L_Button_Up();
+        break;
     }
     default:
     {
         return DefWindowProc(hwnd, umsg, wparam, lparam);
-        break;
     }
-    
-}
- return 0;
+    }
+    return 0;
 }
 LRESULT CALLBACK Aplication::WindowProcSetup(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
