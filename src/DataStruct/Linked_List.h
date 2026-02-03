@@ -32,7 +32,8 @@ class LinkedList
        void Delete(int Position);
        bool Issorted();
        void RemoveDuplicates();
-
+       void ReverseData();
+       void ReverseLinks();
       
 };
 

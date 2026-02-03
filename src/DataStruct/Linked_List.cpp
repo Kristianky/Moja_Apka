@@ -227,9 +227,9 @@ void LinkedList::RemoveDuplicates()
 {
     Node *Temp = First;
     Node *Temp2 = Temp->Next;
-    while(Temp2 != NULL)
+    while (Temp2 != NULL)
     {
-        if(Temp->data != Temp2->data)
+        if (Temp->data != Temp2->data)
         {
             Temp = Temp2;
             Temp2 = Temp2->Next;
@@ -240,5 +240,49 @@ void LinkedList::RemoveDuplicates()
             delete Temp2;
             Temp2 = Temp->Next;
         }
+    }
+}
+//=============================================
+void LinkedList::ReverseData()
+{
+    Node *Temp = First;
+    int *Data;
+    // Zistenie velkosti array
+    int i = 1;
+    while (Temp != nullptr)
+    {
+        i++;
+        Temp = Temp->Next;
+    }
+    Temp = First;
+    Data = new int[i];
+    int j{};
+    while (Temp != nullptr)
+    {
+        Data[j] = Temp->data;
+        Temp = Temp->Next;
+        j++;
+    }
+    j--;
+    Temp = First;
+    while (Temp != nullptr)
+    {
+        Temp->data = Data[j];
+        Temp = Temp->Next;
+        j--;
+    }
+}
+//=====================================================
+void LinkedList::ReverseLinks()
+{
+    Node *Temp1 = First;
+    Node *Temp2 = nullptr;
+    Node *Temp3 = nullptr;
+    while(Temp1 != nullptr)
+    {
+        Temp3 = Temp2;
+        Temp2 = Temp1;
+        Temp1 = Temp1->Next;
+        Temp2->Next = Temp3;
     }
 }
