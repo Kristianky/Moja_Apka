@@ -9,6 +9,60 @@ LinkedList::LinkedList()
     count = 1;
 }
 
+// Copy constructor
+LinkedList::LinkedList(const LinkedList &rhs) : First(nullptr)
+{
+    if (rhs.First == nullptr)
+        return;
+
+    First = new Node;
+    First->data = rhs.First->data;
+    First->Next = nullptr;
+
+    Node *Temp = First;
+    Node *TempRhs = rhs.First->Next;
+
+    while (TempRhs != nullptr)
+    {
+        Temp->Next = new Node;
+        Temp = Temp->Next;
+
+        Temp->data = TempRhs->data;
+        Temp->Next = nullptr;
+
+        TempRhs = TempRhs->Next;
+    }
+}
+// Operator =
+LinkedList LinkedList::operator=(const LinkedList &rhs)
+{
+    if (this == &rhs)
+    {
+        return *this;
+    }
+    First = nullptr;
+    First = new Node;
+    First->data = rhs.First->data;
+    First->Next = nullptr;
+
+    Node *Temp = First;
+    Node *TempRhs = rhs.First->Next;
+
+    while (TempRhs != nullptr)
+    {
+        Temp->Next = new Node;
+        Temp = Temp->Next;
+
+        Temp->data = TempRhs->data;
+        Temp->Next = nullptr;
+
+        TempRhs = TempRhs->Next;
+    }
+}
+LinkedList LinkedList::operator+(const LinkedList &rhs) const
+{
+    
+}
 void LinkedList::Add(const wchar_t *data)
 {
     Node *Temp;
@@ -278,7 +332,7 @@ void LinkedList::ReverseLinks()
     Node *Temp1 = First;
     Node *Temp2 = nullptr;
     Node *Temp3 = nullptr;
-    while(Temp1 != nullptr)
+    while (Temp1 != nullptr)
     {
         Temp3 = Temp2;
         Temp2 = Temp1;
@@ -287,7 +341,7 @@ void LinkedList::ReverseLinks()
     }
 }
 //==========================================
-//Reversing with recursion
+// Reversing with recursion
 /*
 void ReverseRecurs(Node *Temp1,Node *Temp2)
 {

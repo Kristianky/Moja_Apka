@@ -19,6 +19,9 @@ class LinkedList
    public:
        LinkedList ();
        ~LinkedList() = default;
+       LinkedList(const LinkedList &Source);
+       LinkedList operator+(const LinkedList &rhs) const;
+       LinkedList operator=(const LinkedList &rhs);
        void SetData(const wchar_t *Data);
        void Add(const wchar_t *data);
        const wchar_t* Print();
