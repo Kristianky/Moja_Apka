@@ -11,4 +11,4 @@ target_include_directories(AplicationLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(DispatcherLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(AplicationLib PUBLIC MouseLIB DispatcherLIB)
-target_link_libraries(DispatcherLIB PUBLIC UiLib MouseLIB)
+target_link_libraries(DispatcherLIB PUBLIC UiLib MouseLIB MainPageLib)

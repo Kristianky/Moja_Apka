@@ -4,6 +4,7 @@
 #include <windows.h>
 #include "Mouse.h"
 #include "Ui.h"
+#include "PageVirtual.h"
 
 class AppDispatcher
 {
@@ -13,6 +14,7 @@ class AppDispatcher
       bool Inside_Minimize_Mem;
       UI Ui;
 public:
+    
     AppDispatcher(HWND hwnd);
     ~AppDispatcher() = default;
 

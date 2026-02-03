@@ -1,4 +1,4 @@
 add_subdirectory(Aplication)
 add_subdirectory(WinApi)
 add_subdirectory(Ui)
-add_subdirectory(Input)
+add_subdirectory(Input Pages)

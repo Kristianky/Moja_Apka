@@ -52,6 +52,7 @@ void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
         Inside_Minimize_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
     }
+    
 }
 // volanie pre clickunutie lavym tlacidlo mysi
 void AppDispatcher::CallMouseClick(LPARAM lparam, HWND hwnd)
