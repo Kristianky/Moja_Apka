@@ -1,2 +1,2 @@
-C:\PROGRA~1\mingw64\bin\ar.exe qc libDispatcherLIB.a CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj
-C:\PROGRA~1\mingw64\bin\ranlib.exe libDispatcherLIB.a
+C:\msys64\mingw64\bin\ar.exe qc libDispatcherLIB.a CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libDispatcherLIB.a

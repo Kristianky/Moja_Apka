@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/WinApi/Main.cpp" "src/WinApi/CMakeFiles/SiemensTCP.dir/Main.cpp.obj" "gcc" "src/WinApi/CMakeFiles/SiemensTCP.dir/Main.cpp.obj.d"
+  "C:/Users/krist/Desktop/C++/Moja_Apka/src/WinApi/main.cpp" "src/WinApi/CMakeFiles/SiemensTCP.dir/main.cpp.obj" "gcc" "src/WinApi/CMakeFiles/SiemensTCP.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

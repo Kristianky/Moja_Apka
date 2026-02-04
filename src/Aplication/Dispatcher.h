@@ -4,7 +4,7 @@
 #include <windows.h>
 #include "Mouse.h"
 #include "Ui.h"
-#include "PageVirtual.h"
+
 
 class AppDispatcher
 {
@@ -12,7 +12,9 @@ class AppDispatcher
       bool Inside_X_Mem;
       bool Inside_Min_Mem;
       bool Inside_Minimize_Mem;
+      RECT MainWindow;
       UI Ui;
+      VirtualPage *Page;
 public:
     
     AppDispatcher(HWND hwnd);

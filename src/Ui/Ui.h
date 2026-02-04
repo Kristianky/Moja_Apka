@@ -3,13 +3,14 @@
 
 #include <windows.h>
 #include "Mouse.h"
+#include "MainPage.h"
 
 class UI
 {
 public:
    UI(HWND hwnd);
    void Draw_Border(HDC hdc,HWND Main_Hwnd);
-   void Draw_Pages(HDC hdc,HWND hwnd);
+   void Draw_Pages(HDC hdc,HWND hwnd,VirtualPage *Page);
    //Rect pre jednotlive tlacidla na borderi
    RECT Main_Window; //HL okno apky
    RECT X_Rect;

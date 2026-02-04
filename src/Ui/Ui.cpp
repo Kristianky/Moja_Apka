@@ -92,7 +92,10 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
     TextOutW(hdc, Main_Window.right - 130, 2, L"\u2500", 2);
 }
 
-void UI::Draw_Pages(HDC hdc,HWND hwnd)
+void UI::Draw_Pages(HDC hdc,HWND hwnd,VirtualPage *Page)
 {
-    
+    if(Page->Page_Num() == 0)
+    {
+        Page->Btn_Draw(hdc,hwnd);
+    }
 }

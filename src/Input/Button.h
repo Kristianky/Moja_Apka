@@ -18,6 +18,7 @@ class Button
     bool InButt,InButtMem;
     void MouseInside(HWND hwnd);
     void MouseClicked(HWND hwnd);
+    void DrawBtn(HDC hdc,HWND hwnd);   ///Funkcia pre Ui
 };
 
 #endif
