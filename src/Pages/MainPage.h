@@ -11,7 +11,7 @@ class MainPage:public VirtualPage
     private:
     public:
     RECT MainWindow;
-    MainPage(HWND hwnd,RECT MainRect);
+    MainPage(HWND hwnd,RECT &MainRect);
     Button BtnConnect;
     virtual void Btn_Redraw_Call(HWND hwnd) override;
     virtual int Page_Num() override {return 0;};

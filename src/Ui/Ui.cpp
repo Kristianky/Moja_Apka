@@ -94,8 +94,7 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
 
 void UI::Draw_Pages(HDC hdc,HWND hwnd,VirtualPage *Page)
 {
-    if(Page->Page_Num() == 0)
-    {
+
         Page->Btn_Draw(hdc,hwnd);
-    }
+    
 }

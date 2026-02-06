@@ -1,6 +1,6 @@
 #include "Button.h"
-Button::Button(RECT Rect, COLORREF BtnClr, COLORREF TextClr, std::wstring Text)
-    : ButtonRect{Rect}, BtnColor{BtnClr}, TextColor{TextClr}, BtnText{Text}
+Button::Button(int posX,int posY,int width,int lenght,COLORREF BtnClr,COLORREF TextClr,std::wstring Text)
+    : PosX{posX},PosY{posY},Width{posY + width},Lenght{posX + lenght},BtnColor{BtnClr},TextColor{TextClr},BtnText{Text}
 {
    InButt = false;
    InButtMem = false;
@@ -8,21 +8,26 @@ Button::Button(RECT Rect, COLORREF BtnClr, COLORREF TextClr, std::wstring Text)
 
 void Button::MouseInside(HWND hwnd)
 {
-   InButt = Mouse::X < ButtonRect.right && Mouse::X > ButtonRect.left && Mouse::Y < ButtonRect.bottom && Mouse::Y > ButtonRect.top;
+   RECT Butt = {PosX,PosY,Lenght,Width};
    if (InButt != InButtMem)
    {
       InButtMem = InButt;
-      InvalidateRect(hwnd, &ButtonRect, TRUE);
+      InvalidateRect(hwnd, &Butt, TRUE);
    }
    if (InButtMem && !InButt)
    {
       InButtMem = false;
-      InvalidateRect(hwnd, &ButtonRect, true);
+      InvalidateRect(hwnd, &Butt, true);
    }
 }
 
 void Button::DrawBtn(HDC hdc, HWND hwnd)
 {
+   RECT Butt;
+   Butt.top = PosY;
+   Butt.left = PosX;
+   Butt.right = Lenght;
+   Butt.bottom = Width;
    HBRUSH Color;
    if (InButtMem)
    {
@@ -32,6 +37,6 @@ void Button::DrawBtn(HDC hdc, HWND hwnd)
    {
       Color = CreateSolidBrush(RGB(200,0,0));
    }
-   FillRect(hdc, &ButtonRect, Color);
+   FillRect(hdc, &Butt, Color);
    DeleteObject(Color);
 }

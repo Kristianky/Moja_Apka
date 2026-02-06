@@ -9,9 +9,12 @@
 class Button
 {
     public:
-    Button(RECT Rect,COLORREF BtnClr,COLORREF TextClr,std::wstring Text);
+    Button(int PosX,int PosY,int width,int Lenght,COLORREF BtnClr,COLORREF TextClr,std::wstring Text);
     ~Button() = default;
-    RECT ButtonRect;
+    int PosX;
+    int PosY;
+    int Width;
+    int Lenght;
     COLORREF BtnColor;
     COLORREF TextColor;
     std::wstring BtnText;
