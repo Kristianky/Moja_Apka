@@ -1,6 +1,11 @@
 add_library(MainPageLib
             MainPage.h
             MainPage.cpp)
-target_include_directories(MainPageLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+add_library(PageVirtualLIB
+            PageVirtual.h
+            PageVirtual.cpp)
 
-target_link_libraries(MainPageLib PUBLIC MouseLIB ButtonLIB)
+target_include_directories(MainPageLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(PageVirtualLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+target_link_libraries(MainPageLib PUBLIC MouseLIB ButtonLIB PageVirtualLIB)

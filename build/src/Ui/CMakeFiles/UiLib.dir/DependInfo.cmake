@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Ui/Ui.cpp" "src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj" "gcc" "src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj.d"
+  "C:/Users/krist/Desktop/C++/Moja_Apka/src/Ui/Ui.cpp" "src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj" "gcc" "src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

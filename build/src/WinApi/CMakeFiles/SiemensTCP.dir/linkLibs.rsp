@@ -1,1 +1,1 @@
- ../Aplication/libAplicationLib.a ../Aplication/libDispatcherLIB.a ../Ui/libUiLib.a ../Pages/libMouseLIB.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ ../Aplication/libAplicationLib.a ../Aplication/libDispatcherLIB.a ../Ui/libUiLib.a ../Pages/libMainPageLib.a ../Input/libMouseLIB.a ../Input/libButtonLIB.a ../Pages/libPageVirtualLIB.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

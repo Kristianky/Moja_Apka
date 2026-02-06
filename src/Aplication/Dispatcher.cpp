@@ -3,12 +3,15 @@
 AppDispatcher::AppDispatcher(HWND hwnd) : Ui(hwnd)
 
 {
+    GetClientRect(hwnd,&MainWindow);
     Inside_X_Mem = false;
+    Page = new MainPage(hwnd,MainWindow);
 }
 // Volanie pre kreslenie vo wmpaint
 void AppDispatcher::DrawDispatch(HDC hdc, HWND hwnd)
 {
     Ui.Draw_Border(hdc, hwnd);
+    Ui.Draw_Pages(hdc,hwnd,Page);
 }
 // volanie akcii mysi pre border tlacidla
 void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
@@ -52,7 +55,19 @@ void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
         Inside_Minimize_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
     }
-    
+    //==========================================================
+    //Ovladanie Pomocou jednotlivych stranok
+    if(!Page)
+    {
+        Page = new MainPage(hwnd,MainWindow);
+    }
+    switch(Page->Page_Num())
+    {
+        case 0:      //MainPage
+        {
+            Page->Btn_Redraw_Call(hwnd);
+        }
+    }
 }
 // volanie pre clickunutie lavym tlacidlo mysi
 void AppDispatcher::CallMouseClick(LPARAM lparam, HWND hwnd)
