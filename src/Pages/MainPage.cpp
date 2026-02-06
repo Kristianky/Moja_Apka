@@ -6,3 +6,12 @@ MainPage::MainPage(HWND hwnd,RECT MainRect)
    
 }
 
+void MainPage::Btn_Redraw_Call(HWND hwnd)
+{
+     BtnConnect.MouseInside(hwnd);
+}
+
+void MainPage::Btn_Draw(HDC hdc,HWND hwnd)
+{
+    BtnConnect.DrawBtn(hdc,hwnd);
+}
