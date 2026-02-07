@@ -143,6 +143,20 @@ ButtonLIB/fast:
 	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\ButtonLIB.dir\build.make src/Input/CMakeFiles/ButtonLIB.dir/build
 .PHONY : ButtonLIB/fast
 
+# Convenience name for target.
+src/Input/CMakeFiles/EditLib.dir/rule:
+	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Input/CMakeFiles/EditLib.dir/rule
+.PHONY : src/Input/CMakeFiles/EditLib.dir/rule
+
+# Convenience name for target.
+EditLib: src/Input/CMakeFiles/EditLib.dir/rule
+.PHONY : EditLib
+
+# fast build rule for target.
+EditLib/fast:
+	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\EditLib.dir\build.make src/Input/CMakeFiles/EditLib.dir/build
+.PHONY : EditLib/fast
+
 Button.obj: Button.cpp.obj
 .PHONY : Button.obj
 
@@ -166,6 +180,30 @@ Button.s: Button.cpp.s
 Button.cpp.s:
 	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\ButtonLIB.dir\build.make src/Input/CMakeFiles/ButtonLIB.dir/Button.cpp.s
 .PHONY : Button.cpp.s
+
+Edit.obj: Edit.cpp.obj
+.PHONY : Edit.obj
+
+# target to build an object file
+Edit.cpp.obj:
+	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\EditLib.dir\build.make src/Input/CMakeFiles/EditLib.dir/Edit.cpp.obj
+.PHONY : Edit.cpp.obj
+
+Edit.i: Edit.cpp.i
+.PHONY : Edit.i
+
+# target to preprocess a source file
+Edit.cpp.i:
+	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\EditLib.dir\build.make src/Input/CMakeFiles/EditLib.dir/Edit.cpp.i
+.PHONY : Edit.cpp.i
+
+Edit.s: Edit.cpp.s
+.PHONY : Edit.s
+
+# target to generate assembly for a file
+Edit.cpp.s:
+	cd /d C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build && $(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\EditLib.dir\build.make src/Input/CMakeFiles/EditLib.dir/Edit.cpp.s
+.PHONY : Edit.cpp.s
 
 Mouse.obj: Mouse.cpp.obj
 .PHONY : Mouse.obj
@@ -200,10 +238,14 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ButtonLIB
+	@echo ... EditLib
 	@echo ... MouseLIB
 	@echo ... Button.obj
 	@echo ... Button.i
 	@echo ... Button.s
+	@echo ... Edit.obj
+	@echo ... Edit.i
+	@echo ... Edit.s
 	@echo ... Mouse.obj
 	@echo ... Mouse.i
 	@echo ... Mouse.s

@@ -4,6 +4,12 @@ add_library(MouseLIB
 add_library(ButtonLIB
             Button.h
             Button.cpp)
+add_library(EditLib
+            Edit.h
+            Edit.cpp)
+
+
 
 target_include_directories(MouseLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(ButtonLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EditLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -8,4 +8,5 @@ add_library(PageVirtualLIB
 target_include_directories(MainPageLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(PageVirtualLIB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-target_link_libraries(MainPageLib PUBLIC MouseLIB ButtonLIB PageVirtualLIB)
+target_link_libraries(MainPageLib PUBLIC PageVirtualLIB)
+target_link_libraries(PageVirtualLIB PUBLIC MouseLIB ButtonLIB EditLib)

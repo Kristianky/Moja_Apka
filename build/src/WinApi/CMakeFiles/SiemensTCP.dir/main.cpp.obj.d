@@ -283,6 +283,7 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/Main.cpp.obj: \
  C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Dispatcher.h \
  C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Ui/Ui.h \
  C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/MainPage.h \
+ C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/PageVirtual.h \
  C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Button.h \
  C:/Program\ Files/mingw64/include/c++/14.2.0/string \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
@@ -402,4 +403,4 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/Main.cpp.obj: \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/Program\ Files/mingw64/include/c++/14.2.0/istream \
  C:/Program\ Files/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/PageVirtual.h
+ C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.h

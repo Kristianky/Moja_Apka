@@ -36,6 +36,12 @@
   "output": "src/Input/CMakeFiles/ButtonLIB.dir/Button.cpp.obj"
 },
 {
+  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  @CMakeFiles/EditLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\EditLib.dir\\Edit.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Input\\Edit.cpp",
+  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.cpp",
+  "output": "src/Input/CMakeFiles/EditLib.dir/Edit.cpp.obj"
+},
+{
   "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Pages",
   "command": "C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  @CMakeFiles/PageVirtualLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\PageVirtualLIB.dir\\PageVirtual.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Pages\\PageVirtual.cpp",
   "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/PageVirtual.cpp",

@@ -96,9 +96,10 @@ C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Aplication
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Aplication/libDispatcherLIB.a
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Ui/libUiLib.a
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Pages/libMainPageLib.a
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Pages/libPageVirtualLIB.a
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Input/libMouseLIB.a
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Input/libButtonLIB.a
-C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Pages/libPageVirtualLIB.a
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/Input/libEditLib.a
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/WinApi/CMakeFiles/SiemensTCP.dir/linkLibs.rsp
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/WinApi/CMakeFiles/SiemensTCP.dir/objects1.rsp
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe: src/WinApi/CMakeFiles/SiemensTCP.dir/link.txt

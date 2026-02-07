@@ -14,6 +14,7 @@ C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Ui/CMakeFiles/edit_c
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Ui/CMakeFiles/rebuild_cache.dir
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input/CMakeFiles/MouseLIB.dir
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input/CMakeFiles/ButtonLIB.dir
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input/CMakeFiles/EditLib.dir
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input/CMakeFiles/edit_cache.dir
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input/CMakeFiles/rebuild_cache.dir
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Pages/CMakeFiles/MainPageLib.dir

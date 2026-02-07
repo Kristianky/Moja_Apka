@@ -194,6 +194,19 @@ ButtonLIB/fast:
 .PHONY : ButtonLIB/fast
 
 #=============================================================================
+# Target rules for targets named EditLib
+
+# Build rule for target.
+EditLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 EditLib
+.PHONY : EditLib
+
+# fast build rule for target.
+EditLib/fast:
+	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\EditLib.dir\build.make src/Input/CMakeFiles/EditLib.dir/build
+.PHONY : EditLib/fast
+
+#=============================================================================
 # Target rules for targets named MainPageLib
 
 # Build rule for target.
@@ -230,6 +243,7 @@ help:
 	@echo ... AplicationLib
 	@echo ... ButtonLIB
 	@echo ... DispatcherLIB
+	@echo ... EditLib
 	@echo ... MainPageLib
 	@echo ... MouseLIB
 	@echo ... PageVirtualLIB

@@ -394,6 +394,7 @@ src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj: C:/Users/Administrator/Desktop/Kiko/c++/
   C:/Program\ Files/mingw64/x86_64-w64-mingw32/include/wtypes.h \
   C:/Program\ Files/mingw64/x86_64-w64-mingw32/include/wtypesbase.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Button.h \
+  C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Mouse.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/MainPage.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/PageVirtual.h \
@@ -401,6 +402,8 @@ src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj: C:/Users/Administrator/Desktop/Kiko/c++/
 
 
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Ui/Ui.h:
+
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.h:
 
 C:/Program\ Files/mingw64/x86_64-w64-mingw32/include/wtypesbase.h:
 

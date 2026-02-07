@@ -2,7 +2,9 @@
 #define _PAGEVIRTUAL_H_
 
 #include<windows.h>
-
+#include "Mouse.h"
+#include "Button.h"
+#include "Edit.h"
 class VirtualPage
 {
 private:

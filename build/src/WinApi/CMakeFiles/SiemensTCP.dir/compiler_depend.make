@@ -396,6 +396,7 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/Main.cpp.obj: C:/Users/Administrator/Deskto
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Aplication.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Dispatcher.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Button.h \
+  C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Mouse.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/MainPage.h \
   C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/PageVirtual.h \
@@ -403,6 +404,8 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/Main.cpp.obj: C:/Users/Administrator/Deskto
 
 
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Ui/Ui.h:
+
+C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.h:
 
 C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Aplication.h:
 
