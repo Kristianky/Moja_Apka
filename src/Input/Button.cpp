@@ -93,6 +93,10 @@ void Button::MouseLBtnDown(HWND hwnd)
 
 Button Button::operator=(const Button &Rhs)
 {
+   if(&Rhs == this)
+   {
+      return *this;
+   }
    //Copyrovanie Nastaveni
    BtnColor1 = Rhs.BtnColor1;
    BtnColorHov = Rhs.BtnColorHov;
