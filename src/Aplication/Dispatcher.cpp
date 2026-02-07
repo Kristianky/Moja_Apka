@@ -3,9 +3,8 @@
 AppDispatcher::AppDispatcher(HWND hwnd) : Ui(hwnd)
 
 {
-    GetClientRect(hwnd,&MainWindow);
     Inside_X_Mem = false;
-    Page = new MainPage(hwnd,MainWindow);
+    Page = new MainPage(hwnd);
 }
 // Volanie pre kreslenie vo wmpaint
 void AppDispatcher::DrawDispatch(HDC hdc, HWND hwnd)
@@ -17,11 +16,11 @@ void AppDispatcher::DrawDispatch(HDC hdc, HWND hwnd)
 void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
 {
     //Tlacidlo X
-    Ui.Inside_X = Mouse::X > Ui.Main_Window.right - 50 && Mouse::Y < 30;
+    Ui.Inside_X = Mouse::X > MainWindow.right - 50 && Mouse::Y < 30;
     //Tlacidlo restore
-    Ui.Inside_Minimalize = Mouse::X > Ui.Main_Window.right - 100 && Mouse::X < Ui.Main_Window.right - 50 && Mouse::Y < 30;
+    Ui.Inside_Minimalize = Mouse::X > MainWindow.right - 100 && Mouse::X < MainWindow.right - 50 && Mouse::Y < 30;
     //Tlacidlo Minimize
-    Ui.Inside_Minimize = Mouse::X > Ui.Main_Window.right - 150 && Mouse::X < Ui.Main_Window.right - 100 && Mouse::Y < 30;
+    Ui.Inside_Minimize = Mouse::X > MainWindow.right - 150 && Mouse::X < MainWindow.right - 100 && Mouse::Y < 30;
     // Tlacidlo X Logika pre mys
     if (Ui.Inside_X != Inside_X_Mem)
     {
@@ -59,7 +58,7 @@ void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
     //Ovladanie Pomocou jednotlivych stranok
     if(!Page)
     {
-        Page = new MainPage(hwnd,MainWindow);
+        Page = new MainPage(hwnd);
     }
     switch(Page->Page_Num())
     {
@@ -123,4 +122,15 @@ void AppDispatcher::CallMouseLBtnDown(HWND hwnd)
         Inside_Minimize_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
     }
+}
+
+void AppDispatcher::MainLayout(RECT &MainWindow)
+{
+    AppDispatcher::MainWindow = MainWindow;
+    Ui.Set_MainWindow(MainWindow);
+    if(Page)
+    {
+        Page->SetMainWindow(MainWindow);
+    }
+
 }

@@ -13,6 +13,7 @@ class Aplication
     static LRESULT CALLBACK WindowProcRedirect(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
     LRESULT WindowProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
     AppDispatcher DispApp;
+    RECT MainWindow;
     public:
     Aplication(HINSTANCE Hinstance);
     ~Aplication();
@@ -20,6 +21,7 @@ class Aplication
     public:
     //Funkcia pre volanie kreslenia v Ui pre border tlacidla
     void RedrawBorderBTN();
+    RECT GetRect() {return MainWindow;}
 };
 
 #endif

@@ -1,17 +1,18 @@
 #include "MainPage.h"
 
-MainPage::MainPage(HWND hwnd,RECT &MainRect)
-: MainWindow{MainRect},BtnConnect(MainRect.left + 10,MainRect.top + 100,100,500,RGB(0,0,50),RGB(200,200,200),L"Connect")
+MainPage::MainPage(HWND hwnd)
+
 {
-   
 }
 
 void MainPage::Btn_Redraw_Call(HWND hwnd)
 {
-     BtnConnect.MouseInside(hwnd);
+    BtnConnect.MouseInside(hwnd);
 }
 
-void MainPage::Btn_Draw(HDC hdc,HWND hwnd)
+void MainPage::Btn_Draw(HDC hdc, HWND hwnd,RECT &Rect)
 {
-    BtnConnect.DrawBtn(hdc,hwnd);
+    MainPage::SetMainWindow(Rect);
+    BtnConnect.SetRect(MainWindow.left + 50,MainWindow.top + 50,200,100);
+    BtnConnect.DrawBtn(hdc, hwnd);
 }

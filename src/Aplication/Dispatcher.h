@@ -19,7 +19,7 @@ public:
     
     AppDispatcher(HWND hwnd);
     ~AppDispatcher() = default;
-
+    void MainLayout(RECT &MainWindow);
     void DrawDispatch(HDC hdc, HWND hwnd);
     void CallRedraw_MouseMove(LPARAM lparam, HWND hwnd);
     void CallMouseClick(LPARAM lpram,HWND hwnd);
