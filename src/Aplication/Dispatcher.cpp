@@ -15,6 +15,8 @@ void AppDispatcher::DrawDispatch(HDC hdc, HWND hwnd)
 // volanie akcii mysi pre border tlacidla
 void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
 {
+    //In_Border_Bool
+    In_Border = Mouse::X > MainWindow.left && Mouse::X < MainWindow.right - 150 && Mouse::Y > MainWindow.top && Mouse::Y < MainWindow.top + 30;
     //Tlacidlo X
     Ui.Inside_X = Mouse::X > MainWindow.right - 50 && Mouse::Y < 30;
     //Tlacidlo restore

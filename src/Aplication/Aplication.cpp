@@ -32,9 +32,9 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     {
     case WM_CREATE:
     {
-        GetClientRect(hwnd,&MainWindow);
+        GetClientRect(hwnd, &MainWindow);
         DispApp.MainLayout(MainWindow);
-       
+
         break;
     }
     case WM_DESTROY:
@@ -44,7 +44,14 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     }
     case WM_NCHITTEST:
     {
-        return HTCLIENT;
+        Mouse::UpdateX_Y(lparam);
+        LRESULT hit = DefWindowProc(hwnd, WM_NCHITTEST, wparam, lparam);
+        if (Mouse::Y < MainWindow.top + 30)
+        {
+                return HTCAPTION;
+        }
+        else
+        return hit;
     }
     case WM_PAINT:
     {
