@@ -14,6 +14,7 @@ private:
 public:
     MainPage(HWND hwnd);
     Button BtnConnect;
+    Button BtnConnectAndSend;
     virtual void Btn_Redraw_Call(HWND hwnd) override;
     virtual int Page_Num() override { return 0; };
     virtual void Btn_Draw(HDC hdc, HWND hwnd,RECT &MainRect) override;

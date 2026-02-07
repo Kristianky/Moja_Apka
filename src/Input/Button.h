@@ -4,7 +4,7 @@
 #include <windows.h>
 #include <string>
 #include "Mouse.h"
-
+#include <iostream>
 class Button
 {
 private:
@@ -15,6 +15,8 @@ private:
     std::wstring BtnText;
     COLORREF TextColorOff, TextColorOn;
     int TextSize;
+    int Width;
+    int Lenght;
 
 public:
     Button();
@@ -30,6 +32,8 @@ public:
         Rect.left = X;
         Rect.bottom = Y + Width;
         Rect.right = X + Lenght;
+        Button::Width = Width;
+        Button::Lenght = Lenght;
     }
     void SetColor(COLORREF BtnColor1, COLORREF BtnColor2, COLORREF BtnColor3)
     {
@@ -44,6 +48,7 @@ public:
         TextColorOn = Coolloron;
     }
     void MouseLBtnDown(HWND hwnd);
+    Button operator=(const Button &Rhs);
 };
 
 #endif

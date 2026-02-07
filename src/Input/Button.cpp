@@ -13,6 +13,7 @@ Button::Button()
    TextColorOff = RGB(0, 0, 0);
    TextColorOn = RGB(100, 200, 100);
    TextSize = 10;
+
 }
 
 void Button::MouseInside(HWND hwnd)
@@ -88,4 +89,28 @@ void Button::MouseLBtnDown(HWND hwnd)
    {
       InvalidateRect(hwnd, &Rect, false);
    }
+}
+
+Button Button::operator=(const Button &Rhs)
+{
+   //Copyrovanie Nastaveni
+   BtnColor1 = Rhs.BtnColor1;
+   BtnColorHov = Rhs.BtnColorHov;
+   BtnColorIn = Rhs.BtnColorIn;
+   Width = Rhs.Width;
+   Lenght = Rhs.Lenght;
+
+   Rect = Rhs.Rect;
+   if(Rect.bottom != 1150)
+   {
+      Rect.top = Rect.top + Width;
+      Rect.bottom = Rect.bottom + Width;
+   }
+
+   TextColorOff = Rhs.TextColorOff;
+   TextColorOn = Rhs.TextColorOn;
+   BtnText = Rhs.BtnText;
+   TextSize = Rhs.TextSize;
+   return *this;
+   
 }
