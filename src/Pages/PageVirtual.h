@@ -13,6 +13,7 @@ public:
     virtual int Page_Num() = 0;
     virtual void Btn_Draw(HDC hdc,HWND hwnd,RECT &MainRect) = 0;
     virtual void SetMainWindow(RECT &MainRect) = 0;
+    virtual void LBtnDown(HWND hwnd) = 0;
 };
 
 #endif

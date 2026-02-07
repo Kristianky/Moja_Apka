@@ -26,6 +26,7 @@ public:
     void CallMouseClick(LPARAM lpram,HWND hwnd);
     void CallMouseLBtnDown(HWND hwnd);
     bool Get_In_Border(){return In_Border;}
+    int NCWnchittest(HWND hwnd,LPARAM lparam,WPARAM wparam);
 };
 
 #endif

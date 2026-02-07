@@ -18,6 +18,7 @@ public:
     virtual int Page_Num() override { return 0; };
     virtual void Btn_Draw(HDC hdc, HWND hwnd,RECT &MainRect) override;
     virtual void SetMainWindow(RECT &MainRect) override {MainWindow = MainRect;}
+    virtual void LBtnDown(HWND hwnd) override;
 };
 
 #endif

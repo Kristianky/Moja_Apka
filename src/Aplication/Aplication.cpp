@@ -44,23 +44,15 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     }
     case WM_NCHITTEST:
     {
-        POINT Cursor;
-        DispApp.MainLayout(MainWindow);
-        Mouse::UpdateX_Y(lparam);
-        Cursor.x = Mouse::X;
-        Cursor.y = Mouse::Y;
-        ScreenToClient(hwnd, &Cursor);
-
-        GetClientRect(hwnd, &MainWindow);
-
         LRESULT hit = DefWindowProc(hwnd, WM_NCHITTEST, wparam, lparam);
-        if (Cursor.y < MainWindow.top + 30 && Cursor.x < MainWindow.right - 150)
-        {
-            return HTCAPTION;
-        }
-        else
-            return hit;
+        GetClientRect(hwnd, &MainWindow);
         DispApp.MainLayout(MainWindow);
+        int Result = DispApp.NCWnchittest(hwnd, lparam, wparam);
+        if (Result != -1)
+        {
+            return Result;
+        }
+        return hit;
         break;
     }
     case WM_PAINT:
