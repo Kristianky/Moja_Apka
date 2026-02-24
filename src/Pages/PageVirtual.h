@@ -2,7 +2,9 @@
 #define _PAGEVIRTUAL_H_
 
 #include<windows.h>
-
+#include "Mouse.h"
+#include "Button.h"
+#include "Edit.h"
 class VirtualPage
 {
 private:
@@ -11,7 +13,9 @@ public:
     ~VirtualPage() = default;
     virtual void Btn_Redraw_Call(HWND hwnd) = 0;
     virtual int Page_Num() = 0;
-    virtual void Btn_Draw(HDC hdc,HWND hwnd) = 0;
+    virtual void Btn_Draw(HDC hdc,HWND hwnd,RECT &MainRect) = 0;
+    virtual void SetMainWindow(RECT &MainRect) = 0;
+    virtual void LBtnDown(HWND hwnd) = 0;
 };
 
 #endif

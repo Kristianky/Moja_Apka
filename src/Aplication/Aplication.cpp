@@ -30,6 +30,13 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
 {
     switch (umsg)
     {
+    case WM_CREATE:
+    {
+        GetClientRect(hwnd, &MainWindow);
+        DispApp.MainLayout(MainWindow);
+
+        break;
+    }
     case WM_DESTROY:
     {
         PostQuitMessage(0);
@@ -37,7 +44,16 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     }
     case WM_NCHITTEST:
     {
-        return HTCLIENT;
+        LRESULT hit = DefWindowProc(hwnd, WM_NCHITTEST, wparam, lparam);
+        GetClientRect(hwnd, &MainWindow);
+        DispApp.MainLayout(MainWindow);
+        int Result = DispApp.NCWnchittest(hwnd, lparam, wparam);
+        if (Result != -1)
+        {
+            return Result;
+        }
+        return hit;
+        break;
     }
     case WM_PAINT:
     {
@@ -49,23 +65,23 @@ LRESULT Aplication::WindowProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lpara
     }
     case WM_SIZE:
     {
-        RECT Resize_Rect;
-        GetClientRect(hwnd,&Resize_Rect);
-        switch(wparam)
+        GetClientRect(hwnd, &MainWindow);
+        switch (wparam)
         {
-            case SIZE_MINIMIZED:
-            {
-                InvalidateRect(hwnd,&Resize_Rect,TRUE);
-            }
-            case SIZE_MAXIMIZED:
-            {
-                InvalidateRect(hwnd,&Resize_Rect,TRUE);
-            }
-            case SIZE_RESTORED:
-            {
-                InvalidateRect(hwnd,&Resize_Rect,TRUE);
-            }
+        case SIZE_MINIMIZED:
+        {
+            InvalidateRect(hwnd, &MainWindow, TRUE);
         }
+        case SIZE_MAXIMIZED:
+        {
+            InvalidateRect(hwnd, &MainWindow, TRUE);
+        }
+        case SIZE_RESTORED:
+        {
+            InvalidateRect(hwnd, &MainWindow, TRUE);
+        }
+        }
+        DispApp.MainLayout(MainWindow);
         break;
     }
     case WM_MOUSEMOVE:

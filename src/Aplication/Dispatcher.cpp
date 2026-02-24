@@ -3,25 +3,26 @@
 AppDispatcher::AppDispatcher(HWND hwnd) : Ui(hwnd)
 
 {
-    GetClientRect(hwnd,&MainWindow);
     Inside_X_Mem = false;
-    Page = new MainPage(hwnd,MainWindow);
+    Page = new MainPage(hwnd);
 }
 // Volanie pre kreslenie vo wmpaint
 void AppDispatcher::DrawDispatch(HDC hdc, HWND hwnd)
 {
     Ui.Draw_Border(hdc, hwnd);
-    Ui.Draw_Pages(hdc,hwnd,Page);
+    Ui.Draw_Pages(hdc, hwnd, Page);
 }
 // volanie akcii mysi pre border tlacidla
 void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
 {
-    //Tlacidlo X
-    Ui.Inside_X = Mouse::X > Ui.Main_Window.right - 50 && Mouse::Y < 30;
-    //Tlacidlo restore
-    Ui.Inside_Minimalize = Mouse::X > Ui.Main_Window.right - 100 && Mouse::X < Ui.Main_Window.right - 50 && Mouse::Y < 30;
-    //Tlacidlo Minimize
-    Ui.Inside_Minimize = Mouse::X > Ui.Main_Window.right - 150 && Mouse::X < Ui.Main_Window.right - 100 && Mouse::Y < 30;
+    // In_Border_Bool
+    In_Border = Mouse::X > MainWindow.left && Mouse::X < MainWindow.right - 150 && Mouse::Y > MainWindow.top && Mouse::Y < MainWindow.top + 30;
+    // Tlacidlo X
+    Ui.Inside_X = Mouse::X > MainWindow.right - 50 && Mouse::Y < 30;
+    // Tlacidlo restore
+    Ui.Inside_Minimalize = Mouse::X > MainWindow.right - 100 && Mouse::X < MainWindow.right - 50 && Mouse::Y < 30;
+    // Tlacidlo Minimize
+    Ui.Inside_Minimize = Mouse::X > MainWindow.right - 150 && Mouse::X < MainWindow.right - 100 && Mouse::Y < 30;
     // Tlacidlo X Logika pre mys
     if (Ui.Inside_X != Inside_X_Mem)
     {
@@ -44,8 +45,8 @@ void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
         Inside_Min_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimalize_Rect, TRUE);
     }
-    //Tlacidlo Minimize
-     if (Ui.Inside_Minimize != Inside_Minimize_Mem)
+    // Tlacidlo Minimize
+    if (Ui.Inside_Minimize != Inside_Minimize_Mem)
     {
         Inside_Minimize_Mem = Ui.Inside_Minimize;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
@@ -56,17 +57,17 @@ void AppDispatcher::CallRedraw_MouseMove(LPARAM lparam, HWND hwnd)
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
     }
     //==========================================================
-    //Ovladanie Pomocou jednotlivych stranok
-    if(!Page)
+    // Ovladanie Pomocou jednotlivych stranok
+    if (!Page)
     {
-        Page = new MainPage(hwnd,MainWindow);
+        Page = new MainPage(hwnd);
     }
-    switch(Page->Page_Num())
+    switch (Page->Page_Num())
     {
-        case 0:      //MainPage
-        {
-            Page->Btn_Redraw_Call(hwnd);
-        }
+    case 0: // MainPage
+    {
+        Page->Btn_Redraw_Call(hwnd);
+    }
     }
 }
 // volanie pre clickunutie lavym tlacidlo mysi
@@ -78,17 +79,17 @@ void AppDispatcher::CallMouseClick(LPARAM lparam, HWND hwnd)
     }
     if (Inside_Min_Mem && Mouse::LBtn_Clicked)
     {
-        if(IsZoomed(hwnd))
-        ShowWindow(hwnd,SW_RESTORE);
+        if (IsZoomed(hwnd))
+            ShowWindow(hwnd, SW_RESTORE);
         else
-        ShowWindow(hwnd,SW_MAXIMIZE);
+            ShowWindow(hwnd, SW_MAXIMIZE);
     }
-    if(Inside_Minimize_Mem && Mouse::LBtn_Clicked)
+    if (Inside_Minimize_Mem && Mouse::LBtn_Clicked)
     {
-        ShowWindow(hwnd,SW_MINIMIZE);
+        ShowWindow(hwnd, SW_MINIMIZE);
     }
 }
-//Volanie vo wm_Lbtndown
+// Volanie vo wm_Lbtndown
 void AppDispatcher::CallMouseLBtnDown(HWND hwnd)
 {
     if (Inside_X_Mem)
@@ -112,8 +113,8 @@ void AppDispatcher::CallMouseLBtnDown(HWND hwnd)
         Inside_Min_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimalize_Rect, TRUE);
     }
-    //Tlacidlo Minimize
-     if ( Inside_Minimize_Mem)
+    // Tlacidlo Minimize
+    if (Inside_Minimize_Mem)
     {
         Inside_Minimize_Mem = Ui.Inside_Minimize;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
@@ -123,4 +124,72 @@ void AppDispatcher::CallMouseLBtnDown(HWND hwnd)
         Inside_Minimize_Mem = false;
         InvalidateRect(hwnd, &Ui.Minimize_Rect, TRUE);
     }
+}
+
+void AppDispatcher::MainLayout(RECT &MainWindow)
+{
+    AppDispatcher::MainWindow = MainWindow;
+    Ui.Set_MainWindow(MainWindow);
+    if (Page)
+    {
+        Page->SetMainWindow(MainWindow);
+    }
+}
+
+int AppDispatcher::NCWnchittest(HWND hwnd, LPARAM lparam, WPARAM wparam)
+{
+    POINT Cursor;
+
+    Mouse::UpdateX_Y(lparam);
+    Cursor.x = Mouse::X;
+    Cursor.y = Mouse::Y;
+    ScreenToClient(hwnd, &Cursor);
+
+    GetClientRect(hwnd, &MainWindow);
+
+    int Caption = 8;
+
+    bool Left = Cursor.x < Caption;
+    bool Right = Cursor.x > MainWindow.right - Caption;
+    bool Top = Cursor.y < Caption;
+    bool Bottom = Cursor.y > MainWindow.bottom - Caption;
+    
+    if (Bottom && Left)
+    {
+        return HTBOTTOMLEFT;
+    }
+    else if (Bottom && Right)
+    {
+        return HTBOTTOMRIGHT;
+    }
+    else if (Top && Left)
+    {
+        return HTTOPLEFT;
+    }
+    else if (Top && Right)
+    {
+        return HTTOPRIGHT;
+    }
+    else if (Left)
+    {
+        return HTLEFT;
+    }
+    else if (Right)
+    {
+        return HTRIGHT;
+    }
+    else if (Top)
+    {
+        return HTTOP;
+    }
+    else if (Bottom)
+    {
+        return HTBOTTOM;
+    }
+    else if (Cursor.y < MainWindow.top + 30 && Cursor.x < MainWindow.right - 150)
+    {
+        return HTCAPTION;
+    }
+    else
+        return -1;
 }

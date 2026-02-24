@@ -7,7 +7,6 @@ UI::UI(HWND hwnd)
 void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
 {
     // Inicializacia velkosti bordera a ziskanie velkosti okna
-    GetClientRect(Main_Hwnd, &Main_Window);
     X_Rect = {Main_Window.right - 50, Main_Window.top, Main_Window.right, Main_Window.top + 30};
     Minimalize_Rect = {Main_Window.right - 100, Main_Window.top, Main_Window.right - 50, Main_Window.top + 30};
     Minimize_Rect = {Main_Window.right - 150, Main_Window.top, Main_Window.right - 100, Main_Window.top + 30};
@@ -94,8 +93,7 @@ void UI::Draw_Border(HDC hdc, HWND Main_Hwnd)
 
 void UI::Draw_Pages(HDC hdc,HWND hwnd,VirtualPage *Page)
 {
-    if(Page->Page_Num() == 0)
-    {
-        Page->Btn_Draw(hdc,hwnd);
-    }
+
+    Page->Btn_Draw(hdc,hwnd,Main_Window);
+    
 }

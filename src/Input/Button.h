@@ -4,21 +4,51 @@
 #include <windows.h>
 #include <string>
 #include "Mouse.h"
-
-
+#include <iostream>
 class Button
 {
-    public:
-    Button(RECT Rect,COLORREF BtnClr,COLORREF TextClr,std::wstring Text);
-    ~Button() = default;
-    RECT ButtonRect;
-    COLORREF BtnColor;
-    COLORREF TextColor;
+private:
+    // Button rectangle and color off rectangle
+    RECT Rect;
+    COLORREF BtnColor1, BtnColorIn, BtnColorHov;
+    // Button Text Size Color
     std::wstring BtnText;
-    bool InButt,InButtMem;
+    COLORREF TextColorOff, TextColorOn;
+    int TextSize;
+    int Width;
+    int Lenght;
+
+public:
+    Button();
+    ~Button() = default;
+
+    bool InButt, InButtMem;
     void MouseInside(HWND hwnd);
     void MouseClicked(HWND hwnd);
-    void DrawBtn(HDC hdc,HWND hwnd);   ///Funkcia pre Ui
+    void DrawBtn(HDC hdc, HWND hwnd); /// Funkcia pre Ui
+    void SetRect(int X, int Y, int Lenght, int Width)
+    {
+        Rect.top = Y;
+        Rect.left = X;
+        Rect.bottom = Y + Width;
+        Rect.right = X + Lenght;
+        Button::Width = Width;
+        Button::Lenght = Lenght;
+    }
+    void SetColor(COLORREF BtnColor1, COLORREF BtnColor2, COLORREF BtnColor3)
+    {
+        Button::BtnColor1 = BtnColor1;
+        BtnColorIn = BtnColor2;
+        BtnColorHov = BtnColor3;
+    }
+    void SetText(std::wstring Text, COLORREF Coloroff, COLORREF Coolloron)
+    {
+        BtnText = Text;
+        TextColorOff = Coloroff;
+        TextColorOn = Coolloron;
+    }
+    void MouseLBtnDown(HWND hwnd);
+    Button operator=(const Button &Rhs);
 };
 
 #endif
