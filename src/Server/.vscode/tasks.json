@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with g++",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "$files = (Get-ChildItem *.cpp | ForEach-Object { $_.FullName }); C:/msys64/mingw64/bin/g++.exe -g -Wall -std=c++20 $files -lws2_32 -o main.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+
