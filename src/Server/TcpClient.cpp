@@ -13,8 +13,8 @@ bool TCPClient::Connect()
 
     sockaddr_in Server;
     Server.sin_family = AF_INET;
-    Server.sin_port = 502;
-    Server.sin_addr.s_addr = inet_addr("129.168.0.1");
+    Server.sin_port = 505;
+    Server.sin_addr.s_addr = inet_addr("129.168.10.2");
 
     int Connect_Result = connect(m_Socket, (SOCKADDR *)&Server, sizeof(Server));
     if (Connect_Result == INVALID_SOCKET)
@@ -37,7 +37,7 @@ void TCPClient::Disconnect()
 
 bool TCPClient::Send()
 {
-    int Error_Send = send(m_Socket,"Ahoooj",7,0);
+    int Error_Send = send(m_Socket,"Ahoooj z c++",13,0);
     if(Error_Send == SOCKET_ERROR)
     {
        return false;
