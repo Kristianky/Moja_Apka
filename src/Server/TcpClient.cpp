@@ -37,15 +37,22 @@ void TCPClient::Disconnect()
 
 bool TCPClient::Send(std::string &Buffer)
 {
-    int Error_Send = send(m_Socket,Buffer.c_str(),13,0);
-    if(Error_Send == SOCKET_ERROR)
+    int Error_Send = send(m_Socket, Buffer.c_str(), Buffer.length(), 0);
+    if (Error_Send == SOCKET_ERROR)
     {
-       return false;
+        return false;
     }
     return true;
 }
 
-bool TCPClient::Recieve()
+int TCPClient::Recieve()
 {
-    return false;
+    char *RecvBuffTemp = new char[20];
+    int Lenght = recv(m_Socket, RecvBuffTemp, 20, 0);
+    if (Lenght > 0)
+    {
+        RecvBuff = RecvBuffTemp;
+        return Lenght;
+    }
+    return Lenght;
 }

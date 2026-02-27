@@ -8,13 +8,15 @@ class TCPClient
 {
 private:
     SOCKET m_Socket;
+    std::string RecvBuff;
 public:
     TCPClient():m_Socket{INVALID_SOCKET}{}
     ~TCPClient(){Disconnect();}
     void Disconnect();
     bool Connect();
     bool Send(std::string &Buffer);
-    bool Recieve();
+    int Recieve();
+    std::string GetRecvBuff() {return RecvBuff;}
 };
 
 #endif
