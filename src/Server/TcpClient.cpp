@@ -13,11 +13,11 @@ bool TCPClient::Connect()
 
     sockaddr_in Server;
     Server.sin_family = AF_INET;
-    Server.sin_port = 505;
-    Server.sin_addr.s_addr = inet_addr("129.168.10.2");
+    Server.sin_port = htons(2505);
+    Server.sin_addr.s_addr = inet_addr("192.168.10.2");
 
     int Connect_Result = connect(m_Socket, (SOCKADDR *)&Server, sizeof(Server));
-    if (Connect_Result == INVALID_SOCKET)
+    if (Connect_Result == SOCKET_ERROR)
     {
         closesocket(m_Socket);
         WSACleanup();
@@ -35,9 +35,9 @@ void TCPClient::Disconnect()
     m_Socket = INVALID_SOCKET;
 }
 
-bool TCPClient::Send()
+bool TCPClient::Send(std::string &Buffer)
 {
-    int Error_Send = send(m_Socket,"Ahoooj z c++",13,0);
+    int Error_Send = send(m_Socket,Buffer.c_str(),13,0);
     if(Error_Send == SOCKET_ERROR)
     {
        return false;

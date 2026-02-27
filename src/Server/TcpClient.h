@@ -2,6 +2,7 @@
 #define _TCP_CLIENT_H_
 
 #include <winsock2.h>
+#include <string>
 
 class TCPClient
 {
@@ -12,7 +13,7 @@ public:
     ~TCPClient(){Disconnect();}
     void Disconnect();
     bool Connect();
-    bool Send();
+    bool Send(std::string &Buffer);
     bool Recieve();
 };
 
