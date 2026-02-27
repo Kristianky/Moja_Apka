@@ -37,7 +37,7 @@ void TCPClient::Disconnect()
 
 bool TCPClient::Send()
 {
-    int Error_Send = send(m_Socket,"Ahoooj",7,0);
+    int Error_Send = send(m_Socket,"Ahoooj z c++",13,0);
     if(Error_Send == SOCKET_ERROR)
     {
        return false;
