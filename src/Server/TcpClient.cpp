@@ -13,8 +13,8 @@ bool TCPClient::Connect()
 
     sockaddr_in Server;
     Server.sin_family = AF_INET;
-    Server.sin_port = 2000;
-    Server.sin_addr.s_addr = inet_addr("129.168.0.35");
+    Server.sin_port = 505;
+    Server.sin_addr.s_addr = inet_addr("129.168.10.2");
 
     int Connect_Result = connect(m_Socket, (SOCKADDR *)&Server, sizeof(Server));
     if (Connect_Result == INVALID_SOCKET)
