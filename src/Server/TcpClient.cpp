@@ -35,9 +35,9 @@ void TCPClient::Disconnect()
     m_Socket = INVALID_SOCKET;
 }
 
-bool TCPClient::Send(std::string &Buffer)
+bool TCPClient::Send(std::vector<uint8_t> &Buffer)
 {
-    int Error_Send = send(m_Socket, Buffer.c_str(), Buffer.length(), 0);
+    int Error_Send = send(m_Socket, reinterpret_cast<char*>(Buffer.data()), Buffer.size(), 0);
     if (Error_Send == SOCKET_ERROR)
     {
         return false;
@@ -47,8 +47,8 @@ bool TCPClient::Send(std::string &Buffer)
 
 int TCPClient::Recieve()
 {
-    char *RecvBuffTemp = new char[20];
-    int Lenght = recv(m_Socket, RecvBuffTemp, 20, 0);
+    uint8_t *RecvBuffTemp = new uint8_t[20];
+    int Lenght = recv(m_Socket, reinterpret_cast<char*>(RecvBuffTemp), 20, 0);
     if (Lenght > 0)
     {
         RecvBuff = RecvBuffTemp;

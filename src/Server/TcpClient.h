@@ -3,20 +3,22 @@
 
 #include <winsock2.h>
 #include <string>
+#include <vector>
+#include <cstdint>
 
 class TCPClient
 {
 private:
     SOCKET m_Socket;
-    std::string RecvBuff;
+    std::vector<uint8_t> RecvBuff;
 public:
     TCPClient():m_Socket{INVALID_SOCKET}{}
     ~TCPClient(){Disconnect();}
     void Disconnect();
     bool Connect();
-    bool Send(std::string &Buffer);
+    bool Send(std::vector<uint8_t> &Buffer);
     int Recieve();
-    std::string GetRecvBuff() {return RecvBuff;}
+    std::vector<uint8_t> GetRecvBuff() {return RecvBuff;}
 };
 
 #endif
