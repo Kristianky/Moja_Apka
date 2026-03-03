@@ -1,24 +1,27 @@
 #include "TCPClient.h"
 #include <iostream>
 #include <string>
+#include "Converter.h"
 
 int main()
 {
     TCPClient Client;
-    if (!Client.Connect())
+    if (!Client.Connect("192.168.10.2",2505))
     {
         std::cout<<"Not Connected\n";
     }
     std::cout<<"What You wont to send: \n";
     std::string Buff;
     std::cin>>Buff;
-    if(!Client.Send(Buff))
+    std::vector<uint8_t> BuffVec;
+    BuffVec = StringToVector_Uint8(Buff);
+    if(!Client.Send(BuffVec))
     {
         std::cout<<"Not Sended\n";
     }
     if(Client.Recieve() > 0)
     {
-        std::cout<<Client.GetRecvBuff()<<std::endl;
+        std::cout<<Vector_Uint8_ToString(Client.GetRecvBuff())<<std::endl;
     }
     else
     {

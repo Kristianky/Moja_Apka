@@ -15,7 +15,7 @@ public:
     TCPClient():m_Socket{INVALID_SOCKET}{}
     ~TCPClient(){Disconnect();}
     void Disconnect();
-    bool Connect();
+    bool Connect(const char *IpAdrres,const int Port);
     bool Send(std::vector<uint8_t> &Buffer);
     int Recieve();
     std::vector<uint8_t> GetRecvBuff() {return RecvBuff;}

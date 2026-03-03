@@ -1,6 +1,6 @@
 #include "TcpClient.h"
 
-bool TCPClient::Connect()
+bool TCPClient::Connect(const char *IpAdrres,const int Port)
 {
 
     WSADATA wsaData;
@@ -11,10 +11,21 @@ bool TCPClient::Connect()
     }
     m_Socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
+int DotCount{},Index{};
+while(IpAdrres != '\0')
+{
+    if(IpAdrres[Index] == '.')
+    {
+        DotCount++;
+    }
+}
+
+if(DotCount == 4)       //Znamena ze nie je spravny tvar ip
+{
     sockaddr_in Server;
     Server.sin_family = AF_INET;
-    Server.sin_port = htons(2505);
-    Server.sin_addr.s_addr = inet_addr("192.168.10.2");
+    Server.sin_port = htons(Port);
+    Server.sin_addr.s_addr = inet_addr(IpAdrres);
 
     int Connect_Result = connect(m_Socket, (SOCKADDR *)&Server, sizeof(Server));
     if (Connect_Result == SOCKET_ERROR)
@@ -27,7 +38,11 @@ bool TCPClient::Connect()
 
     return true;
 }
-
+else
+{
+    return false;
+}
+}
 void TCPClient::Disconnect()
 {
     closesocket(m_Socket);
@@ -47,11 +62,18 @@ bool TCPClient::Send(std::vector<uint8_t> &Buffer)
 
 int TCPClient::Recieve()
 {
-    uint8_t *RecvBuffTemp = new uint8_t[20];
-    int Lenght = recv(m_Socket, reinterpret_cast<char*>(RecvBuffTemp), 20, 0);
+    char *RecvBuffTemp = new char[20];
+    int Lenght = recv(m_Socket, RecvBuffTemp, 20, 0);
     if (Lenght > 0)
     {
-        RecvBuff = RecvBuffTemp;
+        int i{};
+        RecvBuff.clear();
+        while(RecvBuffTemp != '\0')
+        {
+            RecvBuff.push_back(reinterpret_cast<uint8_t>(RecvBuffTemp));
+            i++;
+        }
+        
         return Lenght;
     }
     return Lenght;
