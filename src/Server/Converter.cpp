@@ -7,7 +7,7 @@ std::vector<uint8_t> StringToVector_Uint8(const std::string &ToConvert)
     {
         return ReturnValue;
     }
-    for(int i{};i < ToConvert.size();i++)
+    for(long long unsigned int i{};i < ToConvert.size();i++)
     {
         ReturnValue.push_back((ToConvert.at(i)));
     }
@@ -23,7 +23,7 @@ std::string Vector_Uint8_ToString(const std::vector<uint8_t> &ToCnvert)
         ReturnValue = "Data = 0";
         return ReturnValue;
     }
-    for(int i{};i < ToCnvert.size();i++)
+    for(long long unsigned int i{};i < ToCnvert.size();i++)
     {
         ReturnValue.push_back(ToCnvert.at(i));
     }

@@ -12,7 +12,7 @@ public:
     uint16_t ProtocolIdent; // Je to aby sme vedeli aky protokol bol pouzity pre modbus je to 0
     uint16_t Lenght;        // Tu zadavame Unit ID a PDU velkost pre PDU hlavicku
     uint8_t unitID;         // Je to nieco ako profbus adrres daneho zariadenia
-    MBAP(uint16_t lenght, uint16_t unitid) : Lenght{lenght}, unitID{unitid}
+    MBAP(uint16_t lenght, uint8_t unitid) : Lenght{lenght}, unitID{unitid}
     {
         TransactionID = 0;
         ProtocolIdent = 0;
@@ -30,6 +30,8 @@ public:
         mbap.push_back(Lenght & 0xFF);
 
         mbap.push_back(unitID);
+
+        return mbap;
     }
 };
 
@@ -40,7 +42,7 @@ public:
     uint8_t FunctionCode; // tu urcujeme aku chcem funckiu napr 01 read coils
     uint16_t Adress;      // tu urcujeme adresu uz napr z db v siemens
     uint16_t Quantity;    // tu urcujeme quantitu kolko registrov alebo coils chceme precitat
-    PDU(uint16_t functioncode = 1, uint16_t adress = 0, uint16_t quantity = 1)
+    PDU(uint8_t functioncode = 1, uint16_t adress = 0, uint16_t quantity = 1)
         : FunctionCode{functioncode}, Adress{adress}, Quantity{quantity}
     {
     }
@@ -54,6 +56,8 @@ public:
 
         Map.push_back(Quantity >> 8);
         Map.push_back(Quantity & 0xFF);
+
+        return Map;
     }
 };
 

@@ -11,8 +11,8 @@ bool TCPClient::Connect(const char *IpAdrres,const int Port)
     }
     m_Socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-int DotCount{},Index{};
-while(IpAdrres != '\0')
+int DotCount{},Index{1};
+while(IpAdrres[Index - 1] != '\0')
 {
     if(IpAdrres[Index] == '.')
     {
@@ -20,7 +20,7 @@ while(IpAdrres != '\0')
     }
 }
 
-if(DotCount == 4)       //Znamena ze nie je spravny tvar ip
+if(DotCount == 3)       //Znamena ze nie je spravny tvar ip
 {
     sockaddr_in Server;
     Server.sin_family = AF_INET;
@@ -68,9 +68,9 @@ int TCPClient::Recieve()
     {
         int i{};
         RecvBuff.clear();
-        while(RecvBuffTemp != '\0')
+        while(RecvBuffTemp[i] != '\0')
         {
-            RecvBuff.push_back(reinterpret_cast<uint8_t>(RecvBuffTemp));
+            RecvBuff.push_back(RecvBuffTemp[i]);
             i++;
         }
         
