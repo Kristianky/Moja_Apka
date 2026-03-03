@@ -18,6 +18,7 @@ while(IpAdrres[Index - 1] != '\0')
     {
         DotCount++;
     }
+    Index++;
 }
 
 if(DotCount == 3)       //Znamena ze nie je spravny tvar ip
