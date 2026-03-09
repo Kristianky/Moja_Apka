@@ -1,11 +1,12 @@
-#include "TCPClient.h"
+
 #include <iostream>
 #include <string>
 #include "Converter.h"
+#include "ModbusClient.h"
 
 int main()
 {
-    TCPClient Client;
+    ModbusClient Client;
     if (!Client.Connect("192.168.10.2",2505))
     {
         std::cout<<"Not Connected\n";

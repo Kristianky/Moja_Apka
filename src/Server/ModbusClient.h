@@ -67,6 +67,7 @@ public:
     ModbusClient();
     ~ModbusClient() = default;
     uint8_t ReadSingleCoil();
+    void WriteSingleCoil(bool Data);
 };
 
 #endif
