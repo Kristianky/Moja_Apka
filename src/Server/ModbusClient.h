@@ -30,7 +30,7 @@ public:
         mbap.push_back(Lenght & 0xFF);
 
         mbap.push_back(unitID);
-
+        TransactionID++;
         return mbap;
     }
 };
@@ -42,7 +42,7 @@ public:
     uint8_t FunctionCode; // tu urcujeme aku chcem funckiu napr 01 read coils
     uint16_t Adress;      // tu urcujeme adresu uz napr z db v siemens
     uint16_t Quantity;    // tu urcujeme quantitu kolko registrov alebo coils chceme precitat
-    PDU(uint8_t functioncode = 1, uint16_t adress = 0, uint16_t quantity = 1)
+    PDU(uint8_t functioncode = 0, uint16_t adress = 0, uint16_t quantity = 0)
         : FunctionCode{functioncode}, Adress{adress}, Quantity{quantity}
     {
     }
@@ -63,11 +63,14 @@ public:
 
 class ModbusClient : public TCPClient
 {
+private:
+    MBAP ModbusHead;
+    PDU PDUHead;
 public:
     ModbusClient();
     ~ModbusClient() = default;
     uint8_t ReadSingleCoil();
-    void WriteSingleCoil(bool Data);
+    void WriteSingleCoil(const bool &Data,const uint16_t &Adress);
 };
 
 #endif
