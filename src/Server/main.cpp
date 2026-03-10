@@ -1,7 +1,6 @@
 
 #include <iostream>
 #include <string>
-#include "Converter.h"
 #include "ModbusClient.h"
 
 int main()
@@ -16,7 +15,7 @@ int main()
     std::cin>>Buff;
     std::vector<uint8_t> BuffVec;
     BuffVec = StringToVector_Uint8(Buff);
-    if(!Client.Send(BuffVec))
+    if(!Client.WriteSingleCoil(true,0,0))
     {
         std::cout<<"Not Sended\n";
     }

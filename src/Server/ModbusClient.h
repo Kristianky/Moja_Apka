@@ -3,6 +3,7 @@
 
 #include "TcpClient.h"
 #include <vector>
+#include "Converter.h"
 // Classa pre mbap co je 7 byte hlavicka na idetentifikovanie v modbus komunikacii
 class MBAP
 {
@@ -41,9 +42,10 @@ private:
 public:
     uint8_t FunctionCode; // tu urcujeme aku chcem funckiu napr 01 read coils
     uint16_t Adress;      // tu urcujeme adresu uz napr z db v siemens
-    uint16_t Quantity;    // tu urcujeme quantitu kolko registrov alebo coils chceme precitat
+    uint16_t Quantity_Value;    // tu urcujeme quantitu kolko registrov alebo coils chceme precitat... 
+    //   pri single coil tu dame value ktoru chceme citat/pisat pri multiple je to quantita citanych / pisanych
     PDU(uint8_t functioncode = 0, uint16_t adress = 0, uint16_t quantity = 0)
-        : FunctionCode{functioncode}, Adress{adress}, Quantity{quantity}
+        : FunctionCode{functioncode}, Adress{adress}, Quantity_Value{quantity}
     {
     }
     std::vector<uint8_t> PDUMap()
@@ -54,8 +56,8 @@ public:
         Map.push_back(Adress >> 8);
         Map.push_back(Adress & 0xFF);
 
-        Map.push_back(Quantity >> 8);
-        Map.push_back(Quantity & 0xFF);
+        Map.push_back(Quantity_Value >> 8);
+        Map.push_back(Quantity_Value & 0xFF);
 
         return Map;
     }
@@ -70,7 +72,7 @@ public:
     ModbusClient();
     ~ModbusClient() = default;
     uint8_t ReadSingleCoil();
-    void WriteSingleCoil(const bool &Data,const uint16_t &Adress);
+    bool WriteSingleCoil(const bool &Data,const int Byte,const int Bit);
 };
 
 #endif
