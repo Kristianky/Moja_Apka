@@ -2,9 +2,19 @@
 #include <iostream>
 #include <string>
 #include "ModbusClient.h"
+#include "MCProtocol.h"
 
 int main()
 {
+    int Choice{2};
+    while(Choice > 1)
+    {
+    std::cout<<"If you want modbus protocol press 0\n";
+    std::cout<<"If you want Mc Protcol press 1\n";
+    std::cin>>Choice;
+    }
+    if(Choice == 0)
+    {
     ModbusClient Client;
     if (!Client.Connect("192.168.10.2",2505))
     {
@@ -31,5 +41,14 @@ int main()
     int end;
     std::cin>>end;
     Client.Disconnect();
+    return 1;
+    }
+    else if (Choice == 1)
+    {
+        MCProtocol mntnc;
+        mntnc.Connect("192.168.10.2",2505);
+        mntnc.Disconnect();
+        return 2;
+    }
     return 0;
 }
