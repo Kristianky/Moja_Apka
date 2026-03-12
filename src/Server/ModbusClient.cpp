@@ -14,12 +14,12 @@ uint8_t ModbusClient::ReadSingleCoil()
 bool ModbusClient::WriteSingleCoil(const bool &Data, const int Byte, const int Bit)
 {
     ModbusHead.Lenght = 6;
-    PDUHead.FunctionCode = 5;
+    PDUHead.FunctionCode = 6;
     PDUHead.Adress = DBX(Byte,Bit);
     std::vector<uint8_t> SendMAp;
     if(Data)
     {
-        PDUHead.Quantity_Value = 0xFF00;
+        PDUHead.Quantity_Value = 0x2200;
     }
     else
     {
