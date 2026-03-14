@@ -47,7 +47,9 @@ int main()
     {
         MCProtocol mntnc;
         mntnc.Connect("192.168.10.2",2505);
+        mntnc.WriteMBit(true,0x00);
         mntnc.Disconnect();
+
         return 2;
     }
     return 0;

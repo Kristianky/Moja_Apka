@@ -16,8 +16,8 @@ struct Header
         // Mcprotocl comands
         uint16_t Comand;
         uint16_t SubComand;
-        uint16_t EndCode;
-        uint16_t ErrorInfo;
+        uint32_t DeviceCode;
+        uint16_t DevicePoints;
         std::vector<uint8_t> Map()
         {
                 std::vector<uint8_t> map;
@@ -45,11 +45,14 @@ struct Header
                 map.push_back(SubComand >> 8);
                 map.push_back(SubComand & 0xFF);
 
-                map.push_back(EndCode >> 8);
-                map.push_back(EndCode & 0xFF);
 
-                map.push_back(ErrorInfo >> 8);
-                map.push_back(ErrorInfo & 0xFF);
+                map.push_back((DeviceCode >> 24) & 0xFF);
+                map.push_back((DeviceCode >> 16) & 0xFF);
+                map.push_back((DeviceCode >> 8) & 0xFF);
+                map.push_back(DeviceCode & 0xFF);
+
+                map.push_back(DevicePoints >> 8);
+                map.push_back(DevicePoints & 0xFF);
                 return map;
         }
 };
@@ -61,7 +64,7 @@ class MCProtocol : public TCPClient
 public:
         MCProtocol();
         ~MCProtocol() = default;
-        void SetHeader();
+        void WriteMBit(const bool &Data,const uint16_t &Adrres);
 };
 
 #endif
