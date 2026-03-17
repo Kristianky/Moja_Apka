@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-server",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "src/Server/main.cpp",
+                "src/Server/MCProtocol.cpp",
+                "src/Server/TcpClient.cpp",
+                "src/Server/ModbusClient.cpp",
+                "src/Server/Converter.cpp",
+                "-o",
+                "src/Server/server.exe",
+                "-I", "src/Server",
+                "-lws2_32"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
