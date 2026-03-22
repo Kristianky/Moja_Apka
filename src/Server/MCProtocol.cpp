@@ -14,14 +14,16 @@ void MCProtocol::WriteMBit(const bool &Value, const uint16_t &Adress)
 {
     HeadReq.Comand = 0x1401;
     HeadReq.SubComand = 0x0001;
-    HeadReq.DeviceCode = 0x00000090;
-    HeadReq.DevicePoints = 0x0100;
+    HeadReq.DeviceCode = 0x90;
+    HeadReq.Adress1 = 0x03E8;
+    HeadReq.Adress2 = 0x00;
+    HeadReq.DevicePoints = 0x0001;
     HeadReq.Request_Data_Lenght = 0x000B;
     std::vector<uint8_t> ToSend = HeadReq.Map();
     uint8_t Data;
     if(Value)
     {
-        Data = 0x01;
+        Data = 0x10;
     }
     else
     {
