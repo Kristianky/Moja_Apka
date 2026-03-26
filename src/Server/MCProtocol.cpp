@@ -5,7 +5,7 @@ MCProtocol::MCProtocol() : TCPClient()
     HeadReq.SubHeader = 0x0050;
     HeadReq.Network_No = 0x01;
     HeadReq.PLC_No = 0xFF;
-    HeadReq.IO_No = 0x03FF;
+    HeadReq.IO_No = 0x03ff;
     HeadReq.Station_No = 0x00;
     HeadReq.Monitoring_Timer = 0x0010;
 }
