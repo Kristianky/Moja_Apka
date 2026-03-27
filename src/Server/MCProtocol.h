@@ -84,6 +84,7 @@ public:
         MCProtocol();
         ~MCProtocol() = default;
         void WriteMBit(const bool &Data, const uint16_t &Adrres);
+        void ReadMBit(const uint16_t &Adrres);
 };
 
 #endif

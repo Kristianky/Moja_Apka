@@ -35,3 +35,17 @@ void MCProtocol::WriteMBit(const bool &Value, const uint16_t &Adress)
     
 
 }
+
+void MCProtocol::ReadMBit(const uint16_t &Adress)
+{
+    HeadReq.Comand = 0x0401;
+    HeadReq.SubComand = 0x0001;
+    HeadReq.DeviceCode = 0x90;
+    HeadReq.Adress1 = 0x00c8;
+    HeadReq.Adress2 = 0x00;
+    HeadReq.DevicePoints = 0x0001;
+    HeadReq.Request_Data_Lenght = 0x000C;
+    std::vector<uint8_t> ToSend = HeadReq.Map();
+    Send(ToSend);
+    Recieve();
+}
