@@ -3,11 +3,11 @@
 MCProtocol::MCProtocol() : TCPClient()
 {
     HeadReq.SubHeader = 0x0050;
-    HeadReq.Network_No = 0x01;
+    HeadReq.Network_No = 0x00;
     HeadReq.PLC_No = 0xFF;
-    HeadReq.IO_No = 0x03ff;
+    HeadReq.IO_No = 0x03FF;
     HeadReq.Station_No = 0x00;
-    HeadReq.Monitoring_Timer = 0x0010;
+    HeadReq.Monitoring_Timer = 0x000a;
 }
 
 void MCProtocol::WriteMBit(const bool &Value, const uint16_t &Adress)
@@ -15,7 +15,7 @@ void MCProtocol::WriteMBit(const bool &Value, const uint16_t &Adress)
     HeadReq.Comand = 0x1401;
     HeadReq.SubComand = 0x0001;
     HeadReq.DeviceCode = 0x90;
-    HeadReq.Adress1 = 0x0000;
+    HeadReq.Adress1 = 0x00C8;
     HeadReq.Adress2 = 0x00;
     HeadReq.DevicePoints = 0x0001;
     HeadReq.Request_Data_Lenght = 0x000D;
