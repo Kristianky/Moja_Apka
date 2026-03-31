@@ -5,6 +5,7 @@
 #include <vector>
 #include <cstdint>
 #include <iostream>
+#include <iomanip>
 
 
     std::vector<uint8_t> StringToVector_Uint8(const std::string &ToCnovert);

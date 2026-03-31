@@ -29,14 +29,7 @@ int main()
         {
             std::cout << "Not Sended\n";
         }
-        if (Client.Recieve() > 0)
-        {
-            std::cout << Vector_Uint8_ToString(Client.GetRecvBuff()) << std::endl;
-        }
-        else
-        {
-            std::cout << "Server sa zatvoril";
-        }
+        std::cout<<Vector_Uint8_ToString(Client.ReadSingleCoil());
         std::cout << "For End Press any number\n";
         int end;
         std::cin >> end;

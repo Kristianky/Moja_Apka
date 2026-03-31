@@ -14,19 +14,22 @@ std::vector<uint8_t> StringToVector_Uint8(const std::string &ToConvert)
     return ReturnValue;
 }
 
-std::string Vector_Uint8_ToString(const std::vector<uint8_t> &ToCnvert)
+std::string Vector_Uint8_ToString(const std::vector<uint8_t> &data)
 {
-    std::string ReturnValue;
-    if (ToCnvert.size() == 0)
     {
-        ReturnValue = "Data = 0";
-        return ReturnValue;
+        if (data.empty())
+            return "Data = 0";
+
+        std::ostringstream oss;
+
+        for (uint8_t byte : data)
+        {
+            oss << std::hex << std::setw(2) << std::setfill('0')
+                << (int)byte << " ";
+        }
+
+        return oss.str();
     }
-    for (long long unsigned int i{}; i < ToCnvert.size(); i++)
-    {
-        ReturnValue.push_back(ToCnvert.at(i));
-    }
-    return ReturnValue;
 }
 
 uint16_t DBX(int Byte, int Bit)

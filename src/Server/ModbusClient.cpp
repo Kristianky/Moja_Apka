@@ -4,11 +4,33 @@ ModbusClient::ModbusClient() : TCPClient(), ModbusHead(0, 2)
 {
 }
 
-uint16_t ModbusClient::ReadSingleCoil()
+std::vector<uint8_t> ModbusClient::ReadSingleCoil()
 {
-    // Vytvorenie Hlavicky mbap pre modbus spojenie
-    // transaction id su 2 byte ktorym sa identifikuje ukon
-    return 0;
+    std::vector<uint8_t> returnvalue;
+    ModbusHead.Lenght = 6;
+    PDUHead.FunctionCode = 3;
+    PDUHead.Adress = 0;
+    PDUHead.Quantity_Value = 0x0001;
+    std::vector<uint8_t> SendMap, pdu;
+    SendMap = ModbusHead.BuildMap();
+    pdu = PDUHead.PDUMap();
+    SendMap.insert(SendMap.end(), pdu.begin(), pdu.end());
+    if (Send(SendMap))
+    {
+        int Lenght = Recieve();
+        if (Lenght > 0)
+            returnvalue = GetRecvBuff();
+        else
+        {
+            throw std::runtime_error("Recv = 0");
+        }
+    }
+    else
+    {
+        throw std::runtime_error("Bit out of range");
+    }
+
+    return returnvalue;
 }
 
 bool ModbusClient::WriteSingleCoil(const bool &Data, const int Byte, const int Bit)

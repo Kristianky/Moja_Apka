@@ -1,6 +1,6 @@
 #include "TcpClient.h"
 
-bool TCPClient::Connect(const char *IpAdrres,const int Port)
+bool TCPClient::Connect(const char *IpAdrres, const int Port)
 {
 
     WSADATA wsaData;
@@ -11,38 +11,38 @@ bool TCPClient::Connect(const char *IpAdrres,const int Port)
     }
     m_Socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-int DotCount{},Index{1};
-while(IpAdrres[Index - 1] != '\0')
-{
-    if(IpAdrres[Index] == '.')
+    int DotCount{}, Index{1};
+    while (IpAdrres[Index - 1] != '\0')
     {
-        DotCount++;
+        if (IpAdrres[Index] == '.')
+        {
+            DotCount++;
+        }
+        Index++;
     }
-    Index++;
-}
 
-if(DotCount == 3)       //Znamena ze nie je spravny tvar ip
-{
-    sockaddr_in Server;
-    Server.sin_family = AF_INET;
-    Server.sin_port = htons(Port);
-    Server.sin_addr.s_addr = inet_addr(IpAdrres);
-
-    int Connect_Result = connect(m_Socket, (SOCKADDR *)&Server, sizeof(Server));
-    if (Connect_Result == SOCKET_ERROR)
+    if (DotCount == 3) // Znamena ze nie je spravny tvar ip
     {
-        closesocket(m_Socket);
-        WSACleanup();
-        m_Socket = INVALID_SOCKET;
+        sockaddr_in Server;
+        Server.sin_family = AF_INET;
+        Server.sin_port = htons(Port);
+        Server.sin_addr.s_addr = inet_addr(IpAdrres);
+
+        int Connect_Result = connect(m_Socket, (SOCKADDR *)&Server, sizeof(Server));
+        if (Connect_Result == SOCKET_ERROR)
+        {
+            closesocket(m_Socket);
+            WSACleanup();
+            m_Socket = INVALID_SOCKET;
+            return false;
+        }
+
+        return true;
+    }
+    else
+    {
         return false;
     }
-
-    return true;
-}
-else
-{
-    return false;
-}
 }
 void TCPClient::Disconnect()
 {
@@ -53,7 +53,7 @@ void TCPClient::Disconnect()
 
 bool TCPClient::Send(std::vector<uint8_t> &Buffer)
 {
-    int Error_Send = send(m_Socket, reinterpret_cast<char*>(Buffer.data()), Buffer.size(), 0);
+    int Error_Send = send(m_Socket, reinterpret_cast<char *>(Buffer.data()), Buffer.size(), 0);
     if (Error_Send == SOCKET_ERROR)
     {
         return false;
@@ -63,19 +63,19 @@ bool TCPClient::Send(std::vector<uint8_t> &Buffer)
 
 int TCPClient::Recieve()
 {
-    char *RecvBuffTemp = new char[20];
-    int Lenght = recv(m_Socket, RecvBuffTemp, 20, 0);
-    if (Lenght > 0)
     {
-        int i{};
-        RecvBuff.clear();
-        while(RecvBuffTemp[i] != '\0')
+        char RecvBuffTemp[256]; // väčší buffer
+        int Length = recv(m_Socket, RecvBuffTemp, sizeof(RecvBuffTemp), 0);
+
+        if (Length > 0)
         {
-            RecvBuff.push_back(RecvBuffTemp[i]);
-            i++;
+            RecvBuff.clear();
+            for (int i = 0; i < Length; i++)
+            {
+                RecvBuff.push_back(RecvBuffTemp[i]);
+            }
         }
-        
-        return Lenght;
+
+        return Length;
     }
-    return Lenght;
 }
