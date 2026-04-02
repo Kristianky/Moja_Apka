@@ -11,9 +11,12 @@
                 "src/Server/TcpClient.cpp",
                 "src/Server/ModbusClient.cpp",
                 "src/Server/Converter.cpp",
+
                 "-o",
-                "src/Server/server.exe",
-                "-I", "src/Server",
+                "server.exe",
+
+                "-I", "src",
+
                 "-lws2_32"
             ],
             "group": "build",
