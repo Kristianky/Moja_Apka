@@ -7,10 +7,10 @@
             "command": "g++",
             "args": [
                 "src/Server/main.cpp",
-                "src/Server/MCProtocol.cpp",
+                "src/Protocols/McProtocol/Handlers/MCProtocol.cpp",
                 "src/Server/TcpClient.cpp",
-                "src/Server/ModbusClient.cpp",
-                "src/Server/Converter.cpp",
+                "src/Protocols/Modbus/Handlers/ModbusClient.cpp",
+                "src/Utils/Converter.cpp",
 
                 "-o",
                 "server.exe",
