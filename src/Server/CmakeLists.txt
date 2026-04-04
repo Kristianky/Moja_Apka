@@ -1,0 +1,12 @@
+add_library(TCPCLIENT
+            TcpClient.h
+            TcpClient.cpp)
+
+
+add_executable(server
+    src/Server/main.cpp
+)
+
+target_include_directories(TCPCLIENT PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+target_link_libraries(server PRIVATE core ws2_32)
