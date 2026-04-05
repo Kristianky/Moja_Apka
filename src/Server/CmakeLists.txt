@@ -10,3 +10,4 @@ add_executable(server
 target_include_directories(TCPCLIENT PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(server PRIVATE core ws2_32)
+target_link_libraries(server PUBLIC MODBUSClient MCPROTOCOL)
