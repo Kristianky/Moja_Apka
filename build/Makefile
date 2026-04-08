@@ -281,8 +281,21 @@ MCPROTCOL: cmake_check_build_system
 
 # fast build rule for target.
 MCPROTCOL/fast:
-	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MCPROTCOL.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MCPROTCOL.dir/build
+	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTCOL.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTCOL.dir/build
 .PHONY : MCPROTCOL/fast
+
+#=============================================================================
+# Target rules for targets named MODBUSClient
+
+# Build rule for target.
+MODBUSClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MODBUSClient
+.PHONY : MODBUSClient
+
+# fast build rule for target.
+MODBUSClient/fast:
+	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSClient.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSClient.dir/build
+.PHONY : MODBUSClient/fast
 
 # Help Target
 help:
@@ -298,6 +311,7 @@ help:
 	@echo ... DispatcherLIB
 	@echo ... EditLib
 	@echo ... MCPROTCOL
+	@echo ... MODBUSClient
 	@echo ... MainPageLib
 	@echo ... MouseLIB
 	@echo ... PageVirtualLIB
