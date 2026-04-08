@@ -21,10 +21,12 @@ C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Pages/CMakeFiles/MainPageLib.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Pages/CMakeFiles/PageVirtualLIB.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Pages/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Pages/CMakeFiles/rebuild_cache.dir
-C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/CMakeFiles/TCPCLIENT.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/CMakeFiles/server.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/CMakeFiles/rebuild_cache.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/TcpClient/CMakeFiles/edit_cache.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/TcpClient/CMakeFiles/rebuild_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Utils/CMakeFiles/CONVERTER.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Utils/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Utils/CMakeFiles/rebuild_cache.dir
@@ -32,7 +34,7 @@ C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/CMakeFiles/edit_cache.d
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/CMakeFiles/rebuild_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/CMakeFiles/rebuild_cache.dir
-C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTCOL.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser/CMakeFiles/rebuild_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/CMakeFiles/edit_cache.dir

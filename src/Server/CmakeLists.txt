@@ -1,7 +1,4 @@
-add_library(TCPCLIENT
-            TcpClient.h
-            TcpClient.cpp)
-
+add_subdirectory(TcpClient)
 
 add_executable(server
     main.cpp
@@ -11,8 +8,5 @@ target_include_directories(server PRIVATE
    ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(server PRIVATE MODBUSClient MCPROTCOL)
+target_link_libraries(server PUBLIC MODBUSClient MCPROTOCOL)
 
-target_include_directories(TCPCLIENT PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-target_link_libraries(TCPCLIENT PRIVATE ws2_32)

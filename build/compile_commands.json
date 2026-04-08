@@ -55,15 +55,15 @@
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/TCPCLIENT.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\TCPCLIENT.dir\\TcpClient.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Server\\TcpClient.cpp",
-  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/TcpClient.cpp",
-  "output": "src/Server/CMakeFiles/TCPCLIENT.dir/TcpClient.cpp.obj"
-},
-{
-  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server",
   "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/server.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\server.dir\\main.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Server\\main.cpp",
   "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/main.cpp",
   "output": "src/Server/CMakeFiles/server.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/TcpClient",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/TCPCLIENT.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\TCPCLIENT.dir\\TcpClient.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Server\\TcpClient\\TcpClient.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/TcpClient/TcpClient.cpp",
+  "output": "src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/TcpClient.cpp.obj"
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Utils",
@@ -73,9 +73,9 @@
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTCOL.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTCOL.dir\\MCProtocol.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\McProtocol\\Handlers\\MCProtocol.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOL.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOL.dir\\MCProtocol.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\McProtocol\\Handlers\\MCProtocol.cpp",
   "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/McProtocol/Handlers/MCProtocol.cpp",
-  "output": "src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTCOL.dir/MCProtocol.cpp.obj"
+  "output": "src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir/MCProtocol.cpp.obj"
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser",

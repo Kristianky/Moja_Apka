@@ -233,19 +233,6 @@ PageVirtualLIB/fast:
 .PHONY : PageVirtualLIB/fast
 
 #=============================================================================
-# Target rules for targets named TCPCLIENT
-
-# Build rule for target.
-TCPCLIENT: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TCPCLIENT
-.PHONY : TCPCLIENT
-
-# fast build rule for target.
-TCPCLIENT/fast:
-	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\TCPCLIENT.dir\build.make src/Server/CMakeFiles/TCPCLIENT.dir/build
-.PHONY : TCPCLIENT/fast
-
-#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -257,6 +244,19 @@ server: cmake_check_build_system
 server/fast:
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/build
 .PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named TCPCLIENT
+
+# Build rule for target.
+TCPCLIENT: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TCPCLIENT
+.PHONY : TCPCLIENT
+
+# fast build rule for target.
+TCPCLIENT/fast:
+	$(MAKE) $(MAKESILENT) -f src\Server\TcpClient\CMakeFiles\TCPCLIENT.dir\build.make src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/build
+.PHONY : TCPCLIENT/fast
 
 #=============================================================================
 # Target rules for targets named CONVERTER
@@ -272,17 +272,17 @@ CONVERTER/fast:
 .PHONY : CONVERTER/fast
 
 #=============================================================================
-# Target rules for targets named MCPROTCOL
+# Target rules for targets named MCPROTOCOL
 
 # Build rule for target.
-MCPROTCOL: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MCPROTCOL
-.PHONY : MCPROTCOL
+MCPROTOCOL: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MCPROTOCOL
+.PHONY : MCPROTOCOL
 
 # fast build rule for target.
-MCPROTCOL/fast:
-	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTCOL.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTCOL.dir/build
-.PHONY : MCPROTCOL/fast
+MCPROTOCOL/fast:
+	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOL.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir/build
+.PHONY : MCPROTOCOL/fast
 
 #=============================================================================
 # Target rules for targets named MODBUSClient
@@ -310,7 +310,7 @@ help:
 	@echo ... CONVERTER
 	@echo ... DispatcherLIB
 	@echo ... EditLib
-	@echo ... MCPROTCOL
+	@echo ... MCPROTOCOL
 	@echo ... MODBUSClient
 	@echo ... MainPageLib
 	@echo ... MouseLIB
