@@ -417,10 +417,10 @@ src/WinApi/clean: src/WinApi/CMakeFiles/SiemensTCP.dir/clean
 # Target rules for target src/Aplication/CMakeFiles/AplicationLib.dir
 
 # All Build rule for target.
-src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
@@ -492,11 +492,11 @@ src/Aplication/CMakeFiles/DispatcherLIB.dir/clean:
 # Target rules for target src/WinApi/CMakeFiles/SiemensTCP.dir
 
 # All Build rule for target.
-src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/AplicationLib.dir/all
-src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/AplicationLib.dir/all
+src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
@@ -732,11 +732,11 @@ src/Pages/CMakeFiles/PageVirtualLIB.dir/clean:
 # Target rules for target src/Server/CMakeFiles/server.dir
 
 # All Build rule for target.
-src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Handlers/CMakeFiles/MODBUSClient.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=29,30 "Built target server"
