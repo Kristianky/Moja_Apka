@@ -29,7 +29,7 @@ int main()
         {
             std::cout << "Not Sended\n";
         }
-        std::cout<<Vector_Uint8_ToString(Client.ReadSingleCoil());
+        std::cout<<Vector_Uint8_ToString(Client.ReadSingleCoil(0,0));
         std::cout << "For End Press any number\n";
         int end;
         std::cin >> end;

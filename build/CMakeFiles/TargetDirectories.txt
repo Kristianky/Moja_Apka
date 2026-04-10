@@ -39,6 +39,9 @@ C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser/CMake
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser/CMakeFiles/rebuild_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/CMakeFiles/rebuild_cache.dir
-C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser/CMakeFiles/MODBUSClient.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Handlers/CMakeFiles/MODBUSClient.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Handlers/CMakeFiles/edit_cache.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Handlers/CMakeFiles/rebuild_cache.dir
+C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser/CMakeFiles/rebuild_cache.dir
