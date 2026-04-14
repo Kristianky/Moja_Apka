@@ -1,2 +1,2 @@
-add_subdirectory(Handlers)
+add_subdirectory(ModbusClient)
 add_subdirectory(Parser)
