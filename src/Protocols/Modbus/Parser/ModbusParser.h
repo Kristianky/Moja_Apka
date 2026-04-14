@@ -2,6 +2,7 @@
 #define _MODBUSPARSER_H_
 
 #include "Converter.h"
+#include"ModbusFrame.h"
 
 class MBAP
 {
@@ -66,12 +67,15 @@ class Parser
     private:
        MBAP MbapHead;
        PDU PduHead;
+       ModbusFrame HandleFrame;
     public:
        Parser();
        ~Parser() = default;
        std::vector<uint8_t> BuildReadSingleCoil(const int Byte,const int Bit);
        std::vector<uint8_t> BuildWriteSingleCoil(const int Byte,const int Bit);
        void SetQuantityValue(uint16_t Value) {PduHead.Quantity_Value = Value;}
+       ModbusFrame BuildFrame(const std::vector<uint8_t> &Data);
+       
 };
 
 #endif

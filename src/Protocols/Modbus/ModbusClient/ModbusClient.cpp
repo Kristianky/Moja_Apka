@@ -21,7 +21,7 @@ std::vector<uint8_t> ModbusClient::ReadSingleCoil(const int Byte,const int Bit)
     {
         throw std::runtime_error("Bit out of range");
     }
-
+    ModbusParser.BuildFrame(returnvalue);
     return returnvalue;
 }
 

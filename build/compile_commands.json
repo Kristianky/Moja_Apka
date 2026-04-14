@@ -78,10 +78,10 @@
   "output": "src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir/MCProtocol.cpp.obj"
 },
 {
-  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Handlers",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSClient.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSClient.dir\\ModbusClient.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\Modbus\\Handlers\\ModbusClient.cpp",
-  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/Handlers/ModbusClient.cpp",
-  "output": "src/Protocols/Modbus/Handlers/CMakeFiles/MODBUSClient.dir/ModbusClient.cpp.obj"
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/ModbusClient",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSClient.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSClient.dir\\ModbusClient.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\Modbus\\ModbusClient\\ModbusClient.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/ModbusClient/ModbusClient.cpp",
+  "output": "src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/ModbusClient.cpp.obj"
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser",

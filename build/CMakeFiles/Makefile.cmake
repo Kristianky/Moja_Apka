@@ -52,7 +52,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/McProtocol/CMakeLists.txt"
   "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/McProtocol/Handlers/CMakeLists.txt"
   "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/CMakeLists.txt"
-  "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/Handlers/CMakeLists.txt"
+  "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/ModbusClient/CMakeLists.txt"
   "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/Parser/CMakeLists.txt"
   "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/CMakeLists.txt"
   "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/TcpClient/CMakeLists.txt"
@@ -83,7 +83,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Protocols/McProtocol/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Protocols/McProtocol/Parser/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Protocols/Modbus/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/Protocols/Modbus/Handlers/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Protocols/Modbus/ModbusClient/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Protocols/Modbus/Parser/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -102,6 +102,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/DependInfo.cmake"
   "src/Utils/CMakeFiles/CONVERTER.dir/DependInfo.cmake"
   "src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOL.dir/DependInfo.cmake"
-  "src/Protocols/Modbus/Handlers/CMakeFiles/MODBUSClient.dir/DependInfo.cmake"
+  "src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/DependInfo.cmake"
   "src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/DependInfo.cmake"
+  "src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/DependInfo.cmake"
   )
