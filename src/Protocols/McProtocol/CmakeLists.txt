@@ -1,2 +1,2 @@
-add_subdirectory(McProtocol
-                 Parser)
+add_subdirectory(McProtocolClient)
+add_subdirectory(Parser)

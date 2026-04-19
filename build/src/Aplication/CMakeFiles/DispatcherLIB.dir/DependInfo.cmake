@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/krist/Desktop/C++/Moja_Apka/src/Aplication/Dispatcher.cpp" "src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj" "gcc" "src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj.d"
+  "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Dispatcher.cpp" "src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj" "gcc" "src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

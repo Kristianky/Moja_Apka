@@ -1,7 +1,6 @@
-#ifndef _MCPROTOCOL_H_
-#define _MCPROTOCOL_H_
+#pragma once
 
-#include "TcpClient.h"
+#include "McProtocolFrame.h"
 
 struct Header
 {
@@ -74,17 +73,3 @@ struct Header
                 return map;
         }
 };
-
-class MCProtocol : public TCPClient
-{
-private:
-        Header HeadReq;
-
-public:
-        MCProtocol();
-        ~MCProtocol() = default;
-        void WriteMBit(const bool &Data, const uint16_t &Adrres);
-        void ReadMBit(const uint16_t &Adrres);
-};
-
-#endif
