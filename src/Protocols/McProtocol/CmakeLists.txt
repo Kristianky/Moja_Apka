@@ -1,2 +1,2 @@
-add_subdirectory(Handlers
+add_subdirectory(McProtocol
                  Parser)
