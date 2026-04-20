@@ -1,3 +1,4 @@
+C:/Users/krist/Desktop/C++/Moja_Apka/build/CMakeFiles/Docs.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/CMakeFiles/edit_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/CMakeFiles/rebuild_cache.dir
 C:/Users/krist/Desktop/C++/Moja_Apka/build/src/CMakeFiles/edit_cache.dir

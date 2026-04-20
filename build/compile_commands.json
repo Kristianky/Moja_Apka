@@ -25,15 +25,15 @@
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MouseLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MouseLIB.dir\\Mouse.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Mouse.cpp",
-  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Mouse.cpp",
-  "output": "src/Input/CMakeFiles/MouseLIB.dir/Mouse.cpp.obj"
-},
-{
-  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
   "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/ButtonLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\ButtonLIB.dir\\Button.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Button.cpp",
   "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Button.cpp",
   "output": "src/Input/CMakeFiles/ButtonLIB.dir/Button.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MouseLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MouseLIB.dir\\Mouse.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Mouse.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Mouse.cpp",
+  "output": "src/Input/CMakeFiles/MouseLIB.dir/Mouse.cpp.obj"
 },
 {
   "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",

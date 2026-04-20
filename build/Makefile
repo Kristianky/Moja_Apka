@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Docs
+
+# Build rule for target.
+Docs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Docs
+.PHONY : Docs
+
+# fast build rule for target.
+Docs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Docs.dir\build.make CMakeFiles/Docs.dir/build
+.PHONY : Docs/fast
+
+#=============================================================================
 # Target rules for targets named AplicationLib
 
 # Build rule for target.
@@ -357,6 +370,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Docs
 	@echo ... AplicationLib
 	@echo ... ButtonLIB
 	@echo ... CONVERTER

@@ -269,6 +269,12 @@ Cpp_Project_Template_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Cpp_Project_Template_SOURCE_DIR:STATIC=C:/Users/krist/Desktop/C++/Moja_Apka
 
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
+
+//Doxygen documentation generation tool (https://www.doxygen.nl)
+DOXYGEN_EXECUTABLE:FILEPATH=C:/Program Files/doxygen/bin/doxygen.exe
+
 
 ########################
 # INTERNAL cache entries
@@ -434,4 +440,10 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
+//Details about finding Doxygen
+FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[C:/Program Files/doxygen/bin/doxygen.exe][found components: doxygen missing components: dot][v1.16.1()]
 

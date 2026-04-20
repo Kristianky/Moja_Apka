@@ -77,6 +77,7 @@ preinstall: configured/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Docs.dir/clean
 clean: src/clean
 clean: configured/clean
 .PHONY : clean
@@ -466,13 +467,45 @@ src/WinApi/clean: src/WinApi/CMakeFiles/SiemensTCP.dir/clean
 .PHONY : src/WinApi/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/Docs.dir
+
+# All Build rule for target.
+CMakeFiles/Docs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Docs.dir\build.make CMakeFiles/Docs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Docs.dir\build.make CMakeFiles/Docs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num= "Built target Docs"
+.PHONY : CMakeFiles/Docs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Docs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Docs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles 0
+.PHONY : CMakeFiles/Docs.dir/rule
+
+# Convenience name for target.
+Docs: CMakeFiles/Docs.dir/rule
+.PHONY : Docs
+
+# codegen rule for target.
+CMakeFiles/Docs.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Docs.dir\build.make CMakeFiles/Docs.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num= "Finished codegen for target Docs"
+.PHONY : CMakeFiles/Docs.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Docs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Docs.dir\build.make CMakeFiles/Docs.dir/clean
+.PHONY : CMakeFiles/Docs.dir/clean
+
+#=============================================================================
 # Target rules for target src/Aplication/CMakeFiles/AplicationLib.dir
 
 # All Build rule for target.
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
-src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
@@ -508,8 +541,8 @@ src/Aplication/CMakeFiles/AplicationLib.dir/clean:
 
 # All Build rule for target.
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
-src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
@@ -544,11 +577,11 @@ src/Aplication/CMakeFiles/DispatcherLIB.dir/clean:
 # Target rules for target src/WinApi/CMakeFiles/SiemensTCP.dir
 
 # All Build rule for target.
-src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/AplicationLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/DispatcherLIB.dir/all
+src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/AplicationLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
-src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
@@ -583,8 +616,8 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/clean:
 # Target rules for target src/Ui/CMakeFiles/UiLib.dir
 
 # All Build rule for target.
-src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
@@ -715,8 +748,8 @@ src/Input/CMakeFiles/EditLib.dir/clean:
 # Target rules for target src/Pages/CMakeFiles/MainPageLib.dir
 
 # All Build rule for target.
-src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Pages/CMakeFiles/MainPageLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\MainPageLib.dir\build.make src/Pages/CMakeFiles/MainPageLib.dir/depend
@@ -750,8 +783,8 @@ src/Pages/CMakeFiles/MainPageLib.dir/clean:
 # Target rules for target src/Pages/CMakeFiles/PageVirtualLIB.dir
 
 # All Build rule for target.
-src/Pages/CMakeFiles/PageVirtualLIB.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Pages/CMakeFiles/PageVirtualLIB.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Pages/CMakeFiles/PageVirtualLIB.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Pages/CMakeFiles/PageVirtualLIB.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\PageVirtualLIB.dir\build.make src/Pages/CMakeFiles/PageVirtualLIB.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\PageVirtualLIB.dir\build.make src/Pages/CMakeFiles/PageVirtualLIB.dir/build
@@ -784,14 +817,14 @@ src/Pages/CMakeFiles/PageVirtualLIB.dir/clean:
 # Target rules for target src/Server/CMakeFiles/server.dir
 
 # All Build rule for target.
+src/Server/CMakeFiles/server.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=33,34 "Built target server"
@@ -887,10 +920,10 @@ src/Utils/CMakeFiles/CONVERTER.dir/clean:
 # Target rules for target src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir
 
 # All Build rule for target.
-src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
-src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
+src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
+src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\McProtocolClient\CMakeFiles\MCPROTOCOL.dir\build.make src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\McProtocolClient\CMakeFiles\MCPROTOCOL.dir\build.make src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=11,12 "Built target MCPROTOCOL"
@@ -987,10 +1020,10 @@ src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/clean:
 # Target rules for target src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir
 
 # All Build rule for target.
-src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
-src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
+src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all
+src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\ModbusClient\CMakeFiles\MODBUSClient.dir\build.make src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\ModbusClient\CMakeFiles\MODBUSClient.dir\build.make src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\krist\Desktop\C++\Moja_Apka\build\CMakeFiles --progress-num=16,17 "Built target MODBUSClient"
