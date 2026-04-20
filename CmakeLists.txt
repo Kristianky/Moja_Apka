@@ -14,5 +14,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 #include(AddGitSubmodule)    toto len povieme kde sa funckia nachadza a urcime jej cestu k nej
 #add_git_submodule(Nejaka cesta ku kniznici)   tu uz volame funckiu s konkretnou kniznicou
 
-
+#Externe kniznice vieme volat aj cez FetchDeclare() a potom aktivovat cez Fetch_MakeAvailable
+#Samozrejme v oboch pripadoch volania extern kniznic im musime potom pridat link libraries v danej zlozke kde budu
 add_subdirectory(src)
+add_subdirectory(configured)
