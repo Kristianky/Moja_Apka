@@ -1,0 +1,29 @@
+DOXYFILE_ENCODING = UTF-8
+PROJECT_NAME = Cpp_Project_Template
+PROJECT_NUMBER = 1.0
+PROJECT_BRIEF = 
+PROJECT_LOGO = 
+OUTPUT_DIRECTORY = ./
+MARKDOWN_SUPPORT = YES
+
+EXTRAXT_ALL = YES
+RECURSIVE = YES
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+
+INPUT = ../src \
+INPUT ../include
+INPUT_ENCODING = UTF-8
+FILE_PATERNS = *.c\
+               *.cc\
+               *.cpp\
+               *.c++\
+               *.h\
+               *.hpp\
+               *.h++\
+               *.md\
+               *.dox\
+               *.doc\
+               *.txt
+
+
