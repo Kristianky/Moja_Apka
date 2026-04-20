@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/krist/Desktop/C++/Moja_Apka/src/Aplication
+# Install script for directory: C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Aplication/install_local_manifest.txt"
+  file(WRITE "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Aplication/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

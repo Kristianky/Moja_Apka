@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe"
-  "C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.exe.manifest"
-  "C:/Users/krist/Desktop/C++/Moja_Apka/SiemensTCP.pdb"
+  "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe"
+  "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.exe.manifest"
+  "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/SiemensTCP.pdb"
   "CMakeFiles/SiemensTCP.dir/main.cpp.obj"
   "CMakeFiles/SiemensTCP.dir/main.cpp.obj.d"
   "libSiemensTCP.dll.a"

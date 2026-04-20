@@ -73,3 +73,14 @@ struct Header
                 return map;
         }
 };
+
+class McProtocolParser
+{
+private:
+        Header HeadReq;
+public:
+        McProtocolParser();
+        ~McProtocolParser() = default;
+        std::vector<uint8_t> ReadBitHead(const std::string &MemoryArea,const int32_t&Adress,const int &Points);
+        std::vector<uint8_t> WriteBitHead(const std::string &MemoryArea,const int32_t &Adress,const int &Points);
+};

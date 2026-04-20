@@ -11,7 +11,7 @@
 class ModbusClient : public TCPClient
 {
 private:
-    Parser ModbusParser;
+    ModbusParser ModbusParser;
 public:
     ModbusClient();
     ~ModbusClient() = default;

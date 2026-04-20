@@ -62,15 +62,15 @@ public:
     }
 };
 
-class Parser
+class ModbusParser
 {
     private:
        MBAP MbapHead;
        PDU PduHead;
        ModbusFrame HandleFrame;
     public:
-       Parser();
-       ~Parser() = default;
+       ModbusParser();
+       ~ModbusParser() = default;
        std::vector<uint8_t> BuildReadSingleCoil(const int Byte,const int Bit);
        std::vector<uint8_t> BuildWriteSingleCoil(const int Byte,const int Bit);
        void SetQuantityValue(uint16_t Value) {PduHead.Quantity_Value = Value;}

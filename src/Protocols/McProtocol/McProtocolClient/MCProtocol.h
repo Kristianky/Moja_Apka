@@ -8,13 +8,13 @@
 class MCProtocol : public TCPClient
 {
 private:
-        Header HeadReq;
+        McProtocolParser McParser;
 
 public:
         MCProtocol();
         ~MCProtocol() = default;
-        void WriteMBit(const bool &Data, const uint16_t &Adrres);
-        void ReadMBit(const uint16_t &Adrres);
+        void WriteMBit(const bool &Data, const uint32_t &Adrres);
+        void ReadMBit(const int32_t &Adrres);
 };
 
 #endif
