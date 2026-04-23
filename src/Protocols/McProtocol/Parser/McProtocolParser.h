@@ -74,13 +74,18 @@ struct Header
         }
 };
 
+class McProtocolParser;
+std::ostream &operator<<(std::ostream &Os,const McProtocolParser &Rhs);
 class McProtocolParser
 {
 private:
         Header HeadReq;
+        McProtocolFrame PlcFrame;
 public:
         McProtocolParser();
         ~McProtocolParser() = default;
         std::vector<uint8_t> ReadBitHead(const std::string &MemoryArea,const int32_t&Adress,const int &Points);
         std::vector<uint8_t> WriteBitHead(const std::string &MemoryArea,const int32_t &Adress,const int &Points);
+        void CreateFrameToHandler(const std::vector<uint8_t> &InputFrame);
+        friend std::ostream &operator<<(std::ostream &Os,const McProtocolParser &Rhs);
 };

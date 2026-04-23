@@ -473,9 +473,9 @@ src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Aplication/CMakeFiles/Dispa
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
-src/Aplication/CMakeFiles/AplicationLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\AplicationLib.dir\build.make src/Aplication/CMakeFiles/AplicationLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\AplicationLib.dir\build.make src/Aplication/CMakeFiles/AplicationLib.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=1,2 "Built target AplicationLib"
@@ -510,9 +510,9 @@ src/Aplication/CMakeFiles/AplicationLib.dir/clean:
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
-src/Aplication/CMakeFiles/DispatcherLIB.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Aplication\CMakeFiles\DispatcherLIB.dir\build.make src/Aplication/CMakeFiles/DispatcherLIB.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=7,8 "Built target DispatcherLIB"
@@ -549,12 +549,12 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Aplication/CMakeFiles/DispatcherLI
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Ui/CMakeFiles/UiLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
-src/WinApi/CMakeFiles/SiemensTCP.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\WinApi\CMakeFiles\SiemensTCP.dir\build.make src/WinApi/CMakeFiles/SiemensTCP.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\WinApi\CMakeFiles\SiemensTCP.dir\build.make src/WinApi/CMakeFiles/SiemensTCP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=27,28 "Built target SiemensTCP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=28,29 "Built target SiemensTCP"
 .PHONY : src/WinApi/CMakeFiles/SiemensTCP.dir/all
 
 # Build rule for subdir invocation for target.
@@ -571,7 +571,7 @@ SiemensTCP: src/WinApi/CMakeFiles/SiemensTCP.dir/rule
 # codegen rule for target.
 src/WinApi/CMakeFiles/SiemensTCP.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\WinApi\CMakeFiles\SiemensTCP.dir\build.make src/WinApi/CMakeFiles/SiemensTCP.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=27,28 "Finished codegen for target SiemensTCP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=28,29 "Finished codegen for target SiemensTCP"
 .PHONY : src/WinApi/CMakeFiles/SiemensTCP.dir/codegen
 
 # clean rule for target.
@@ -585,12 +585,12 @@ src/WinApi/CMakeFiles/SiemensTCP.dir/clean:
 # All Build rule for target.
 src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
+src/Ui/CMakeFiles/UiLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Ui/CMakeFiles/UiLib.dir/all: src/Pages/CMakeFiles/MainPageLib.dir/all
-src/Ui/CMakeFiles/UiLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Ui\CMakeFiles\UiLib.dir\build.make src/Ui/CMakeFiles/UiLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Ui\CMakeFiles\UiLib.dir\build.make src/Ui/CMakeFiles/UiLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=31,32 "Built target UiLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=32,33 "Built target UiLib"
 .PHONY : src/Ui/CMakeFiles/UiLib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -607,7 +607,7 @@ UiLib: src/Ui/CMakeFiles/UiLib.dir/rule
 # codegen rule for target.
 src/Ui/CMakeFiles/UiLib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Ui\CMakeFiles\UiLib.dir\build.make src/Ui/CMakeFiles/UiLib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=31,32 "Finished codegen for target UiLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=32,33 "Finished codegen for target UiLib"
 .PHONY : src/Ui/CMakeFiles/UiLib.dir/codegen
 
 # clean rule for target.
@@ -622,7 +622,7 @@ src/Ui/CMakeFiles/UiLib.dir/clean:
 src/Input/CMakeFiles/MouseLIB.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\MouseLIB.dir\build.make src/Input/CMakeFiles/MouseLIB.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\MouseLIB.dir\build.make src/Input/CMakeFiles/MouseLIB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=23,24 "Built target MouseLIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=24,25 "Built target MouseLIB"
 .PHONY : src/Input/CMakeFiles/MouseLIB.dir/all
 
 # Build rule for subdir invocation for target.
@@ -639,7 +639,7 @@ MouseLIB: src/Input/CMakeFiles/MouseLIB.dir/rule
 # codegen rule for target.
 src/Input/CMakeFiles/MouseLIB.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Input\CMakeFiles\MouseLIB.dir\build.make src/Input/CMakeFiles/MouseLIB.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=23,24 "Finished codegen for target MouseLIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=24,25 "Finished codegen for target MouseLIB"
 .PHONY : src/Input/CMakeFiles/MouseLIB.dir/codegen
 
 # clean rule for target.
@@ -717,11 +717,11 @@ src/Input/CMakeFiles/EditLib.dir/clean:
 # All Build rule for target.
 src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/MouseLIB.dir/all
 src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/all
-src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 src/Pages/CMakeFiles/MainPageLib.dir/all: src/Pages/CMakeFiles/PageVirtualLIB.dir/all
+src/Pages/CMakeFiles/MainPageLib.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\MainPageLib.dir\build.make src/Pages/CMakeFiles/MainPageLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\MainPageLib.dir\build.make src/Pages/CMakeFiles/MainPageLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=21,22 "Built target MainPageLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=22,23 "Built target MainPageLib"
 .PHONY : src/Pages/CMakeFiles/MainPageLib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -738,7 +738,7 @@ MainPageLib: src/Pages/CMakeFiles/MainPageLib.dir/rule
 # codegen rule for target.
 src/Pages/CMakeFiles/MainPageLib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\MainPageLib.dir\build.make src/Pages/CMakeFiles/MainPageLib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=21,22 "Finished codegen for target MainPageLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=22,23 "Finished codegen for target MainPageLib"
 .PHONY : src/Pages/CMakeFiles/MainPageLib.dir/codegen
 
 # clean rule for target.
@@ -755,7 +755,7 @@ src/Pages/CMakeFiles/PageVirtualLIB.dir/all: src/Input/CMakeFiles/ButtonLIB.dir/
 src/Pages/CMakeFiles/PageVirtualLIB.dir/all: src/Input/CMakeFiles/EditLib.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\PageVirtualLIB.dir\build.make src/Pages/CMakeFiles/PageVirtualLIB.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\PageVirtualLIB.dir\build.make src/Pages/CMakeFiles/PageVirtualLIB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=25,26 "Built target PageVirtualLIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=26,27 "Built target PageVirtualLIB"
 .PHONY : src/Pages/CMakeFiles/PageVirtualLIB.dir/all
 
 # Build rule for subdir invocation for target.
@@ -772,7 +772,7 @@ PageVirtualLIB: src/Pages/CMakeFiles/PageVirtualLIB.dir/rule
 # codegen rule for target.
 src/Pages/CMakeFiles/PageVirtualLIB.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Pages\CMakeFiles\PageVirtualLIB.dir\build.make src/Pages/CMakeFiles/PageVirtualLIB.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=25,26 "Finished codegen for target PageVirtualLIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=26,27 "Finished codegen for target PageVirtualLIB"
 .PHONY : src/Pages/CMakeFiles/PageVirtualLIB.dir/codegen
 
 # clean rule for target.
@@ -784,22 +784,22 @@ src/Pages/CMakeFiles/PageVirtualLIB.dir/clean:
 # Target rules for target src/Server/CMakeFiles/server.dir
 
 # All Build rule for target.
-src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all
-src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all
+src/Server/CMakeFiles/server.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=33,34 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=34,35 "Built target server"
 .PHONY : src/Server/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 src/Server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Server/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 0
 .PHONY : src/Server/CMakeFiles/server.dir/rule
@@ -811,7 +811,7 @@ server: src/Server/CMakeFiles/server.dir/rule
 # codegen rule for target.
 src/Server/CMakeFiles/server.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Server\CMakeFiles\server.dir\build.make src/Server/CMakeFiles/server.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=33,34 "Finished codegen for target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=34,35 "Finished codegen for target server"
 .PHONY : src/Server/CMakeFiles/server.dir/codegen
 
 # clean rule for target.
@@ -826,7 +826,7 @@ src/Server/CMakeFiles/server.dir/clean:
 src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\Server\TcpClient\CMakeFiles\TCPCLIENT.dir\build.make src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Server\TcpClient\CMakeFiles\TCPCLIENT.dir\build.make src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=29,30 "Built target TCPCLIENT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=30,31 "Built target TCPCLIENT"
 .PHONY : src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
 
 # Build rule for subdir invocation for target.
@@ -843,7 +843,7 @@ TCPCLIENT: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/rule
 # codegen rule for target.
 src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Server\TcpClient\CMakeFiles\TCPCLIENT.dir\build.make src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=29,30 "Finished codegen for target TCPCLIENT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=30,31 "Finished codegen for target TCPCLIENT"
 .PHONY : src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/codegen
 
 # clean rule for target.
@@ -887,9 +887,9 @@ src/Utils/CMakeFiles/CONVERTER.dir/clean:
 # Target rules for target src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir
 
 # All Build rule for target.
-src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
-src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
+src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
+src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
 src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\McProtocolClient\CMakeFiles\MCPROTOCOL.dir\build.make src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\McProtocolClient\CMakeFiles\MCPROTOCOL.dir\build.make src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/build
@@ -898,7 +898,7 @@ src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all: src/Pro
 
 # Build rule for subdir invocation for target.
 src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 0
 .PHONY : src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/rule
@@ -926,12 +926,12 @@ src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all: src/Utils/C
 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOLPARSER.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOLPARSER.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=14,15 "Built target MCPROTOCOLPARSER"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=15,16 "Built target MCPROTOCOLPARSER"
 .PHONY : src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
 
 # Build rule for subdir invocation for target.
 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 0
 .PHONY : src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/rule
@@ -943,7 +943,7 @@ MCPROTOCOLPARSER: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.di
 # codegen rule for target.
 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOLPARSER.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=14,15 "Finished codegen for target MCPROTOCOLPARSER"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=15,16 "Finished codegen for target MCPROTOCOLPARSER"
 .PHONY : src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/codegen
 
 # clean rule for target.
@@ -958,12 +958,12 @@ src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/clean:
 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOLFRAME.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOLFRAME.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=13 "Built target MCPROTOCOLFRAME"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=13,14 "Built target MCPROTOCOLFRAME"
 .PHONY : src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 
 # Build rule for subdir invocation for target.
 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles 0
 .PHONY : src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/rule
@@ -975,7 +975,7 @@ MCPROTOCOLFRAME: src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/
 # codegen rule for target.
 src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Protocols\McProtocol\Parser\CMakeFiles\MCPROTOCOLFRAME.dir\build.make src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=13 "Finished codegen for target MCPROTOCOLFRAME"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=13,14 "Finished codegen for target MCPROTOCOLFRAME"
 .PHONY : src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/codegen
 
 # clean rule for target.
@@ -987,13 +987,13 @@ src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/clean:
 # Target rules for target src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir
 
 # All Build rule for target.
-src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/all
-src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
+src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all
+src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\ModbusClient\CMakeFiles\MODBUSClient.dir\build.make src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\ModbusClient\CMakeFiles\MODBUSClient.dir\build.make src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=16,17 "Built target MODBUSClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=17,18 "Built target MODBUSClient"
 .PHONY : src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1010,7 +1010,7 @@ MODBUSClient: src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/rule
 # codegen rule for target.
 src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\ModbusClient\CMakeFiles\MODBUSClient.dir\build.make src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=16,17 "Finished codegen for target MODBUSClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=17,18 "Finished codegen for target MODBUSClient"
 .PHONY : src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/codegen
 
 # clean rule for target.
@@ -1026,7 +1026,7 @@ src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all: src/Utils/CMakeFile
 src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSPARSER.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSPARSER.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=19,20 "Built target MODBUSPARSER"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=20,21 "Built target MODBUSPARSER"
 .PHONY : src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1043,7 +1043,7 @@ MODBUSPARSER: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/rule
 # codegen rule for target.
 src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSPARSER.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=19,20 "Finished codegen for target MODBUSPARSER"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=20,21 "Finished codegen for target MODBUSPARSER"
 .PHONY : src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/codegen
 
 # clean rule for target.
@@ -1058,7 +1058,7 @@ src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/clean:
 src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all: src/Utils/CMakeFiles/CONVERTER.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSFRAME.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSFRAME.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=18 "Built target MODBUSFRAME"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=19 "Built target MODBUSFRAME"
 .PHONY : src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1075,7 +1075,7 @@ MODBUSFRAME: src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/rule
 # codegen rule for target.
 src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\Protocols\Modbus\Parser\CMakeFiles\MODBUSFRAME.dir\build.make src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=18 "Finished codegen for target MODBUSFRAME"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Administrator\Desktop\Kiko\c++\Moja_Apka\build\CMakeFiles --progress-num=19 "Finished codegen for target MODBUSFRAME"
 .PHONY : src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/codegen
 
 # clean rule for target.

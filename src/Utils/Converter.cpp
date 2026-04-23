@@ -133,3 +133,11 @@ uint32_t IntToMcProtocolAdress(const int32_t &Adress)
      uint32_t ReturnValue = static_cast<uint32_t>(Adress);
      return ReturnValue;
 }
+
+std::string uint16_ToString(const uint16_t &ToConvert)
+{
+    std::ostringstream oss;
+    oss << std::hex << std::setw(4) << std::setfill('0')<<ToConvert;
+    return oss.str();
+    
+}

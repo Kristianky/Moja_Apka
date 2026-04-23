@@ -39,3 +39,16 @@ std::vector<uint8_t> McProtocolParser::WriteBitHead(const std::string &MemoryAre
     ReturnValue = HeadReq.Map();
     return ReturnValue;
 }
+
+void McProtocolParser::CreateFrameToHandler(const std::vector<uint8_t> &InputFrame)
+{
+    PlcFrame.SetSubHeader(InputFrame);
+    PlcFrame.SetEndCode(InputFrame);
+    PlcFrame.SetData(InputFrame);
+}
+
+std::ostream &operator<<(std::ostream &Os,const McProtocolParser &Rhs)
+{
+    Os<<Rhs.PlcFrame;
+    return Os;
+}

@@ -4,7 +4,6 @@
 #include "TcpClient.h"
 #include "McProtocolParser.h"
 
-
 class MCProtocol : public TCPClient
 {
 private:
@@ -15,6 +14,8 @@ public:
         ~MCProtocol() = default;
         void WriteMBit(const bool &Data, const uint32_t &Adrres);
         void ReadMBit(const int32_t &Adrres);
+        McProtocolParser GetMcParser() {return McParser;}
+        void DisplayFrameToHandle(){std::cout<<McParser;}
 };
 
 #endif

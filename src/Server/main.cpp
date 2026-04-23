@@ -40,9 +40,10 @@ int main()
     {
         MCProtocol mntnc;
         mntnc.Connect("192.168.10.2", 2505);
-        mntnc.WriteMBit(false, 0x00);
+        mntnc.WriteMBit(true, 0x00);
         mntnc.ReadMBit(0x00);
         std::cout << Vector_Uint8_ToString(mntnc.GetRecvBuff()) << std::endl;
+        mntnc.DisplayFrameToHandle();
         std::cout << "\nFor End Press any number\n";
         int end;
         std::cin >> end;

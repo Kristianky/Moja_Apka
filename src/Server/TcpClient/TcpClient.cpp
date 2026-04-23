@@ -70,7 +70,7 @@ int TCPClient::Recieve()
         if (Length > 0)
         {
             RecvBuff.clear();
-            for (int i = 0; i < Length; i++)
+            for (int i = 0; i < Length + 1; i++)
             {
                 RecvBuff.push_back(RecvBuffTemp[i]);
             }
