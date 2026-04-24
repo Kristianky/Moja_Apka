@@ -31,6 +31,7 @@ int main()
         }
         std::cout<<Vector_Uint8_ToString(Client.ReadSingleCoil(0,0))<<"\n";
         std::cout << "For End Press any number\n";
+        Client.DisplayFrame();
         int end;
         std::cin >> end;
         Client.Disconnect();

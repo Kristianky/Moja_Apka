@@ -4,6 +4,9 @@
 #include "Converter.h"
 #include"ModbusFrame.h"
 
+class ModbusParser;
+std::ostream &operator<<(std::ostream &Os,const ModbusParser &Rhs);
+
 class MBAP
 {
 private:
@@ -74,7 +77,10 @@ class ModbusParser
        std::vector<uint8_t> BuildReadSingleCoil(const int Byte,const int Bit);
        std::vector<uint8_t> BuildWriteSingleCoil(const int Byte,const int Bit);
        void SetQuantityValue(uint16_t Value) {PduHead.Quantity_Value = Value;}
-       ModbusFrame BuildFrame(const std::vector<uint8_t> &Data);
+       void BuildFrame(const std::vector<uint8_t> &Data);
+       friend std::ostream &operator<<(std::ostream &Os,const ModbusParser &Rhs);
+       ModbusFrame GetHandleFrame() {return HandleFrame;}
+       
        
 };
 

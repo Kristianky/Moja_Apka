@@ -6,6 +6,7 @@ ModbusClient::ModbusClient() : TCPClient()
 
 std::vector<uint8_t> ModbusClient::ReadSingleCoil(const int Byte,const int Bit)
 {
+    ModbusParser.SetQuantityValue(0x0001);
     std::vector<uint8_t> SendMap = ModbusParser.BuildReadSingleCoil(Byte,Bit),returnvalue;
     if (Send(SendMap))
     {

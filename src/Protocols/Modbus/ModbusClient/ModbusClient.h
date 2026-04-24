@@ -17,6 +17,7 @@ public:
     ~ModbusClient() = default;
     std::vector<uint8_t> ReadSingleCoil(int Byte,int Bit);
     bool WriteSingleCoil(const bool &Data,const int Byte,const int Bit);
+    void DisplayFrame(){std::cout<<ModbusParser.GetHandleFrame();}
 };
 
 #endif

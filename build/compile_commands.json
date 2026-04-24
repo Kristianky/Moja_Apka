@@ -1,104 +1,110 @@
 [
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Aplication",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/DispatcherLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\DispatcherLIB.dir\\Dispatcher.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Aplication\\Dispatcher.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Dispatcher.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Aplication",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/DispatcherLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\DispatcherLIB.dir\\Dispatcher.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Aplication\\Dispatcher.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Aplication/Dispatcher.cpp",
   "output": "src/Aplication/CMakeFiles/DispatcherLIB.dir/Dispatcher.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Aplication",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/AplicationLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\AplicationLib.dir\\Aplication.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Aplication\\Aplication.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Aplication/Aplication.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Aplication",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/AplicationLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\AplicationLib.dir\\Aplication.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Aplication\\Aplication.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Aplication/Aplication.cpp",
   "output": "src/Aplication/CMakeFiles/AplicationLib.dir/Aplication.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/WinApi",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DUNICODE -D_UNICODE @CMakeFiles/SiemensTCP.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\SiemensTCP.dir\\main.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\WinApi\\main.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/WinApi/main.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/WinApi",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DUNICODE -D_UNICODE @CMakeFiles/SiemensTCP.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\SiemensTCP.dir\\main.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\WinApi\\main.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/WinApi/main.cpp",
   "output": "src/WinApi/CMakeFiles/SiemensTCP.dir/main.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Ui",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/UiLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\UiLib.dir\\Ui.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Ui\\Ui.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Ui/Ui.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Ui",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/UiLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\UiLib.dir\\Ui.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Ui\\Ui.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Ui/Ui.cpp",
   "output": "src/Ui/CMakeFiles/UiLib.dir/Ui.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MouseLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MouseLIB.dir\\Mouse.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Input\\Mouse.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Mouse.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MouseLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MouseLIB.dir\\Mouse.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Mouse.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Mouse.cpp",
   "output": "src/Input/CMakeFiles/MouseLIB.dir/Mouse.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/ButtonLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\ButtonLIB.dir\\Button.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Input\\Button.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Button.cpp",
-  "output": "src/Input/CMakeFiles/ButtonLIB.dir/Button.cpp.obj"
-},
-{
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Input",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/EditLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\EditLib.dir\\Edit.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Input\\Edit.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Input/Edit.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/EditLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\EditLib.dir\\Edit.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Edit.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Edit.cpp",
   "output": "src/Input/CMakeFiles/EditLib.dir/Edit.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Pages",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/PageVirtualLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\PageVirtualLIB.dir\\PageVirtual.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Pages\\PageVirtual.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/PageVirtual.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Input",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/ButtonLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\ButtonLIB.dir\\Button.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Input\\Button.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Input/Button.cpp",
+  "output": "src/Input/CMakeFiles/ButtonLIB.dir/Button.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Pages",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/PageVirtualLIB.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\PageVirtualLIB.dir\\PageVirtual.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Pages\\PageVirtual.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Pages/PageVirtual.cpp",
   "output": "src/Pages/CMakeFiles/PageVirtualLIB.dir/PageVirtual.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Pages",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MainPageLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MainPageLib.dir\\MainPage.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Pages\\MainPage.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Pages/MainPage.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Pages",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MainPageLib.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MainPageLib.dir\\MainPage.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Pages\\MainPage.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Pages/MainPage.cpp",
   "output": "src/Pages/CMakeFiles/MainPageLib.dir/MainPage.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Server",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/server.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\server.dir\\main.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Server\\main.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Server/main.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/server.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\server.dir\\main.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Server\\main.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/main.cpp",
   "output": "src/Server/CMakeFiles/server.dir/main.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Server/TcpClient",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/TCPCLIENT.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\TCPCLIENT.dir\\TcpClient.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Server\\TcpClient\\TcpClient.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Server/TcpClient/TcpClient.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Server/TcpClient",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/TCPCLIENT.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\TCPCLIENT.dir\\TcpClient.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Server\\TcpClient\\TcpClient.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Server/TcpClient/TcpClient.cpp",
   "output": "src/Server/TcpClient/CMakeFiles/TCPCLIENT.dir/TcpClient.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Utils",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/CONVERTER.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\CONVERTER.dir\\Converter.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Utils\\Converter.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Utils/Converter.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Utils",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/CONVERTER.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\CONVERTER.dir\\Converter.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Utils\\Converter.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Utils/Converter.cpp",
   "output": "src/Utils/CMakeFiles/CONVERTER.dir/Converter.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Protocols/McProtocol/McProtocolClient",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOL.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOL.dir\\MCProtocol.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Protocols\\McProtocol\\McProtocolClient\\MCProtocol.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Protocols/McProtocol/McProtocolClient/MCProtocol.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/McProtocolClient",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOL.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOL.dir\\MCProtocol.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\McProtocol\\McProtocolClient\\MCProtocol.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/McProtocol/McProtocolClient/MCProtocol.cpp",
   "output": "src/Protocols/McProtocol/McProtocolClient/CMakeFiles/MCPROTOCOL.dir/MCProtocol.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Protocols/McProtocol/Parser",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOLFRAME.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOLFRAME.dir\\McProtocolFrame.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Protocols\\McProtocol\\Parser\\McProtocolFrame.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Protocols/McProtocol/Parser/McProtocolFrame.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOLFRAME.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOLFRAME.dir\\McProtocolFrame.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\McProtocol\\Parser\\McProtocolFrame.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/McProtocol/Parser/McProtocolFrame.cpp",
   "output": "src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLFRAME.dir/McProtocolFrame.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Protocols/McProtocol/Parser",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOLPARSER.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOLPARSER.dir\\McProtocolParser.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Protocols\\McProtocol\\Parser\\McProtocolParser.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Protocols/McProtocol/Parser/McProtocolParser.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/McProtocol/Parser",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MCPROTOCOLPARSER.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MCPROTOCOLPARSER.dir\\McProtocolParser.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\McProtocol\\Parser\\McProtocolParser.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/McProtocol/Parser/McProtocolParser.cpp",
   "output": "src/Protocols/McProtocol/Parser/CMakeFiles/MCPROTOCOLPARSER.dir/McProtocolParser.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Protocols/Modbus/ModbusClient",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSClient.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSClient.dir\\ModbusClient.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Protocols\\Modbus\\ModbusClient\\ModbusClient.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Protocols/Modbus/ModbusClient/ModbusClient.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/ModbusClient",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSClient.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSClient.dir\\ModbusClient.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\Modbus\\ModbusClient\\ModbusClient.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/ModbusClient/ModbusClient.cpp",
   "output": "src/Protocols/Modbus/ModbusClient/CMakeFiles/MODBUSClient.dir/ModbusClient.cpp.obj"
 },
 {
-  "directory": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/build/src/Protocols/Modbus/Parser",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSPARSER.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSPARSER.dir\\ModbusParser.cpp.obj -c C:\\Users\\Administrator\\Desktop\\Kiko\\c++\\Moja_Apka\\src\\Protocols\\Modbus\\Parser\\ModbusParser.cpp",
-  "file": "C:/Users/Administrator/Desktop/Kiko/c++/Moja_Apka/src/Protocols/Modbus/Parser/ModbusParser.cpp",
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSFRAME.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSFRAME.dir\\ModbusFrame.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\Modbus\\Parser\\ModbusFrame.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/Parser/ModbusFrame.cpp",
+  "output": "src/Protocols/Modbus/Parser/CMakeFiles/MODBUSFRAME.dir/ModbusFrame.cpp.obj"
+},
+{
+  "directory": "C:/Users/krist/Desktop/C++/Moja_Apka/build/src/Protocols/Modbus/Parser",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  @CMakeFiles/MODBUSPARSER.dir/includes_CXX.rsp -std=c++17 -o CMakeFiles\\MODBUSPARSER.dir\\ModbusParser.cpp.obj -c C:\\Users\\krist\\Desktop\\C++\\Moja_Apka\\src\\Protocols\\Modbus\\Parser\\ModbusParser.cpp",
+  "file": "C:/Users/krist/Desktop/C++/Moja_Apka/src/Protocols/Modbus/Parser/ModbusParser.cpp",
   "output": "src/Protocols/Modbus/Parser/CMakeFiles/MODBUSPARSER.dir/ModbusParser.cpp.obj"
 }
 ]
