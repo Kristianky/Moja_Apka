@@ -17,7 +17,7 @@ public:
     void SetEndCode(const std::vector<uint8_t> &InputFrame) { EndCode = static_cast<uint16_t>(InputFrame[8]) | (static_cast<uint16_t>(InputFrame.at(9) << 8)); }
     void SetData(const std::vector<uint8_t> &InputFrame)
     {
-        int i{10};
+        int i{11};
         for (i; i < InputFrame.size(); i++)
         {
             Data.push_back(InputFrame.at(i));

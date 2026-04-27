@@ -18,7 +18,7 @@ void MCProtocol::WriteMBit(const bool &Value, const uint32_t &Adress)
     }
     ToSend.push_back(Data);
     Send(ToSend);
-
+    int Result = Recieve();
     
 
 }
