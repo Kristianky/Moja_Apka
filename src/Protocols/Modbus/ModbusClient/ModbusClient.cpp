@@ -43,7 +43,7 @@ bool ModbusClient::WriteSingleCoil(const bool &Data, const int Byte, const int B
         value &= ~(1 << Bit);
     }
 
-    ModbusParser.SetQuantityValue(value);
+    // ModbusParser.SetQuantityValue(value);
     SendMAp = ModbusParser.BuildWriteSingleCoil(Byte,Bit);
     return Send(SendMAp);
 }

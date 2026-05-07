@@ -6,6 +6,7 @@
 #include "Converter.h"
 #include <string>
 #include "ModbusParser.h"
+#include "ModbusHandler.h"
 
 
 class ModbusClient : public TCPClient
@@ -17,6 +18,7 @@ public:
     ~ModbusClient() = default;
     std::vector<uint8_t> ReadSingleCoil(int Byte,int Bit);
     bool WriteSingleCoil(const bool &Data,const int Byte,const int Bit);
+    uint16_t ReadInputRegister();
     void DisplayFrame(){std::cout<<ModbusParser.GetHandleFrame();}
 };
 

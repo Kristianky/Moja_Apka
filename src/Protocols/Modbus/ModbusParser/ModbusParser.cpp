@@ -9,8 +9,8 @@ std::vector<uint8_t> ModbusParser::BuildReadSingleCoil(const int Byte,const int 
 {
     std::vector<uint8_t> ReadRequest,PduHeadRead;
     MbapHead.Lenght = 6;
-    PduHead.FunctionCode = 3;
-    PduHead.Adress = static_cast<uint16_t>(Byte);
+    PduHead.FunctionCode = 4;
+    PduHead.Adress = 2;
     PduHead.Quantity_Value = 0x0001;
     ReadRequest = MbapHead.BuildMap();
     PduHeadRead = PduHead.PDUMap();

@@ -21,5 +21,10 @@ class ModbusFrame
        void SetAdress(const std::vector<uint8_t> &InputFrame);
        void SetQuantityValue(const std::vector<uint8_t> &InputFrame);
        void SetData (const std::vector<uint8_t> &InputFrame);
+       uint16_t GetTransactionID () const {return TransactionID;}
+       uint8_t GetUnitID () const {return UnitID;}
+       uint8_t GetFunctionCode() const {return FunctionCode;}
+       uint16_t GetAdress() const {return Adress;}
+       uint16_t GetQuantity() const {return QuantityValue;}
        friend std::ostream &operator<<(std::ostream &Os,const ModbusFrame &Rhs);
 };
