@@ -29,7 +29,8 @@ std::vector<uint8_t> ModbusClient::ReadSingleCoil(const int Byte,const int Bit)
 bool ModbusClient::WriteSingleCoil(const bool &Data, const int Byte, const int Bit)
 {
     uint16_t value;
-    std::vector<uint8_t> SendMAp;
+    std::vector<uint8_t> SendMAp,RcvMap;
+    
     if (Bit > 15)
     {
         throw std::runtime_error("Bit out of range");
