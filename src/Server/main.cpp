@@ -4,7 +4,6 @@
 #include "ModbusClient.h"
 #include "MCProtocol.h"
 
-
 int main()
 {
     int Choice{2};
@@ -16,27 +15,38 @@ int main()
     }
     if (Choice == 0)
     {
-        ModbusClient Client;
-        if (!Client.Connect("192.168.10.2", 2505))
+        while (Choice != -1)
         {
-            std::cout << "Not Connected\n";
+            ModbusClient Client;
+            if (!Client.Connect("192.168.10.2", 2505))
+            {
+                std::cout << "Not Connected\n";
+            }
+            std::cout << "What You wont to send: \n";
+            std::string Buff;
+            std::cin >> Buff;
+            std::vector<uint8_t> BuffVec;
+            BuffVec = StringToVector_Uint8(Buff);
+            if (!Client.WriteSingleCoil(true, 0, 0))
+            {
+                std::cout << "Not Sended\n";
+            }
+            Client.Recieve();
+            int Byte,Lenght;
+            std::cout<<"Write Adress and Lenght: \n";
+            std::cin>>Byte;
+            std::cin>>Lenght;
+            std::cout << Vector_Uint8_ToString(Client.ReadCoils(Byte, Lenght)) << "\n";
+            Client.DisplayFrame();
+            Client.DisplayBoolData(0);
+            std::cout << "For End Press any number\n";
+            std::cin >> Choice;
+            Client.Disconnect();
+            if (Choice == -1)
+            {
+                return 1;
+            }
         }
-        std::cout << "What You wont to send: \n";
-        std::string Buff;
-        std::cin >> Buff;
-        std::vector<uint8_t> BuffVec;
-        BuffVec = StringToVector_Uint8(Buff);
-        if (!Client.WriteSingleCoil(true, 0, 0))
-        {
-            std::cout << "Not Sended\n";
-        }
-        std::cout<<Vector_Uint8_ToString(Client.ReadSingleCoil(0,0))<<"\n";
-        std::cout << "For End Press any number\n";
-        Client.DisplayFrame();
-        int end;
-        std::cin >> end;
-        Client.Disconnect();
-        return 1;
     }
     else if (Choice == 1)
     {

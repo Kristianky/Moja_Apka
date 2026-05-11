@@ -2,6 +2,9 @@
 
 #include "ModbusFrame.h"
 #include "Converter.h"
+#include<functional>
+#include <unordered_map>
+
 
 struct UnitInfo
 {
@@ -26,13 +29,16 @@ private:
     std::vector<int> IntData;
     std::vector<std::string> StringData;
 
-private:
+public:
+    ~ModbusHandler() = default;
+    ModbusHandler();
     void SetUnitInf(const ModbusFrame &Frame);
     void SetDataInf(const ModbusFrame &Frame);
     void SetData(const ModbusFrame &Frame);
-    
+    std::vector<bool> BuildCiols(const std::vector<uint8_t> &Frame,int Lenght);
 
 
     std::string GetPlcName() const { return UnitInf.Unit; }
     uint16_t GetTransactionID() const { return UnitInf.TransactionID; }
+    bool GetBoolData(int index){return BooleanData.at(index);}
 };

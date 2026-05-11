@@ -4,10 +4,9 @@ ModbusClient::ModbusClient() : TCPClient()
 {
 }
 
-std::vector<uint8_t> ModbusClient::ReadSingleCoil(const int Byte,const int Bit)
+std::vector<uint8_t> ModbusClient::ReadCoils(const int Byte, const int Lenght)
 {
-    ModbusParser.SetQuantityValue(0x0001);
-    std::vector<uint8_t> SendMap = ModbusParser.BuildReadSingleCoil(Byte,Bit),returnvalue;
+    std::vector<uint8_t> SendMap = ModbusPArser.BuildMaps[1](Byte, Lenght), returnvalue;
     if (Send(SendMap))
     {
         int Lenght = Recieve();
@@ -22,15 +21,16 @@ std::vector<uint8_t> ModbusClient::ReadSingleCoil(const int Byte,const int Bit)
     {
         throw std::runtime_error("Bit out of range");
     }
-    ModbusParser.BuildFrame(returnvalue);
+    // ModbusPArser.BuildFrame(returnvalue);
+    ModbusHNDlr.BuildCiols(returnvalue, Lenght);
     return returnvalue;
 }
 
 bool ModbusClient::WriteSingleCoil(const bool &Data, const int Byte, const int Bit)
 {
     uint16_t value;
-    std::vector<uint8_t> SendMAp,RcvMap;
-    
+    std::vector<uint8_t> SendMAp, RcvMap;
+
     if (Bit > 15)
     {
         throw std::runtime_error("Bit out of range");
@@ -44,7 +44,7 @@ bool ModbusClient::WriteSingleCoil(const bool &Data, const int Byte, const int B
         value &= ~(1 << Bit);
     }
 
-    // ModbusParser.SetQuantityValue(value);
-    SendMAp = ModbusParser.BuildWriteSingleCoil(Byte,Bit);
+    ModbusPArser.SetQuantityValue(value);
+    SendMAp = ModbusPArser.BuildWriteSingleCoil(Byte, Bit);
     return Send(SendMAp);
 }

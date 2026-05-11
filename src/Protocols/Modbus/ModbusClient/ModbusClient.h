@@ -12,14 +12,16 @@
 class ModbusClient : public TCPClient
 {
 private:
-    ModbusParser ModbusParser;
+    ModbusParser ModbusPArser;
+    ModbusHandler ModbusHNDlr;
 public:
     ModbusClient();
     ~ModbusClient() = default;
-    std::vector<uint8_t> ReadSingleCoil(int Byte,int Bit);
+    std::vector<uint8_t> ReadCoils(int Byte,int Lenght);
     bool WriteSingleCoil(const bool &Data,const int Byte,const int Bit);
     uint16_t ReadInputRegister();
-    void DisplayFrame(){std::cout<<ModbusParser.GetHandleFrame();}
+    void DisplayFrame(){std::cout<<ModbusPArser.GetHandleFrame();}
+    void DisplayBoolData(int Index){std::cout<<ModbusHNDlr.GetBoolData(Index)<<std::endl;}
 };
 
 #endif

@@ -26,5 +26,6 @@ class ModbusFrame
        uint8_t GetFunctionCode() const {return FunctionCode;}
        uint16_t GetAdress() const {return Adress;}
        uint16_t GetQuantity() const {return QuantityValue;}
+       uint16_t GetWordData() const {uint16_t Value = (Data.at(0) << 8) | (Data.at(1));return Value;}
        friend std::ostream &operator<<(std::ostream &Os,const ModbusFrame &Rhs);
 };

@@ -1,9 +1,13 @@
 #include "ModbusHandler.h"
 
+ModbusHandler::ModbusHandler()
+{
+}
+
 void ModbusHandler::SetUnitInf(const ModbusFrame &Frame)
 {
     UnitInf.TransactionID = Frame.GetTransactionID();
-    if(Frame.GetUnitID() == 2)
+    if (Frame.GetUnitID() == 2)
     {
         UnitInf.Unit = "SiemensPlc Virtual 1";
     }
@@ -18,5 +22,28 @@ void ModbusHandler::SetDataInf(const ModbusFrame &Frame)
 
 void ModbusHandler::SetData(const ModbusFrame &Frame)
 {
-    
+}
+
+std::vector<bool> ModbusHandler::BuildCiols(const std::vector<uint8_t> &Frame, int Lenght)
+{
+
+    std::vector<bool> ReturnValue;
+
+    int byteCount = Frame.at(8);
+
+    for (int i = 0; i < byteCount; i++)
+    {
+        uint8_t dataByte = Frame[9 + i];
+
+        for (int j = 0; j < 8; j++)
+        {
+            if (ReturnValue.size() >= Lenght)
+                break;
+
+            ReturnValue.push_back(
+                (dataByte >> j) & 0x01);
+        }
+    }
+    BooleanData = ReturnValue;
+    return ReturnValue;
 }
