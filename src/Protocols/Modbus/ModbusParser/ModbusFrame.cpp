@@ -15,19 +15,22 @@ void ModbusFrame::SetFunctionCode(const std::vector<uint8_t> &InputFrame)
     FunctionCode = InputFrame.at(7);
 }
 
-void ModbusFrame::SetAdress(const std::vector<uint8_t> &InputFrame)
+void ModbusFrame::SetAdress(const uint16_t &InputFrame)
 {
-    Adress = static_cast<uint16_t>(InputFrame.at(9))|static_cast<uint16_t>(InputFrame.at(8)>>8);
+    Adress = static_cast<uint16_t>(InputFrame|static_cast<uint16_t>(InputFrame>>8));
 }
 
 void ModbusFrame::SetQuantityValue(const std::vector<uint8_t> &InputFrame)
 {
-    QuantityValue = static_cast<uint16_t>(InputFrame.at(11)|static_cast<uint16_t>(InputFrame.at(10)>>8));
+    QuantityValue = InputFrame.at(8);
 }
 
 void ModbusFrame::SetData(const std::vector<uint8_t> &InputFrame)
 {
-
+     for(int i{};i < InputFrame.size() - 9;i++)
+     {
+        Data.push_back(InputFrame.at(i + 9));
+     }
 }
 
 std::ostream &operator<<(std::ostream &Os,const ModbusFrame &Rhs)

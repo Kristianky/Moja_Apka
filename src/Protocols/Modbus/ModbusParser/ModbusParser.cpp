@@ -75,7 +75,7 @@ void ModbusParser::BuildFrame(const std::vector<uint8_t> &Data)
     HandleFrame.SetTransactionID(Data);
     HandleFrame.SetUnitID(Data);
     HandleFrame.SetFunctionCode(Data);
-    HandleFrame.SetAdress(Data);
+    // HandleFrame.SetAdress();
     HandleFrame.SetQuantityValue(Data);
 }
 

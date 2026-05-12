@@ -19,7 +19,7 @@ std::vector<uint8_t> ModbusClient::ReadCoils(const int Byte, const int Lenght)
     }
     else
     {
-        throw std::runtime_error("Bit out of range");
+        throw std::runtime_error("Send Fail");
     }
     // ModbusPArser.BuildFrame(returnvalue);
     ModbusHNDlr.BuildCiols(returnvalue, Lenght);
