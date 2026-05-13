@@ -4,5 +4,9 @@
 
 class McProtocolHandler
 {
+    private:
+      McProtocolFrame Frame;
+    public:
+      
 
 };

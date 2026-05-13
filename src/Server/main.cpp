@@ -52,8 +52,26 @@ int main()
     {
         MCProtocol mntnc;
         mntnc.Connect("192.168.1.2", 2505);
-        mntnc.WriteMBit(true, 0x00);
-        mntnc.ReadMBit(0x00);
+        while(1)
+        {
+            std::vector<uint8_t> Data;
+        bool value;
+        std::uint32_t Adress;
+        std::cout<<"Write value 0 or 1";
+        std::cin>>value;
+        std::cout<<"Write adress";
+        std::cin>>value;
+        if(value)
+        {
+           Data.push_back(0x10);
+        }
+        else
+        {
+            Data.push_back(0x00);
+        }
+        uint16_t Lenght = 1;
+        mntnc.write["M"](Data,Adress,Lenght);
+        mntnc.read["M"](Adress,Lenght);
         std::cout << Vector_Uint8_ToString(mntnc.GetRecvBuff()) << std::endl;
         mntnc.DisplayFrameToHandle();
         std::cout << "\nFor End Press any number\n";
@@ -62,6 +80,7 @@ int main()
         mntnc.Disconnect();
 
         return 2;
+        }
     }
 
     return 0;

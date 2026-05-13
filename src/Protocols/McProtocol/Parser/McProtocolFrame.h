@@ -2,6 +2,7 @@
 
 #include "Converter.h"
 #include <vector>
+
 class McProtocolFrame;
 std::ostream &operator<<(std::ostream &Os, const McProtocolFrame &Rhs);
 
