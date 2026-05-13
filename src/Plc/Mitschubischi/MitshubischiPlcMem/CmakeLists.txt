@@ -1,0 +1,4 @@
+add_library(MMEM
+            MMem.hpp)
+target_include_directories(MMEM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(MMEM PUBLIC CONVERTER)

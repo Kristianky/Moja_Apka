@@ -70,8 +70,8 @@ int main()
             Data.push_back(0x00);
         }
         uint16_t Lenght = 1;
-        mntnc.write["M"](Data,Adress,Lenght);
-        mntnc.read["M"](Adress,Lenght);
+        mntnc.write["B"](Data,Adress,Lenght,"M");
+        mntnc.read["B"](Adress,Lenght,"M");
         std::cout << Vector_Uint8_ToString(mntnc.GetRecvBuff()) << std::endl;
         mntnc.DisplayFrameToHandle();
         std::cout << "\nFor End Press any number\n";
