@@ -76,8 +76,7 @@ class ModbusParser
     public:
        ModbusParser();
        ~ModbusParser() = default;
-       std::vector<uint8_t> BuildWriteSingleCoil(const int Byte,const int Bit);
-       std::unordered_map<std::uint16_t,std::function<std::vector<uint8_t>(int,int)>> BuildMaps;
+       std::unordered_map<std::uint16_t,std::function<std::vector<uint8_t>(uint16_t,uint16_t)>> BuildMaps;
        void SetQuantityValue(uint16_t Value) {PduHead.Quantity_Value = Value;}
        void BuildFrame(const std::vector<uint8_t> &Data);
        friend std::ostream &operator<<(std::ostream &Os,const ModbusParser &Rhs);

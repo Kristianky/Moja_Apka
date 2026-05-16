@@ -17,6 +17,7 @@ int main()
     {
         while (Choice != -1)
         {
+            std::vector<bool> DAtaSend = {true};
             ModbusClient Client;
             if (!Client.Connect("192.168.10.2", 2505))
             {
@@ -27,11 +28,14 @@ int main()
             std::cin >> Buff;
             std::vector<uint8_t> BuffVec;
             BuffVec = StringToVector_Uint8(Buff);
-            if (!Client.WriteSingleCoil(true, 0, 0))
+            if (!Client.WriteCoils(DAtaSend, 0, 1))
             {
                 std::cout << "Not Sended\n";
             }
-            Client.Recieve();
+            if (Client.Recieve());
+            {
+
+            }
             int Byte,Lenght;
             std::cout<<"Write Adress and Lenght: \n";
             std::cin>>Byte;

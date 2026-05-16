@@ -18,7 +18,8 @@ public:
     ModbusClient();
     ~ModbusClient() = default;
     std::vector<uint8_t> ReadCoils(int Byte,int Lenght);
-    bool WriteSingleCoil(const bool &Data,const int Byte,const int Bit);
+    bool WriteCoils(const std::vector<bool> &Data,const uint16_t Byte,const uint16_t Lenght);
+    bool WriteRegisters(std::vector<uint8_t> &Data,const uint16_t Byte,const uint16_t Lenght);
     uint16_t ReadInputRegister();
     void DisplayFrame(){std::cout<<ModbusPArser.GetHandleFrame();}
     void DisplayBoolData(int Index){std::cout<<ModbusHNDlr.GetBoolData(Index)<<std::endl;}

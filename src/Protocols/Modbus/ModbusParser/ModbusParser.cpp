@@ -2,7 +2,7 @@
 
 ModbusParser::ModbusParser() : MbapHead(0, 2)
 {
-    BuildMaps[1] = [this](int Byte, int Lenght)
+    BuildMaps[1] = [this](uint16_t Byte, uint16_t Lenght)
     {
         std::vector<uint8_t> ReadRequest, PduHeadRead;
         int LenghtTemp = (Lenght + 15) / 16;
@@ -15,7 +15,7 @@ ModbusParser::ModbusParser() : MbapHead(0, 2)
         ReadRequest.insert(ReadRequest.end(), PduHeadRead.begin(), PduHeadRead.end());
         return ReadRequest;
     };
-    BuildMaps[3] = [this](int Byte, int Lenght)
+    BuildMaps[3] = [this](uint16_t Byte, uint16_t Lenght)
     {
         std::vector<uint8_t> ReadRequest, PduHeadRead;
         MbapHead.Lenght = 6;
@@ -28,24 +28,24 @@ ModbusParser::ModbusParser() : MbapHead(0, 2)
 
         return ReadRequest;
     };
-    BuildMaps[6] = [this](int Byte, int Lenght)
+    BuildMaps[15] = [this](uint16_t Byte, uint16_t Lenght)
     {
         std::vector<uint8_t> ReadRequest, PduHeadRead;
-        MbapHead.Lenght = 6;
-        PduHead.FunctionCode = 6;
+        MbapHead.Lenght = 6 + ((Lenght + 15) / 16);
+        PduHead.FunctionCode = 0x16;
         PduHead.Adress = Byte;
-        PduHead.Quantity_Value = 1;
+        PduHead.Quantity_Value = (Lenght + 15) / 16;
         ReadRequest = MbapHead.BuildMap();
         PduHeadRead = PduHead.PDUMap();
         ReadRequest.insert(ReadRequest.end(), PduHeadRead.begin(), PduHeadRead.end());
 
         return ReadRequest;
     };
-       BuildMaps[16] = [this](int Byte, int Lenght)
+       BuildMaps[16] = [this](uint16_t Byte, uint16_t Lenght)
     {
         std::vector<uint8_t> ReadRequest, PduHeadRead;
-        MbapHead.Lenght = 6;
-        PduHead.FunctionCode = 16;
+        MbapHead.Lenght = 6 + Lenght;
+        PduHead.FunctionCode = 0x16;
         PduHead.Adress = Byte;
         PduHead.Quantity_Value = Lenght;
         ReadRequest = MbapHead.BuildMap();
@@ -57,18 +57,7 @@ ModbusParser::ModbusParser() : MbapHead(0, 2)
 
 }
 
-std::vector<uint8_t> ModbusParser::BuildWriteSingleCoil(const int Byte, const int Bit)
-{
-    std::vector<uint8_t> ReadRequest, PduHeadRead;
-    MbapHead.Lenght = 6;
-    PduHead.FunctionCode = 6;
-    PduHead.Adress = static_cast<uint16_t>(Byte);
-    PduHead.Quantity_Value = 0x0001;
-    ReadRequest = MbapHead.BuildMap();
-    PduHeadRead = PduHead.PDUMap();
-    ReadRequest.insert(ReadRequest.end(), PduHeadRead.begin(), PduHeadRead.end());
-    return ReadRequest;
-}
+
 
 void ModbusParser::BuildFrame(const std::vector<uint8_t> &Data)
 {
