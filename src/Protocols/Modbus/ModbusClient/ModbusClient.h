@@ -7,6 +7,7 @@
 #include <string>
 #include "ModbusParser.h"
 #include "ModbusHandler.h"
+#include "SiemensModbusMem.h"
 
 
 class ModbusClient : public TCPClient
@@ -14,6 +15,7 @@ class ModbusClient : public TCPClient
 private:
     ModbusParser ModbusPArser;
     ModbusHandler ModbusHNDlr;
+    ModbusMemory Memory;
 public:
     ModbusClient();
     ~ModbusClient() = default;
@@ -23,6 +25,7 @@ public:
     uint16_t ReadInputRegister();
     void DisplayFrame(){std::cout<<ModbusPArser.GetHandleFrame();}
     void DisplayBoolData(int Index){std::cout<<ModbusHNDlr.GetBoolData(Index)<<std::endl;}
+    void InitMemory();
 };
 
 #endif

@@ -23,6 +23,7 @@ int main()
             {
                 std::cout << "Not Connected\n";
             }
+            Client.InitMemory();
             std::cout << "What You wont to send: \n";
             std::string Buff;
             std::cin >> Buff;

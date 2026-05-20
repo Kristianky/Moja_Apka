@@ -141,3 +141,13 @@ std::string uint16_ToString(const uint16_t &ToConvert)
     return oss.str();
     
 }
+
+std::vector<uint16_t> ModbusFrameToUint16(const std::vector<uint8_t> &Data)
+{
+    std::vector<uint16_t> ReturnValue;
+    for(int i{};i + 9 < Data.size();i += 2)
+    {
+        ReturnValue.push_back(static_cast<uint16_t>(Data.at(i + 9 + 1)|static_cast<uint16_t>(Data.at(i + 9)<<8)));
+    }
+    return ReturnValue;
+}

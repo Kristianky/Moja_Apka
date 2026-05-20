@@ -26,7 +26,7 @@ std::vector<uint8_t> ModbusClient::ReadCoils(const int Byte, const int Lenght)
     return returnvalue;
 }
 
-bool ModbusClient::WriteCoils(const std::vector<bool>& Data,
+bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
                               const uint16_t Byte,
                               const uint16_t Lenght)
 {
@@ -36,13 +36,13 @@ bool ModbusClient::WriteCoils(const std::vector<bool>& Data,
 
     uint16_t ByteLenght = (Lenght + 15) / 16;
 
-    for(uint16_t i = 0; i < ByteLenght; i++)
+    for (uint16_t i = 0; i < ByteLenght; i++)
     {
         uint8_t Mask = 0;
 
-        for(uint16_t j = 0; j < 16 && Count < Lenght; j++)
+        for (uint16_t j = 0; j < 16 && Count < Lenght; j++)
         {
-            if(Data.at(Count))
+            if (Data.at(Count))
             {
                 Mask |= (1 << j);
             }
@@ -72,4 +72,19 @@ bool ModbusClient::WriteRegisters(std::vector<uint8_t> &Data, const uint16_t Byt
     ModbusPArser.SetQuantityValue(value);
     SendMAp = ModbusPArser.BuildMaps[15](Byte, Lenght);
     return Send(SendMAp);
+}
+void ModbusClient::InitMemory()
+{
+    std::vector<uint8_t> SendMap = ModbusPArser.BuildMaps[3](0, 10);
+    std::vector<uint16_t> DataInit;
+    if (Send(SendMap))
+    {
+        int Lenght = Recieve();
+        if(Lenght)
+        {
+           DataInit =  ModbusFrameToUint16(GetRecvBuff());
+           Memory.MemsInit(DataInit);
+        }
+        Memory.Display();
+    }
 }
