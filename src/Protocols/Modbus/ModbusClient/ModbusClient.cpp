@@ -38,19 +38,39 @@ bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
 
     for (uint16_t i = 0; i < ByteLenght; i++)
     {
-        uint8_t Mask = 0;
+        uint16_t Mask = Memory.GetMem1(Byte + i);
+        uint8_t SendMask = (Mask >> 8) & 0xFF;
 
-        for (uint16_t j = 0; j < 16 && Count < Lenght; j++)
+        for (uint16_t j = 0; j < 8 && Count < Lenght; j++)
         {
             if (Data.at(Count))
             {
-                Mask |= (1 << j);
+                SendMask |= 1 << j;
+            }
+            else
+            {
+                SendMask &= ~(1 << j);
             }
 
             Count++;
         }
 
-        DataToSend.push_back(Mask);
+        DataToSend.push_back(SendMask);
+        SendMask = Mask & 0xFF;
+        for (uint16_t j = 0; j < 8 && Count < Lenght; j++)
+        {
+            if (Data.at(Count))
+            {
+                SendMask |= 1 << j;
+            }
+            else
+            {
+                SendMask &= ~(1 << j);
+            }
+
+            Count++;
+        }
+        DataToSend.push_back(SendMask);
     }
 
     SendMap = ModbusPArser.BuildMaps[15](Byte, Lenght);
@@ -80,10 +100,10 @@ void ModbusClient::InitMemory()
     if (Send(SendMap))
     {
         int Lenght = Recieve();
-        if(Lenght)
+        if (Lenght)
         {
-           DataInit =  ModbusFrameToUint16(GetRecvBuff());
-           Memory.MemsInit(DataInit);
+            DataInit = ModbusFrameToUint16(GetRecvBuff());
+            Memory.MemsInit(DataInit);
         }
         Memory.Display();
     }
