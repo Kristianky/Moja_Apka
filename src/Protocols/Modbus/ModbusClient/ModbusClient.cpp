@@ -26,6 +26,28 @@ std::vector<uint8_t> ModbusClient::ReadCoils(const int Byte, const int Lenght)
     return returnvalue;
 }
 
+std::vector<uint8_t> ModbusClient::ReadInputRegisters(const uint16_t Byte, const uint16_t Lenght)
+{
+    std::vector<uint8_t> SendMap = ModbusPArser.BuildMaps[3](Byte, Lenght), returnvalue;
+    if(Send(SendMap))
+    {
+        int RecieveInt = Recieve();
+        if(RecieveInt > 0)
+        {
+            returnvalue = GetRecvBuff();
+        }
+        else
+        {
+            throw std::runtime_error("Recv = 0");
+        }
+    }
+    else
+    {
+        throw std::runtime_error("Send Fail");
+    }
+    return returnvalue;
+}
+
 bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
                               const uint16_t Byte,
                               const uint16_t Lenght)
@@ -87,11 +109,11 @@ bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
 bool ModbusClient::WriteRegisters(std::vector<uint8_t> &Data, const uint16_t Byte, const uint16_t Lenght)
 {
     std::vector<uint8_t> SendMAp;
-    
+
     SendMAp = ModbusPArser.BuildMaps[16](Byte, Lenght);
-    SendMAp.insert(SendMAp.end(),Data.begin(),Data.end());
-    
-    MemoryInitWrite(Data,Byte);
+    SendMAp.insert(SendMAp.end(), Data.begin(), Data.end());
+
+    MemoryInitWrite(Data, Byte);
 
     return Send(SendMAp);
 }
@@ -111,13 +133,13 @@ void ModbusClient::InitMemory()
     }
 }
 
-void ModbusClient:: MemoryInitWrite(std::vector<uint8_t> &Data,const uint16_t &Adress)
+void ModbusClient::MemoryInitWrite(std::vector<uint8_t> &Data, const uint16_t &Adress)
 {
     uint16_t MemoryInit;
 
-    for(int i{};i < Data.size();i += 2)
+    for (int i{}; i < Data.size(); i += 2)
     {
-        MemoryInit = (static_cast<uint16_t>(Data.at(i + 1))|(static_cast<uint16_t>(Data.at(i))>>8));
-        Memory.MemsAtInit(MemoryInit,Adress);
+        MemoryInit = (static_cast<uint16_t>(Data.at(i + 1)) | (static_cast<uint16_t>(Data.at(i)) >> 8));
+        Memory.MemsAtInit(MemoryInit, Adress);
     }
 }

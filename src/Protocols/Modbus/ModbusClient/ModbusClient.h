@@ -22,7 +22,7 @@ public:
     std::vector<uint8_t> ReadCoils(int Byte,int Lenght);
     bool WriteCoils(const std::vector<bool> &Data,const uint16_t Byte,const uint16_t Lenght);
     bool WriteRegisters(std::vector<uint8_t> &Data,const uint16_t Byte,const uint16_t Lenght);
-    uint16_t ReadInputRegister();
+    std::vector<uint8_t> ReadInputRegisters(const uint16_t Byte,const uint16_t Lenght);
     void DisplayFrame(){std::cout<<ModbusPArser.GetHandleFrame();}
     void DisplayBoolData(int Index){std::cout<<ModbusHNDlr.GetBoolData(Index)<<std::endl;}
     void InitMemory();
