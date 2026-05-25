@@ -86,11 +86,13 @@ bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
 
 bool ModbusClient::WriteRegisters(std::vector<uint8_t> &Data, const uint16_t Byte, const uint16_t Lenght)
 {
-    uint16_t value;
-    std::vector<uint8_t> SendMAp, RcvMap;
+    std::vector<uint8_t> SendMAp;
+    
+    SendMAp = ModbusPArser.BuildMaps[16](Byte, Lenght);
+    SendMAp.insert(SendMAp.end(),Data.begin(),Data.end());
+    
+    MemoryInitWrite(Data,Byte);
 
-    ModbusPArser.SetQuantityValue(value);
-    SendMAp = ModbusPArser.BuildMaps[15](Byte, Lenght);
     return Send(SendMAp);
 }
 void ModbusClient::InitMemory()
@@ -106,5 +108,16 @@ void ModbusClient::InitMemory()
             Memory.MemsInit(DataInit);
         }
         Memory.Display();
+    }
+}
+
+void ModbusClient:: MemoryInitWrite(std::vector<uint8_t> &Data,const uint16_t &Adress)
+{
+    uint16_t MemoryInit;
+
+    for(int i{};i < Data.size();i += 2)
+    {
+        MemoryInit = (static_cast<uint16_t>(Data.at(i + 1))|(static_cast<uint16_t>(Data.at(i))>>8));
+        Memory.MemsAtInit(MemoryInit,Adress);
     }
 }

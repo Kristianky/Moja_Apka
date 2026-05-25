@@ -8,7 +8,7 @@ void ModbusMemory::MemsInit(const std::vector<uint16_t> &Data)
 
 } 
 
-void ModbusMemory::MemsAtInit(const uint16_t &Data, uint16_t &Adress)
+void ModbusMemory::MemsAtInit(const uint16_t &Data,const uint16_t &Adress)
 {
     if(Adress < Registers.size())
     Registers.at(Adress) = Data;
