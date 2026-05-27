@@ -24,7 +24,7 @@ void ModbusHandler::SetData(const ModbusFrame &Frame)
 {
 }
 
-std::vector<bool> ModbusHandler::BuildCiols(const std::vector<uint8_t> &Frame, int Lenght)
+std::vector<bool> ModbusHandler::BuildCiols(const std::vector<uint8_t> &Frame, int Lenght,uint16_t BitIndex)
 {
 
     std::vector<bool> ReturnValue;
@@ -34,8 +34,14 @@ std::vector<bool> ModbusHandler::BuildCiols(const std::vector<uint8_t> &Frame, i
     for (int i = 0; i < byteCount; i++)
     {
         uint8_t dataByte = Frame[9 + i];
-
-        for (int j = 0; j < 8; j++)
+        uint16_t j;
+        if(i == 0)
+        {
+            j = BitIndex;
+        }
+        else
+        j = 0;
+        for (j; j < 8; j++)
         {
             if (ReturnValue.size() >= Lenght)
                 break;

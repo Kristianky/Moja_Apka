@@ -25,6 +25,7 @@ public:
     std::vector<uint8_t> ReadInputRegisters(const uint16_t Byte,const uint16_t Lenght);
     void DisplayFrame(){std::cout<<ModbusPArser.GetHandleFrame();}
     void DisplayBoolData(int Index){std::cout<<ModbusHNDlr.GetBoolData(Index)<<std::endl;}
+    void DisplayCoils(){ModbusHNDlr.DisplayBoolData();}
     void InitMemory();
     void MemoryInitWrite(std::vector<uint8_t> &Data,const uint16_t &Adrres);
 };

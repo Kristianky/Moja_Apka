@@ -8,7 +8,7 @@ ModbusParser::ModbusParser() : MbapHead(0, 2)
         int LenghtTemp = (Lenght + 15) / 16;
         MbapHead.Lenght = 6;
         PduHead.FunctionCode = 3;
-        PduHead.Adress = Byte;
+        PduHead.Adress = ((Byte + 15) / 16) - 1;
         PduHead.Quantity_Value = LenghtTemp;
         ReadRequest = MbapHead.BuildMap();
         PduHeadRead = PduHead.PDUMap();

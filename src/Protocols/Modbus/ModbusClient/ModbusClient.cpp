@@ -22,7 +22,7 @@ std::vector<uint8_t> ModbusClient::ReadCoils(const int Byte, const int Lenght)
         throw std::runtime_error("Send Fail");
     }
     // ModbusPArser.BuildFrame(returnvalue);
-    ModbusHNDlr.BuildCiols(returnvalue, Lenght);
+    ModbusHNDlr.BuildCiols(returnvalue, Lenght,Byte);
     return returnvalue;
 }
 
@@ -101,7 +101,7 @@ bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
     SendMap.insert(SendMap.end(),
                    DataToSend.begin(),
                    DataToSend.end());
-
+    
     return Send(SendMap);
 }
 

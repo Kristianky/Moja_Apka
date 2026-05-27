@@ -38,8 +38,7 @@ int main()
             std::cin>>Byte;
             std::cin>>Lenght;
             std::cout << Vector_Uint8_ToString(Client.ReadCoils(Byte, Lenght)) << "\n";
-            Client.DisplayFrame();
-            Client.DisplayBoolData(0);
+            Client.DisplayCoils();
             std::cout << "For End Press any number\n";
             std::cin >> Choice;
             Client.Disconnect();
