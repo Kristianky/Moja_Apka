@@ -3,8 +3,9 @@
 void ModbusMemory::MemsInit(const std::vector<uint16_t> &Data)
 {
     Registers.clear();
-    
+   
     Registers.assign(Data.begin(),Data.end());
+
 
 } 
 
@@ -31,3 +32,4 @@ std::vector<uint16_t> ModbusMemory::GetMems(const uint16_t &StartAdress,const ui
     else 
     return ReturnValue;
 }
+
