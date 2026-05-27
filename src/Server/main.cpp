@@ -17,19 +17,15 @@ int main()
     {
         while (Choice != -1)
         {
-            std::vector<bool> DAtaSend = {true};
+            std::vector<bool> DAtaSend = {true,true,false,true};
             ModbusClient Client;
             if (!Client.Connect("192.168.10.2", 2505))
             {
                 std::cout << "Not Connected\n";
             }
             Client.InitMemory();
-            std::cout << "What You wont to send: \n";
-            std::string Buff;
-            std::cin >> Buff;
-            std::vector<uint8_t> BuffVec;
-            BuffVec = StringToVector_Uint8(Buff);
-            if (!Client.WriteCoils(DAtaSend, 0, 1))
+            
+            if (!Client.WriteCoils(DAtaSend, 0, 4))
             {
                 std::cout << "Not Sended\n";
             }

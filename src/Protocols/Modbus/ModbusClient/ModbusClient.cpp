@@ -95,9 +95,8 @@ bool ModbusClient::WriteCoils(const std::vector<bool> &Data,
         DataToSend.push_back(SendMask);
     }
 
-    SendMap = ModbusPArser.BuildMaps[15](Byte, Lenght);
+    SendMap = ModbusPArser.BuildMaps[15](Byte, ByteLenght);
 
-    SendMap.push_back(ByteLenght);
 
     SendMap.insert(SendMap.end(),
                    DataToSend.begin(),

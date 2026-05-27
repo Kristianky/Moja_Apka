@@ -31,13 +31,14 @@ ModbusParser::ModbusParser() : MbapHead(0, 2)
     BuildMaps[15] = [this](uint16_t Byte, uint16_t Lenght)
     {
         std::vector<uint8_t> ReadRequest, PduHeadRead;
-        MbapHead.Lenght = 6 + ((Lenght + 15) / 16);
-        PduHead.FunctionCode = 0x16;
+        MbapHead.Lenght = 7 + (((Lenght + 15) / 16) * 2);
+        PduHead.FunctionCode = 0x10;
         PduHead.Adress = Byte;
         PduHead.Quantity_Value = (Lenght + 15) / 16;
         ReadRequest = MbapHead.BuildMap();
         PduHeadRead = PduHead.PDUMap();
         ReadRequest.insert(ReadRequest.end(), PduHeadRead.begin(), PduHeadRead.end());
+        ReadRequest.push_back(Lenght * 2);
 
         return ReadRequest;
     };
@@ -45,7 +46,7 @@ ModbusParser::ModbusParser() : MbapHead(0, 2)
     {
         std::vector<uint8_t> ReadRequest, PduHeadRead;
         MbapHead.Lenght = 6 + Lenght;
-        PduHead.FunctionCode = 0x16;
+        PduHead.FunctionCode = 0x10;
         PduHead.Adress = Byte;
         PduHead.Quantity_Value = Lenght;
         ReadRequest = MbapHead.BuildMap();
