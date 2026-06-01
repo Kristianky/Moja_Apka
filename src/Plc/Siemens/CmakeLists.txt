@@ -1,1 +1,2 @@
 add_subdirectory(SiemensModbusMemory)
+add_subdirectory(SiemensMemHandler)
