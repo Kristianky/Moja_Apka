@@ -84,10 +84,10 @@ private:
 public:
         McProtocolParser();
         ~McProtocolParser() = default;
-        std::vector<uint8_t> ReadBitHead(const std::string &MemoryArea,const int32_t&Adress,const uint16_t &Points);
-        std::vector<uint8_t> WriteBitHead(const std::string &MemoryArea,const int32_t &Adress,const uint16_t &Points);
-        std::vector<uint8_t> WriteWordHead(const std::string &MemoryArea,const int32_t &Adress,const uint16_t &Points);
-        std::vector<uint8_t> ReadWordHead(const std::string &MemoryArea,const int32_t&Adress,const uint16_t &Points);
+        std::vector<uint8_t> ReadBitHead(const std::string &MemoryArea,const uint32_t&Adress,const uint16_t &Points);
+        std::vector<uint8_t> WriteBitHead(const std::string &MemoryArea,const uint32_t &Adress,const uint16_t &Points);
+        std::vector<uint8_t> WriteWordHead(const std::string &MemoryArea,const uint32_t &Adress,const uint16_t &Points);
+        std::vector<uint8_t> ReadWordHead(const std::string &MemoryArea,const uint32_t&Adress,const uint16_t &Points);
         void CreateFrameToHandler(const std::vector<uint8_t> &InputFrame);
         friend std::ostream &operator<<(std::ostream &Os,const McProtocolParser &Rhs);
 };

@@ -52,7 +52,7 @@ int main()
     {
         MCProtocol mntnc;
         mntnc.Connect("192.168.1.2", 2505);
-        while(1)
+        while(Choice != -1)
         {
             std::vector<uint8_t> Data;
         bool value;
@@ -60,7 +60,7 @@ int main()
         std::cout<<"Write value 0 or 1";
         std::cin>>value;
         std::cout<<"Write adress";
-        std::cin>>value;
+        std::cin>>Adress;
         if(value)
         {
            Data.push_back(0x10);
@@ -70,17 +70,15 @@ int main()
             Data.push_back(0x00);
         }
         uint16_t Lenght = 1;
-        mntnc.write["B"](Data,Adress,Lenght,"M");
-        mntnc.read["B"](Adress,Lenght,"M");
+        mntnc.write["W"](Data,Adress,Lenght,"D");
+        mntnc.read["W"](Adress,Lenght,"D");
         std::cout << Vector_Uint8_ToString(mntnc.GetRecvBuff()) << std::endl;
         mntnc.DisplayFrameToHandle();
-        std::cout << "\nFor End Press any number\n";
-        int end;
-        std::cin >> end;
-        mntnc.Disconnect();
 
-        return 2;
+        std::cout<<"For end type -1.";
+        std::cin>>Choice;
         }
+        mntnc.Disconnect();
     }
 
     return 0;
