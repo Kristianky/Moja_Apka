@@ -15,7 +15,7 @@ private:
 public:
         MCProtocol();
         ~MCProtocol() = default;
-        std::unordered_map<std::string,std::function <void(std::vector<uint8_t>&,uint32_t&,uint16_t&,std::string)>> write;
+        std::unordered_map<std::string,std::function <void(std::vector<uint8_t>,uint32_t&,uint16_t&,std::string)>> write;
         std::unordered_map<std::string,std::function <void(uint32_t&,uint16_t&,std::string)>> read;
         McProtocolParser GetMcParser() {return McParser;}
         void DisplayFrameToHandle(){std::cout<<McParser;}

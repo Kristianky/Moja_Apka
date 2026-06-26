@@ -17,26 +17,26 @@ int main()
     {
         while (Choice != -1)
         {
-            std::vector<bool> DAtaSend = {true,true,false,true};
+            std::vector<bool> DAtaSend = {true, true, false, true};
             ModbusClient Client;
             if (!Client.Connect("192.168.10.2", 2505))
             {
                 std::cout << "Not Connected\n";
             }
             Client.InitMemory();
-            
+
             if (!Client.WriteCoils(DAtaSend, 0, 4))
             {
                 std::cout << "Not Sended\n";
             }
-            if (Client.Recieve());
+            if (Client.Recieve())
+                ;
             {
-
             }
-            int Byte,Lenght;
-            std::cout<<"Write Adress and Lenght: \n";
-            std::cin>>Byte;
-            std::cin>>Lenght;
+            int Byte, Lenght;
+            std::cout << "Write Adress and Lenght: \n";
+            std::cin >> Byte;
+            std::cin >> Lenght;
             std::cout << Vector_Uint8_ToString(Client.ReadCoils(Byte, Lenght)) << "\n";
             Client.DisplayCoils();
             std::cout << "For End Press any number\n";
@@ -52,31 +52,31 @@ int main()
     {
         MCProtocol mntnc;
         mntnc.Connect("192.168.1.2", 2505);
-        while(Choice != -1)
+        while (Choice != -1)
         {
-            std::vector<uint8_t> Data;
-        bool value;
-        std::uint32_t Adress;
-        std::cout<<"Write value 0 or 1";
-        std::cin>>value;
-        std::cout<<"Write adress";
-        std::cin>>Adress;
-        if(value)
-        {
-           Data.push_back(0x10);
-        }
-        else
-        {
-            Data.push_back(0x00);
-        }
-        uint16_t Lenght = 1;
-        mntnc.write["W"](Data,Adress,Lenght,"D");
-        mntnc.read["W"](Adress,Lenght,"D");
-        std::cout << Vector_Uint8_ToString(mntnc.GetRecvBuff()) << std::endl;
-        mntnc.DisplayFrameToHandle();
+            std::vector<uint16_t> Data;
+            bool value;
+            std::uint32_t Adress;
+            std::cout << "Write value 0 or 1";
+            std::cin >> value;
+            std::cout << "Write adress";
+            std::cin >> Adress;
+            if (value)
+            {
+                Data.push_back(0x10);
+            }
+            else
+            {
+                Data.push_back(0x00);
+            }
+            uint16_t Lenght = 1;
+            mntnc.write["W"](Uint16_To_Uint8_Litle(Data), Adress, Lenght, "D");
+            mntnc.read["W"](Adress, Lenght, "D");
+            std::cout << Vector_Uint8_ToString(mntnc.GetRecvBuff()) << std::endl;
+            mntnc.DisplayFrameToHandle();
 
-        std::cout<<"For end type -1.";
-        std::cin>>Choice;
+            std::cout << "For end type -1.";
+            std::cin >> Choice;
         }
         mntnc.Disconnect();
     }

@@ -78,3 +78,4 @@ std::ostream &operator<<(std::ostream &Os, const McProtocolParser &Rhs)
     Os << Rhs.PlcFrame;
     return Os;
 }
+

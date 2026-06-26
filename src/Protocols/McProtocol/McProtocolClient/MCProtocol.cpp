@@ -2,22 +2,19 @@
 
 MCProtocol::MCProtocol() : TCPClient()
 {
-    write["B"] = [this](std::vector<uint8_t> &Data, uint32_t &Adress, uint16_t &Lenght,std::string Register)
+    write["B"] = [this](std::vector<uint8_t> Data, uint32_t &Adress, uint16_t &Lenght,std::string Register)
     {
         std::vector<uint8_t> ToSend = McParser.WriteBitHead(Register, Adress, Lenght);
-        uint8_t DataSend = Data.at(0);
-        ToSend.push_back(DataSend);
+        ToSend.insert(ToSend.end(),Data.begin(),Data.end());
         Send(ToSend);
         int Result = Recieve();
         if(Result == 0)
         return;
     };
-    write["W"] = [this](std::vector<uint8_t> &Data, uint32_t &Adress, uint16_t &Lenght,std::string Register)
+    write["W"] = [this](std::vector<uint8_t> Data, uint32_t &Adress, uint16_t &Lenght,std::string Register)
     {
         std::vector<uint8_t> ToSend = McParser.WriteWordHead(Register, Adress, Lenght);
-        uint8_t DataSend = Data.at(0);
-        ToSend.push_back(DataSend);
-        ToSend.push_back(0x00);
+        
         Send(ToSend);
         int Result = Recieve();
         if(Result == 0)
@@ -39,6 +36,14 @@ MCProtocol::MCProtocol() : TCPClient()
         int Result = Recieve();
         McParser.CreateFrameToHandler(GetRecvBuff());
         if(Result == 0)
+        return;
+    };
+    write["BW"] = [this](std::vector<uint8_t> Data,uint32_t &Adress, uint16_t &Lenght,std::string Register)
+    {
+        std::vector<uint8_t> ToSend = McParser.WriteWordHead(Register,Adress,Lenght);
+        uint16_t LenghtBool = ((Lenght + 15) / 16) + 1;
+
+
         return;
     };
 }

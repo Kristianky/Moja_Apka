@@ -151,3 +151,14 @@ std::vector<uint16_t> ModbusFrameToUint16(const std::vector<uint8_t> &Data)
     }
     return ReturnValue;
 }
+
+std::vector<uint8_t> Uint16_To_Uint8_Litle(std::vector<uint16_t> &Data)
+{
+    std::vector<uint8_t> ReturnValue;
+    for(int i{};i < Data.size();i++)
+    {
+        ReturnValue.push_back((Data.at(i))& 0xFF);
+        ReturnValue.push_back((Data.at(i)>>8)&0xFF);
+    }
+    return ReturnValue;
+}
