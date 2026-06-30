@@ -7,7 +7,7 @@
 #include <string>
 #include "ModbusParser.h"
 #include "ModbusHandler.h"
-#include "SiemensModbusMem.h"
+#include "MemoryRegisters.h"
 
 
 class ModbusClient : public TCPClient
@@ -15,7 +15,7 @@ class ModbusClient : public TCPClient
 private:
     ModbusParser ModbusPArser;
     ModbusHandler ModbusHNDlr;
-    ModbusMemory Memory;
+    Memory Memory;
 public:
     ModbusClient();
     ~ModbusClient() = default;

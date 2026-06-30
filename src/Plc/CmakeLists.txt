@@ -1,2 +1,1 @@
-add_subdirectory(Siemens)
-add_subdirectory(Mitschubischi)
+add_subdirectory(Memory)

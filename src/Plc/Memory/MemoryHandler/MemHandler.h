@@ -19,3 +19,8 @@ uint16_t GetYear() {return Year;}
 
 };
 
+class Servo
+{
+    public:
+    
+};

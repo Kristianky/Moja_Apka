@@ -1,5 +1,0 @@
-add_library(SIEMENSMEMSHANDL
-            SiemensMemHandler.h
-            SiemensMemHandler.cpp)
-target_include_directories(SIEMENSMEMSHANDL PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(SIEMENSMEMSHANDL PUBLIC CONVERTER)

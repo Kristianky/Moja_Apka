@@ -6,17 +6,21 @@
 #include "McHandler.h"
 #include <functional>
 #include <unordered_map>
-
+#include "MemoryRegisters.h"
 
 class MCProtocol : public TCPClient
 {
 private:
         McProtocolParser McParser;
+        Memory DMemory;
+        Memory MMemory;
 public:
         MCProtocol();
         ~MCProtocol() = default;
+        void MemoryInit(std::vector<uint16_t> &Data);
         std::unordered_map<std::string,std::function <void(std::vector<uint8_t>,uint32_t&,uint16_t&,std::string)>> write;
-        std::unordered_map<std::string,std::function <void(uint32_t&,uint16_t&,std::string)>> read;
+        std::unordered_map<std::string,std::function <std::vector<uint8_t>(uint32_t&,uint16_t&,std::string)>> read;
+        std::unordered_map<std::string,std::function <void(std::vector<uint8_t>,uint32_t&,uint16_t&,uint16_t&,std::string)>> WriteBW;
         McProtocolParser GetMcParser() {return McParser;}
         void DisplayFrameToHandle(){std::cout<<McParser;}
 };

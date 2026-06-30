@@ -11,6 +11,7 @@ class TCPClient
 private:
     SOCKET m_Socket;
     std::vector<uint8_t> RecvBuff;
+    bool Conected;
 public:
     TCPClient():m_Socket{INVALID_SOCKET}{}
     ~TCPClient(){Disconnect();}
@@ -19,6 +20,7 @@ public:
     bool Send(std::vector<uint8_t> &Buffer);
     int Recieve();
     std::vector<uint8_t> GetRecvBuff() {return RecvBuff;}
+    bool Get_Connected(){return Conected;}
 };
 
 #endif

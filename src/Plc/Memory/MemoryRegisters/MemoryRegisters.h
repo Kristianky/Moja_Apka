@@ -2,7 +2,7 @@
 
 #include "Converter.h"
 
-class ModbusMemory
+class Memory
 {
 private:
     std::vector<uint16_t> Registers;

@@ -1,7 +1,0 @@
-add_library(SIEMENSMODBUSMEM
-            SiemensModbusMem.h
-            SiemensModbusMem.cpp)
-
-target_include_directories(SIEMENSMODBUSMEM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-target_link_libraries(SIEMENSMODBUSMEM PUBLIC CONVERTER)

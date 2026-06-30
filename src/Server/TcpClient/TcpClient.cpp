@@ -36,7 +36,7 @@ bool TCPClient::Connect(const char *IpAdrres, const int Port)
             m_Socket = INVALID_SOCKET;
             return false;
         }
-
+        Conected = true;
         return true;
     }
     else
@@ -46,6 +46,7 @@ bool TCPClient::Connect(const char *IpAdrres, const int Port)
 }
 void TCPClient::Disconnect()
 {
+    Conected = false;
     closesocket(m_Socket);
     WSACleanup();
     m_Socket = INVALID_SOCKET;
