@@ -6,6 +6,8 @@ void Memory::MemsInit(const std::vector<uint16_t> &Data)
    
     Registers.assign(Data.begin(),Data.end());
 
+    MemoryHandl.DateAndTime.SetDateAndTime(Data.begin());
+
 
 } 
 

@@ -1,11 +1,14 @@
 #pragma once
 
 #include "Converter.h"
+#include "MemHandler.h"
+
 
 class Memory
 {
 private:
     std::vector<uint16_t> Registers;
+    MemHandler MemoryHandl;
 
 public:
     void MemsInit(const std::vector<uint16_t> &Data);

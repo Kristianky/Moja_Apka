@@ -10,7 +10,7 @@ private:
     uint16_t Year;
 
 public:
-void SetDateAndTime(std::vector<uint16_t> &Memory);
+void SetDateAndTime(std::vector<uint16_t>::const_iterator Frame);
 uint8_t GetHour() {return Hour;}
 uint8_t GetMinute() {return Minute;}
 uint8_t GetDay() {return Day;}
@@ -23,4 +23,10 @@ class Servo
 {
     public:
     
+};
+
+class MemHandler
+{
+    public:
+    Date_And_Time DateAndTime;
 };
