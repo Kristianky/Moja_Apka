@@ -23,28 +23,29 @@ int main()
             {
                 std::cout << "Not Connected\n";
             }
-            Client.InitMemory();
+            else
+            {
+                Client.InitMemory();
 
-            if (!Client.WriteCoils(DAtaSend, 0, 4))
-            {
-                std::cout << "Not Sended\n";
-            }
-            if (Client.Recieve())
-                ;
-            {
-            }
-            int Byte, Lenght;
-            std::cout << "Write Adress and Lenght: \n";
-            std::cin >> Byte;
-            std::cin >> Lenght;
-            std::cout << Vector_Uint8_ToString(Client.ReadCoils(Byte, Lenght)) << "\n";
-            Client.DisplayCoils();
-            std::cout << "For End Press any number\n";
-            std::cin >> Choice;
-            Client.Disconnect();
-            if (Choice == -1)
-            {
-                return 1;
+                if (!Client.WriteCoils(DAtaSend, 0, 4))
+                {
+                    std::cout << "Not Sended\n";
+                }
+                if (Client.Recieve())
+                {
+                }
+                int Byte, Lenght;
+                std::cout << "Write Adress and Lenght: \n";
+                std::cin >> Byte;
+                std::cin >> Lenght;
+                std::cout << Vector_Uint8_ToString(Client.ReadCoils(Byte, Lenght)) << "\n";
+                Client.DisplayCoils();
+                std::cout << "For End Press any number\n";
+                std::cin >> Choice;
+                Client.Disconnect();
+                {
+                    return 1;
+                }
             }
         }
     }

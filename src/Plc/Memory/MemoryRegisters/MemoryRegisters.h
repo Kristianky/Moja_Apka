@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Converter.h"
-#include "MemHandler.h"
+#include "MemHandler.hpp"
 
 
 class Memory
@@ -11,7 +11,7 @@ private:
     MemHandler MemoryHandl;
 
 public:
-    void MemsInit(const std::vector<uint16_t> &Data);
+    void MemsInit(const std::vector<uint16_t> &Data,const uint16_t &Adress);
     void MemsAtInit(const uint16_t &Data, const uint16_t &Adress);
     void RegistersInit(const uint16_t Lenght);
 
@@ -22,7 +22,7 @@ public:
     {
         for (int i{}; i < Registers.size(); i++)
         {
-            std::cout << "Data at " << i << " = " << Registers.at(i) << " ";
+            std::cout << "Data at " << i + 1 << " = " << Registers.at(i) << " ";
         }
         std::cout << std::endl;
     };

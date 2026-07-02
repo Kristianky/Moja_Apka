@@ -118,7 +118,8 @@ bool ModbusClient::WriteRegisters(std::vector<uint8_t> &Data, const uint16_t Byt
 }
 void ModbusClient::InitMemory()
 {
-    std::vector<uint8_t> SendMap = ModbusPArser.BuildMaps[3](0, 10);
+    
+    std::vector<uint8_t> SendMap = ModbusPArser.BuildMaps[3](0, 30);
     std::vector<uint16_t> DataInit;
     if (Send(SendMap))
     {
@@ -126,10 +127,11 @@ void ModbusClient::InitMemory()
         if (Lenght)
         {
             DataInit = ModbusFrameToUint16(GetRecvBuff());
-            Memory.MemsInit(DataInit);
+            Memory.MemsInit(DataInit,0);
         }
         Memory.Display();
     }
+    
 }
 
 void ModbusClient::MemoryInitWrite(std::vector<uint8_t> &Data, const uint16_t &Adress)

@@ -1,12 +1,16 @@
 #include "MemoryRegisters.h"
 
-void Memory::MemsInit(const std::vector<uint16_t> &Data)
+void Memory::MemsInit(const std::vector<uint16_t> &Data,const uint16_t &Adress)
 {
-    Registers.clear();
+    if(Adress == 0)
+    {
+        Registers.clear();
+    }
    
     Registers.assign(Data.begin(),Data.end());
 
-    MemoryHandl.DateAndTime.SetDateAndTime(Data.begin());
+    MemoryHandl.DateAndTime.SetDateAndTime(Data);
+    std::cout<<MemoryHandl.DateAndTime;
 
 
 } 
@@ -31,7 +35,7 @@ std::vector<uint16_t> Memory::GetMems(const uint16_t &StartAdress,const uint16_t
     uint16_t Size = StartAdress + Lenght;
     if(Size < Registers.size())
     ReturnValue.assign(Registers.begin() + StartAdress,Registers.begin() + Size);
-    else 
+     
     return ReturnValue;
 }
 
