@@ -14,3 +14,8 @@ std::ostream &operator<<(std::ostream &os,Date_And_Time &RHS)
     os << static_cast<int>(RHS.Hour)<<":"<<static_cast<int>(RHS.Minute)<<":"<<" "<<static_cast<int>(RHS.Day)<<"."<<static_cast<int>(RHS.Mounth)<<"."<<RHS.Year<<"\n";
     return os;
 }
+
+void Bool::Invert()
+{
+    Adress ^= ~(1 << Bit);
+}
